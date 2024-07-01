@@ -21,3 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
     loadHTML('../../Visual/Html/Header.html', 'Header');
     loadHTML('../../Visual/Html/Footer.html', 'Footer');
 });
+
+function toggleMenu() {
+    var navBotones = document.getElementById('botones');
+    navBotones.classList.toggle('active');
+}

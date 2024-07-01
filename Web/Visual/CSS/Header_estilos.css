@@ -1,0 +1,82 @@
+/* Estilos para el header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+header img {
+    max-width: 100px;
+    height: auto;
+}
+
+#toggle-menu-btn {
+    display: none;
+}
+
+nav#botones ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav#botones ul li {
+    margin: 0 15px;
+}
+
+nav#botones ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+nav#botones ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para móvil */
+@media (max-width: 768px) {
+
+    nav#botones {
+        display: none; /* Oculta el menú de navegación en dispositivos móviles por defecto */
+        width: 100%;
+        margin-top: 10px; /* Espacio opcional para separar el botón del menú */
+    }
+
+    nav#botones.active {
+        display: flex; /* Muestra el menú cuando está activo */
+        flex-direction: column; /* Acomoda los elementos en columnas */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    nav#botones.active ul {
+        width: 100%; /* Asegura que el menú ocupe todo el ancho disponible */
+        padding: 10px 0; /* Espacio entre el borde superior e inferior del menú */
+    }
+
+    nav#botones.active ul li {
+        margin: 10px 0; /* Espacio entre cada ítem del menú */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        text-align: center; /* Centra el texto horizontalmente */
+    }
+
+    #toggle-menu-btn {
+        display: block; /* Muestra el botón en dispositivos móviles */
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: auto; /* Mueve el botón toggle a la derecha */
+        margin-right: 20px; /* Añade un margen a la derecha del botón toggle */
+    }
+}
+
