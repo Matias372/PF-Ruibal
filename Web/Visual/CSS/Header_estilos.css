@@ -1,3 +1,10 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Estilos para el header */
 header {
     display: flex;
@@ -12,6 +19,7 @@ header img {
     max-width: 100px;
     height: auto;
 }
+
 
 #toggle-menu-btn {
     display: none;
@@ -46,37 +54,66 @@ nav#botones ul li a:hover {
 /* Estilos para móvil */
 @media (max-width: 768px) {
 
-    nav#botones {
-        display: none; /* Oculta el menú de navegación en dispositivos móviles por defecto */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    header section{
         width: 100%;
-        margin-top: 10px; /* Espacio opcional para separar el botón del menú */
+        display: flex;
+        flex-direction: row;
+        margin: 0px;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    nav#botones.active {
-        display: flex; /* Muestra el menú cuando está activo */
-        flex-direction: column; /* Acomoda los elementos en columnas */
-        align-items: center; /* Centra los elementos horizontalmente */
+    section#logo-toggle {
+        padding: 10px 20px;
     }
 
-    nav#botones.active ul {
-        width: 100%; /* Asegura que el menú ocupe todo el ancho disponible */
-        padding: 10px 0; /* Espacio entre el borde superior e inferior del menú */
+    nav#botones {
+        display: none; 
+        width: 100%;
     }
 
-    nav#botones.active ul li {
-        margin: 10px 0; /* Espacio entre cada ítem del menú */
-        width: 100%; /* Ocupa todo el ancho disponible */
-        text-align: center; /* Centra el texto horizontalmente */
-    }
 
     #toggle-menu-btn {
-        display: block; /* Muestra el botón en dispositivos móviles */
-        font-size: 24px;
+        display: block; 
+        font-size: 30px;
         background: none;
         border: none;
         cursor: pointer;
-        margin-left: auto; /* Mueve el botón toggle a la derecha */
-        margin-right: 20px; /* Añade un margen a la derecha del botón toggle */
+        height: fit-content;
     }
+    
+    nav#botones.active {
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        margin-top: 5px;
+    }
+
+    nav#botones.active ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav#botones.active ul li {
+        width: 100%;
+    }
+
+    nav#botones.active ul li a {
+        width: 100%;
+        text-align: center;
+        border-radius: 0%;
+        background-color: darkgray;
+        border: 2px solid black;
+    }
+
 }
 

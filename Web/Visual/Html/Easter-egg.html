@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter egg</title>
+    <link rel="stylesheet" href="../CSS/Easter-egg_estilos.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Tu perro</h1>
+        <div id="pet">
+            <img src="tamagotchi.png" alt="Tamagotchi">
+        </div>
+        <div class="stats">
+            <p>Hambre: <span id="hunger">5</span></p>
+            <p>Felicidad: <span id="happiness">5</span></p>
+        </div>
+        <div class="controls">
+            <button onclick="feed()">Alimentar</button>
+            <button onclick="play()">Jugar</button>
+        </div>
+    </div>
+
+    <script src="../../Control/Easter-egg_Handler.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* Clases_estilos.css */
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main h3, main h4, main h5{
+    font-size: 18px;
+}
+
+/* Presencial y Remoto */
+#tipo-presensial, #tipo-remoto {
+    display: inline-block;
+    width: 48%;
+    height: 450px;
+    vertical-align: top;
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#tipo-presensial {
+    margin-right: 2%;
+}
+
+#tipo-presensial h2, #tipo-remoto h2 {
+    margin-bottom: 15px;
+}
+
+#tipo-presensial h3, #tipo-remoto h3 {
+    text-align: justify;
+    margin-bottom: 10px;
+    margin-left: 5%;
+}
+
+#tipo-presensial ul, #tipo-remoto ul {
+    text-align: justify;
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    padding-left: 5%;
+}
+
+#tipo-presensial ul li, #tipo-remoto ul li {
+    margin-bottom: 5px;
+}
+
+#tipo-presensial ul{
+    column-count: 2;
+    margin-left: 5%;
+}
+
+#tipo-remoto p{
+    font-weight: normal !important;
+}
+
+/* Zona horaria */
+#tipo-remoto #zona-horaria {
+    font-weight: bold;
+    display: inline;
+}
+
+#tipo-remoto h4{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#tipo-presensial h4{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+/* Consideraciones */
+#section-consideracion {
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    width: 50%;
+    display: inline-block;
+    align-items: center;
+}
+
+#section-consideracion h2{
+    margin-bottom: 25px;
+}
+
+
+/* Botón de contacto */
+#Btn-Contactanos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#Btn-Contactanos a {
+    width: 225px;
+    height: 66px;
+    display: inline-flex;
+    padding: 10px 20px;
+    background: #ffffff;
+    border: 4px solid #20c361;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background 0.3s;
+    font-size: 24px;
+    align-items: center;
+}
+
+#Btn-Contactanos a:hover {
+    background: #ceffe2;
+}
+
+#Btn-Contactanos a img {
+    margin-right: 10px;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    #tipo-presensial, #tipo-remoto, #section-consideracion {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+}
