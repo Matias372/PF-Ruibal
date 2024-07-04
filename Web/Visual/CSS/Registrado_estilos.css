@@ -1,0 +1,55 @@
+/* Estilos para el main de Registrado.html */
+body{
+    font-family: Arial, sans-serif;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+main img {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 20px;
+    background-color: #597766;
+}
+
+main h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+main a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+main a:hover {
+    background-color: #0056b3;
+}
+
+
+/*
+font-size: 1.9em;*/
+@media (max-width: 768px) {
+
+    main h1 {
+        font-size: 1.9em;
+    }
+
+}

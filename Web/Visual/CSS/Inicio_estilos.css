@@ -8,8 +8,7 @@ body {
 
 /* Slider ===============*/
 #slider {
-    height: 600px;
-    background: #ccc;
+    /*height: 600px;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +27,7 @@ body {
     margin-right: 20px;
 }
 
-section {
+main section {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;

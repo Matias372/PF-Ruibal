@@ -1,23 +1,5 @@
 let hunger = 5;
 let happiness = 5;
-let clickCount = 0;
-let clickTimeout;
-
-function handleLogoClick() {
-    clickCount++;
-    if (clickCount === 1) {
-        clickTimeout = setTimeout(resetClickCount, 5000);
-    }
-    if (clickCount === 10) {
-        clearTimeout(clickTimeout);
-        window.location.href = 'special.html'; // Redirigir a la página deseada
-    }
-}
-
-        function resetClickCount() {
-            clickCount = 0;
-        }
-
 
 function updateStats() {
     document.getElementById('hunger').innerText = hunger;
@@ -28,6 +10,8 @@ function feed() {
     if (hunger > 0) {
         hunger--;
         updateStats();
+        // Mostrar GIF de alimentación
+        displayGif('gif-alimentar.gif');
     }
 }
 
@@ -35,7 +19,14 @@ function play() {
     if (happiness < 10) {
         happiness++;
         updateStats();
+        // Mostrar GIF de jugar
+        displayGif('gif-jugar.gif');
     }
+}
+
+function displayGif(gifSrc) {
+    const petContainer = document.getElementById('pet');
+    petContainer.innerHTML += `<img src="${gifSrc}" class="extra-gif" alt="GIF adicional">`;
 }
 
 function decreaseStats() {
@@ -52,4 +43,4 @@ function decreaseStats() {
 
 updateStats();
 
-let gameInterval = setInterval(decreaseStats, 3000);
+let gameInterval = setInterval(decreaseStats, 4000);

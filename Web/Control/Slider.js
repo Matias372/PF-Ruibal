@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const sliderImage = document.getElementById('sliderImage');
     const imagesPc = [
-        '../../Resources/Img/Slide/1920x/Blue-template.svg',
-        '../../Resources/Img/Slide/1920x/Green-template.svg',
-        '../../Resources/Img/Slide/1920x/Orange-template.svg'
+        '../../Resources/Img/Slide/1920x/Clases-img.png',
+        '../../Resources/Img/Slide/1920x/Iosi-img.png'
     ];
     const imagesMobile = [
         '../../Resources/Img/Slide/375x/Blue-template-M.svg',
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     updateSlider();
-    setInterval(updateSlider, 3000);
+    setInterval(updateSlider, 5000);
 
     window.addEventListener('resize', function() {
         images = window.innerWidth > 768 ? imagesPc : imagesMobile;

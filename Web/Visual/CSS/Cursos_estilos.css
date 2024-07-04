@@ -1,0 +1,198 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal de los cursos */
+.curso-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Título principal */
+.curso-container h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Estilo de cada curso */
+.curso {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+/* Estilo del encabezado de cada curso */
+.curso-header {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Imagen del curso */
+.curso-imagen {
+    width: 250px;
+    height: 200px;
+    margin-right: 20px;
+    /*object-fit: cover;*/
+    /*border-radius: 10px;*/
+    background-color: #949494;
+}
+
+.nombrecurso-detalles h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.nombrecurso-detalles p {
+    margin: 5px 0 0 0;
+    margin-right: 5%;
+    color: #666666;
+}
+
+/* Botón de toggle */
+.toggle-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333333;
+    transition: transform 0.2s ease-in-out;
+    /*lo coloca en la parte inferior*/
+    position: relative;
+    top: 170px;
+}
+
+.toggle-button:hover {
+    color: #555555;
+}
+
+/* Contenido del curso */
+.nombrecurso-contenido {
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+}
+
+.nombrecurso-contenido section {
+    column-count: 2;
+}
+
+.nombrecurso-contenido section div{
+    break-inside: avoid;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+}
+
+.nombrecurso-contenido section div p{
+    margin-bottom: 10px;
+}
+
+.nombrecurso-contenido ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.nombrecurso-contenido li {
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+/* Estilos para los medios de pago */
+
+.pago {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.pago span {
+    display: inline-block;
+}
+
+.monto {
+    font-weight: bold;
+    color: #333333;
+    margin-left: 20px; /* Añade espacio entre los span */
+}
+
+/* Botón de inscripción */
+.inscribirse-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    align-self: center;  /* Centra el botón horizontalmente */
+}
+
+.inscribirse-button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .curso-header {
+        flex-direction: column;
+        align-items: center;;
+    }
+    
+    .curso-imagen {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .toggle-button {
+        align-self: flex-end;
+    }
+    
+    
+    .nombrecurso-contenido section {
+        flex-direction: column;
+        column-count: 1;
+    }
+    
+    .medios-pago {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .inscribirse-button {
+        align-self: center;
+    }
+
+    .nombrecurso-detalles p {
+        margin-right: 0px;
+    }
+
+    .toggle-button{
+        position: static;
+    }
+
+    .nombrecurso-contenido section div{
+        margin-left: 0px;
+        margin-right: 0px
+    }
+
+}

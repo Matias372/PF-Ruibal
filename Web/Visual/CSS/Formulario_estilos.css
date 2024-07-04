@@ -1,0 +1,94 @@
+/* Estilos para el main y la sección de inscribirse */
+body{
+    font-family: Arial, sans-serif;
+}
+
+main {
+    padding: 20px;
+    background-color: #f9f9f9;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#Inscribirse {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#Inscribirse h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+#Inscribirse form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center
+}
+
+#Inscribirse form div {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+#Inscribirse form label {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+#Inscribirse form input,
+#Inscribirse form select,
+#Inscribirse form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#Inscribirse form input:focus,
+#Inscribirse form select:focus,
+#Inscribirse form textarea:focus {
+    border-color: #0056b3;
+}
+
+#Inscribirse form button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#Inscribirse form button:hover {
+    background-color: #004494;
+}
+/*Comentario*/
+#Inscribirse form textarea {
+    resize: none;
+    height: 200px;
+}
+
+@media (max-width: 768px) {
+    #Inscribirse form div {
+        width: 90%;
+    }
+    
+    /*acomodar width de form select option
+    para que no se pase de largo*/
+}
