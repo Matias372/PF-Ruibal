@@ -6,7 +6,7 @@ function handleLogoClick() {
     if (clickCount === 1) {
         clickTimeout = setTimeout(resetClickCount, 5000);
     }
-    if (clickCount === 10) {
+    if (clickCount === 6) {
         clearTimeout(clickTimeout);
         window.location.href = 'Easter-egg.html'; // Redirigir a la página deseada
     }

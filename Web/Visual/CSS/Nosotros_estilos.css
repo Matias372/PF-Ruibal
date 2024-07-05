@@ -1,0 +1,108 @@
+/* Estilos generales para el main */
+body{
+    font-family: Arial, sans-serif;
+}
+
+main {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.perfil-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.perfil-detalles {
+    flex: 2;
+    padding-right: 20px;
+}
+
+.perfil-detalles h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.perfil-detalles p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.perfil-detalles h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.perfil-detalles ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.perfil-detalles li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.linkedin-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0073b1;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.linkedin-link img {
+    margin-right: 5px;
+}
+
+.perfil-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1e1e1;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.perfil-imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .perfil {
+        flex-direction: column;
+    }
+
+    .perfil-detalles {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .perfil-imagen {
+        width: 100%;
+        order: -1; /* Esto coloca el div .perfil-imagen al principio */
+        margin-bottom: 20px;
+    }
+}

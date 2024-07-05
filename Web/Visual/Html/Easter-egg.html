@@ -12,21 +12,37 @@
     </a>
     <div class="game-container">
         <h1>Tu perro</h1>
-        <div id="pet">
-            <img src="../../Resources/Gif/Dog-gif.gif" alt="Tamagotchi">
+        <div class="progress-bars">
+            <div class="progress-bar">
+                <label for="hunger-bar">Hambre</label>
+                <progress id="hunger-bar" max="100" value="50"></progress>
+            </div>
+            <div class="progress-bar">
+                <label for="happiness-bar">Felicidad</label>
+                <progress id="happiness-bar" max="100" value="50"></progress>
+            </div>
         </div>
-        <div class="stats">
-            <p>Hambre: <span id="hunger">5</span></p>
-            <p>Felicidad: <span id="happiness">5</span></p>
+        <div id="pet-container">
+            <img id="gif-sucio" src="../../Resources/Gif/gif-sucio.gif" alt="GIF sucio" style="display:none;">
+            <div id="pet">
+                <img src="../../Resources/Gif/Dog-gif.gif" alt="Tamagotchi">
+            </div>
+            <img id="gif-accion" class="extra-gif" src="" alt="GIF adicional" style="display:none;">
         </div>
+
         <div class="controls">
+            <button onclick="clean()">Limpiar</button>
             <button onclick="feed()">Alimentar</button>
             <button onclick="play()">Jugar</button>
         </div>
-    </div>
 
+        <div id="death-message" style="display:none;">
+            <p>Tu Tamagotchi ha muerto :(</p>
+            <button onclick="restartGame()">Volver a intentar</button>
+        </div>
+    </div>
+    
     <footer>
-        <p>&copy; 2023. Todos los derechos reservados.</p>
         <p>Desarrollado por <a href="https://github.com/Matias372" target="_blank">Matias Ruibal</a></p>
         <p>Atribuciones:</p>
         <p><a href="https://opengameart.org/content/animals-and-tea-by-strawheart" title="dog icons">Dog gif - strawheart</a></p>

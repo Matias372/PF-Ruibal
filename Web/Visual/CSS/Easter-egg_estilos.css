@@ -1,34 +1,138 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    margin-top: 50px;
+.game-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.progress-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #76c7c0;
+    border-radius: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 button {
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-/* Estilos del juego */
-.game-container {
-    margin-top: 50px;
+button:hover {
+    background-color: #ddd;
 }
 
-#pet img {
-    width: 200px;
-    height: 200px;
+footer {
+    margin-top: 40px;
+    text-align: center;
 }
 
-.stats {
-    margin-top: 20px;
+#pet-container {
+    position: relative;
 }
 
-.controls {
-    margin-top: 20px;
+#gif-sucio {
+    position: absolute;
+    left: -50px; /* Ajusta según sea necesario */
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+#gif-accion {
+    display: none;
+}
+
+#death-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 1000;
+    max-width: 80%;
+}
+
+#death-message p {
+    margin: 0 0 10px;
+}
+
+#death-message button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#death-message button:hover {
+    background-color: #f5c6cb;
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        padding: 10px;
+    }
+    
+    .progress-bars {
+        margin-bottom: 10px;
+    }
+
+    .progress-bar {
+        align-items: center;
+    }
+
+    progress {
+        width: 80%;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #death-message {
+        width: 70%;
+    }
+
 }
