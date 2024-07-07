@@ -5,9 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
         '../../Resources/Img/Slide/1920x/Iosi-img.png'
     ];
     const imagesMobile = [
-        '../../Resources/Img/Slide/375x/Blue-template-M.svg',
-        '../../Resources/Img/Slide/375x/Pink-template-M.svg',
-        '../../Resources/Img/Slide/375x/Green-template-M.svg'
+        '../../Resources/Img/Slide/375x/img-slide-m1.jpg',
+        '../../Resources/Img/Slide/375x/img-slide-m2.jpg'
     ];
 
     let currentIndex = 0;

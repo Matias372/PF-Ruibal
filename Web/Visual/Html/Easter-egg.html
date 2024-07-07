@@ -8,10 +8,10 @@
 </head>
 <body>
     <a href="Inicio.html" class="back-to-home">
-        ◄
+        <img src="../../Resources/Img/Back-button.png" alt="" width="50">
     </a>
     <div class="game-container">
-        <h1>Tu perro</h1>
+        <h1>Rocky</h1>
         <div class="progress-bars">
             <div class="progress-bar">
                 <label for="hunger-bar">Hambre</label>
@@ -23,31 +23,54 @@
             </div>
         </div>
         <div id="pet-container">
-            <img id="gif-sucio" src="../../Resources/Gif/gif-sucio.gif" alt="GIF sucio" style="display:none;">
-            <div id="pet">
-                <img src="../../Resources/Gif/Dog-gif.gif" alt="Tamagotchi">
+            <div id="sucio-container">
+                <img id="gif-sucio" src="../../Resources/Gif/PoopGif.gif" alt="GIF sucio">
             </div>
-            <img id="gif-accion" class="extra-gif" src="" alt="GIF adicional" style="display:none;">
+            <div id="pet">
+                <img src="../../Resources/Gif/Dog.gif" alt="Tamagotchi">
+            </div>
+            <div id="accion-container">
+                <img id="gif-Alimentar" src="../../Resources/Gif/Alimentar-gif.gif" class="extra-gif" src="" alt="GIF adicional">
+                <img id="gif-Jugar" src="../../Resources/Gif/Jugar-gif.gif" class="extra-gif" src="" alt="GIF adicional">
+            </div>
         </div>
-
         <div class="controls">
             <button onclick="clean()">Limpiar</button>
             <button onclick="feed()">Alimentar</button>
             <button onclick="play()">Jugar</button>
         </div>
-
         <div id="death-message" style="display:none;">
-            <p>Tu Tamagotchi ha muerto :(</p>
+            <p>Tu Tamagotchi se cansó de esperar por comida, se fue a buscarla él mismo.</p>
             <button onclick="restartGame()">Volver a intentar</button>
         </div>
     </div>
-    
     <footer>
-        <p>Desarrollado por <a href="https://github.com/Matias372" target="_blank">Matias Ruibal</a></p>
-        <p>Atribuciones:</p>
-        <p><a href="https://opengameart.org/content/animals-and-tea-by-strawheart" title="dog icons">Dog gif - strawheart</a></p>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Desarrollado por: <a href="https://github.com/Matias372" target="_blank">Matias372</a></h3>
+                <p>Perronautas se creó con el objetivo de ofrecer un servicio educativo y de aprendizaje de alta calidad. 
+                    La página web se desarrolló para distribuir el contenido a través de las redes sociales y llegar a más clientes. 
+                    La encargada del servicio, apasionada por su trabajo, es experta en su campo y disfruta ayudando a los demás.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Atribuciones:</h3>
+                <p><a href="https://playground.com" title="dog icons" target="_blank">Dog design - playground</a></p>
+                <p><a href="https://github.com/Matias372" title="dog icons" target="_blank">Gif - Matias372</a></p>
+                <p><a href="https://github.com/Matias372" title="dog icons" target="_blank">Icons - Matias372</a></p>
+            </div>
+            <div class="footer-section" id="donations">
+                <h3>Donaciones</h3>
+                <div>
+                    <p><a href="https://www.paypal.com/donate/?hosted_button_id=U5NZNDA6T7WN4" target="_blank">
+                        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="Donar con PayPal" width="120"/>
+                    </a></p>
+                    <a href="https://link.mercadopago.com.ar/matias372" target="_blank">
+                        <img src="../../Resources/Img/Icons/MercadoPago-icon.svg" alt="Donar con Mercado Pago">
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
-
     <script src="../../Control/Easter-egg_Handler.js"></script>
 </body>
 </html>

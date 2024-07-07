@@ -16,7 +16,7 @@ function feed() {
     }
     updateStats();
     // Mostrar GIF de alimentación
-    displayGif('../../Resources/Gif/gif-alimentar.gif');
+    displayGif('gif-Alimentar');
 }
 
 function play() {
@@ -27,36 +27,38 @@ function play() {
     }
     updateStats();
     // Mostrar GIF de jugar
-    displayGif('../../Resources/Gif/gif-jugar.gif');
+    displayGif('gif-Jugar');
 }
 
 function clean() {
-    // Ocultar GIF sucio y mostrar GIF de acción
-    const dirtyGif = document.querySelector('.dirty-gif');
-    dirtyGif.style.display = 'none';
+    // Ocultar GIF sucio
+    const dirtyGif = document.getElementById('gif-sucio');
 
-    isDirty = false;
-    clearInterval(DirtyInterval);
-    happinessDecreaseRate = 0.5;
-}
-
-function displayGif(gifSrc) {
-    const petContainer = document.getElementById('pet');
-    const existingGif = petContainer.querySelector('.extra-gif');
-
-    if (existingGif) {
-        existingGif.remove();
+    if (dirtyGif && dirtyGif.style) {
+        dirtyGif.style.display = 'none';
+        isDirty = false;
+        clearInterval(DirtyInterval);
+        happinessDecreaseRate = 0.5;
     }
 
-    const gif = document.createElement('img');
-    gif.src = gifSrc;
-    gif.classList.add('extra-gif');
-    gif.alt = 'GIF adicional';
+    
+}
 
-    petContainer.appendChild(gif);
+function displayGif(gifId) {
 
+    //ubicar div de gifs
+    const imgAlimentar = document.getElementById("gif-Alimentar");
+    const imgJugar = document.getElementById("gif-Jugar");
+    //identificar gif
+    const gif = document.getElementById(gifId);
+    //quitar ambos
+    imgAlimentar.style.display = 'none';
+    imgJugar.style.display = 'none';
+    //mostrar gif correspondiente
+    gif.style.display = 'block';
+    //eliminar gif cuando termina el tiempo
     setTimeout(() => {
-        gif.remove();
+        gif.style.display = 'none';
     }, 2000); // Remover el GIF después de 3 segundos
 }
 
@@ -68,8 +70,14 @@ function decreaseStats() {
     if (happiness < 0) happiness = 0;
     
     updateStats();
-    if (hunger === 100 || happiness === 0) {
-        displayFinalMessage();
+    if (hunger === 100) {
+        displayFinalMessage("Rocky se cansó de esperar por comida, se fue a buscarla él mismo");
+        clearInterval(gameInterval);
+    }
+
+    if (happiness === 0) {
+        displayFinalMessage("Rocky se aburrió, se fue a pasear por el barrio con otros perros");
+        clearInterval(gameInterval);
     }
 }
 
