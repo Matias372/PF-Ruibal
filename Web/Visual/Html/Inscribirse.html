@@ -22,52 +22,45 @@
 
             <h1>Formulario</h1>
 
-            <form action="" method="post">
+            <form method="post" id="inscripcion-form" onsubmit="sendEmail(event)">
 
                 <div>
                     <label for="nombre">Nombre *</label>
                     <input type="text" id="nombre" name="nombre" required>    
                 </div>
-                
                 <div>
                     <label for="apellido">Apellido *</label>
                     <input type="text" id="apellido" name="apellido" required>
                 </div>
-                
                 <div>
                     <label for="mail">Mail *</label>
                     <input type="email" id="mail" name="mail" required>
                 </div>
-                
                 <div>
                     <label for="telefono">Teléfono *</label>
                     <input type="tel" id="telefono" name="telefono" required>    
                 </div>
-                
                 <div>
                     <label for="curso">Curso *</label>
-                    <select name="" id="cursoname">
+                    <select name="curso" id="cursoname" required>
                         <option value="" disabled selected>Selecciona curso</option>
                         <option value="nombre_de_curso">Nombre de curso</option>
                     </select>    
                 </div>
-                
                 <div>
                     <label for="mascota">Nombre de perro</label>
                     <input type="text" id="mascota" name="mascota">    
                 </div>
-
                 <div>
                     <label for="fca">Nombre de criadero</label>
                     <input type="text" id="fca" name="fca">    
                 </div>
-                
                 <div>
                     <label for="comentarios">Comentarios</label>
                     <textarea id="comentarios" name="comentarios" rows="4"></textarea>    
                 </div>
-                
-                <button type="submit">Enviar formulario</button><!--perronautas.adiestramiento@gmail.com-->
+                <button type="submit">Enviar formulario</button>
+                <!--perronautas.adiestramiento@gmail.com-->
             </form>
         </section>
 
@@ -75,6 +68,8 @@
     
     <div id="Footer"></div>
 
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="../../Control/HeaFoo_Handler.js"></script>
+    <script src="../../Control/Formulario_Handler.js"></script>
 </body>
 </html>

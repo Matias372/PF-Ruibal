@@ -1,7 +1,15 @@
 /* Estilos para el main de Registrado.html */
-body{
+body, html {
+    height: 100%;
+    margin: 0;
     font-family: Arial, sans-serif;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -10,11 +18,11 @@ main {
     text-align: center;
     padding: 20px;
     margin-top: 10px;
+    flex: 1; /* Ocupa el espacio disponible */
 }
 
 main img {
     width: 400px;
-    height: 300px;
     margin-bottom: 20px;
     background-color: #597766;
 }
@@ -43,13 +51,20 @@ main a:hover {
     background-color: #0056b3;
 }
 
+#Footer {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}
 
-/*
-font-size: 1.9em;*/
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
-
     main h1 {
         font-size: 1.9em;
+    }
+
+    main img {
+        width: 100%;
     }
 
 }

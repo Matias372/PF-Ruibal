@@ -38,6 +38,7 @@ function clean() {
         dirtyGif.style.display = 'none';
         isDirty = false;
         clearInterval(DirtyInterval);
+        DirtyInterval = setInterval(displaydirt, 30000);
         happinessDecreaseRate = 0.5;
     }
 
