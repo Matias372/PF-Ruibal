@@ -1,11 +1,9 @@
-/* Reset de estilos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos para el header */
 header {
     display: flex;
     justify-content: space-between;
@@ -71,7 +69,7 @@ nav#botones ul li a:hover {
     }
 
     header #menu{
-        margin-bottom: 0px !important;
+        margin-bottom: 0px !important; /* se agrega important ya que es afectado por otro*/
     }
 
     section#logo-toggle {

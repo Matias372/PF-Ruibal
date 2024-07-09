@@ -1,4 +1,3 @@
-/* Estilos para el main y la sección de inscribirse */
 body{
     font-family: Arial, sans-serif;
 }
@@ -89,6 +88,4 @@ main {
         width: 90%;
     }
     
-    /*acomodar width de form select option
-    para que no se pase de largo*/
 }

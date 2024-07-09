@@ -113,7 +113,7 @@ body {
     color: #333333;
 }
 
-/* Estilos para los medios de pago */
+/* medios de pago =============== */
 
 .pago {
     display: flex;
@@ -145,7 +145,7 @@ body {
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    align-self: center;  /* Centra el botón horizontalmente */
+    align-self: center;  
 }
 
 .inscribirse-button:hover {

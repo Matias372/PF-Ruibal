@@ -1,11 +1,10 @@
-// Inicializar EmailJS
+// perronautas.adiestramiento@gmail.com
 (function(){
     emailjs.init("X9KKi_KEI1ovvrocR"); //API key de usuario de EmailJS
 })();
 
 function sendEmail(event) {
-    event.preventDefault(); // Prevenir el envío del formulario
-
+    event.preventDefault(); 
 
     // Obtener los datos del formulario
     var nombre = document.getElementById('nombre').value;
@@ -41,7 +40,6 @@ function sendEmail(event) {
     })
     .then(function(response) {
         console.log('Correo enviado exitosamente:', response);
-        // Opcional: redirigir a una página de éxito
         window.location.href = 'Registrado.html';
     }, function(error) {
         console.error('Hubo un error al enviar el correo:', error);

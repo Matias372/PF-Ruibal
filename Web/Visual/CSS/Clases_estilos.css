@@ -1,6 +1,3 @@
-/* Clases_estilos.css */
-
-/* General */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -18,7 +15,6 @@ main h3, main h4, main h5{
     font-size: 18px;
 }
 
-/* Presencial y Remoto */
 #tipo-presensial, #tipo-remoto {
     display: inline-block;
     width: 48%;
@@ -65,7 +61,6 @@ main h3, main h4, main h5{
     font-weight: normal !important;
 }
 
-/* Zona horaria */
 #tipo-remoto #zona-horaria {
     font-weight: bold;
     display: inline;
@@ -81,7 +76,6 @@ main h3, main h4, main h5{
     margin-bottom: 20px;
 }
 
-/* Consideraciones */
 #section-consideracion {
     background-color: #f9f9f9;
     padding: 20px;
@@ -96,8 +90,6 @@ main h3, main h4, main h5{
     margin-bottom: 25px;
 }
 
-
-/* Botón de contacto */
 #Btn-Contactanos {
     text-align: center;
     margin-bottom: 20px;
@@ -126,7 +118,7 @@ main h3, main h4, main h5{
     margin-right: 10px;
 }
 
-/* Responsivo */
+
 @media screen and (max-width: 768px) {
     #tipo-presensial, #tipo-remoto, #section-consideracion {
         display: block;

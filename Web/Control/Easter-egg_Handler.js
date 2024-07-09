@@ -12,7 +12,7 @@ function feed() {
     if (hunger > 0 && hunger <= 80) { // Asegurando que no pase de 100
         hunger -= 20;
     } else if (hunger > 80) {
-        hunger = 100; // Ajustar a 100 si se supera
+        hunger = 100; 
     }
     updateStats();
     // Mostrar GIF de alimentación
@@ -23,15 +23,15 @@ function play() {
     if (happiness >= 0 && happiness <= 80) { // Asegurando que no pase de 100
         happiness += 20;
     } else if (happiness > 80) {
-        happiness = 100; // Ajustar a 100 si se supera
+        happiness = 100; 
     }
     updateStats();
-    // Mostrar GIF de jugar
+    //GIF de jugar
     displayGif('gif-Jugar');
 }
 
 function clean() {
-    // Ocultar GIF sucio
+    //identifica GIF de sucio
     const dirtyGif = document.getElementById('gif-sucio');
 
     if (dirtyGif && dirtyGif.style) {
@@ -47,7 +47,7 @@ function clean() {
 
 function displayGif(gifId) {
 
-    //ubicar div de gifs
+    //ubicar gifs
     const imgAlimentar = document.getElementById("gif-Alimentar");
     const imgJugar = document.getElementById("gif-Jugar");
     //identificar gif
@@ -88,7 +88,7 @@ function displayFinalMessage(message) {
     messageText.textContent = message;
     deathMessage.style.display = 'block';
 
-    // Mostrar botón de volver a intentar
+    // Mostrar mensaje de reintentar
     const retryButton = deathMessage.querySelector('button');
     retryButton.addEventListener('click', () => {
         deathMessage.style.display = 'none';
@@ -97,12 +97,12 @@ function displayFinalMessage(message) {
 }
 
 function restartGame() {
-    // Reiniciar valores y actualizar interfaz
+    // Reiniciar valores
     hunger = 50;
     happiness = 50;
     updateStats();
 
-    // Ocultar el mensaje de muerte
+    // Ocultar el mensaje
     const deathMessage = document.getElementById('death-message');
     deathMessage.style.display = 'none';
 

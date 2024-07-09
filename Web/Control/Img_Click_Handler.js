@@ -8,7 +8,7 @@ function handleLogoClick() {
     }
     if (clickCount === 6) {
         clearTimeout(clickTimeout);
-        window.location.href = 'Easter-egg.html'; // Redirigir a la página deseada
+        window.location.href = 'Easter-egg.html'; 
     }
 }
 
