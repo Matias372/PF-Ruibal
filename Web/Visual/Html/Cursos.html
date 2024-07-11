@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="../CSS/Header_estilos.css">
     <link rel="stylesheet" href="../CSS/Footer_estilos.css">
     <link rel="stylesheet" href="../CSS/Cursos_estilos.css">
+    <!-- Scripts -->
 </head>
 <body>
-    
     <div id="Header"></div>
 
     <main>
@@ -33,7 +33,7 @@
                     <button class="toggle-button" onclick="toggleCourseContent(this)">▼</button>
                 </div>
 
-                <div class="nombrecurso-contenido" style="display: none;">
+                <div id="Curso1name" class="nombrecurso-contenido" style="display: none;">
                     <section>
                         <div>
                             <p><strong>Temario:</strong></p>
@@ -50,11 +50,11 @@
                             <p><strong>Medios de pago:</strong></p>
                             <div class="pago">
                                 <span>Transferencia bancaria:</span>
-                                <span class="monto">$ #####</span> <!--DESPUES CAMBIARLO POR PRECIO-->
+                                <span id="$" class="monto">$ #####</span> <!--DESPUES CAMBIARLO POR PRECIO-->
                             </div>
                             <div class="pago">
                                 <span>Pagos exterior:</span>
-                                <span class="monto">USD ####</span> 
+                                <span id="USD" class="monto">USD ####</span> 
                                 <!--mas adelante pasarlo a variables y juntar todas las 
                                 variables de los diferentes cursos en un archivo, asi se
                                 cambia mas rapido-->
@@ -79,7 +79,7 @@
                     <button class="toggle-button" onclick="toggleCourseContent(this)">▼</button>
                 </div>
 
-                <div class="nombrecurso-contenido" style="display: none;">
+                <div id="Curso2name" class="nombrecurso-contenido" style="display: none;">
                     <section>
                         <div>
                             <p><strong>Temario:</strong></p>
@@ -96,11 +96,11 @@
                             <p><strong>Medios de pago:</strong></p>
                             <div class="pago">
                                 <span>Transferencia bancaria:</span>
-                                <span class="monto">$ #####</span>
+                                <span id="$" class="monto">$ #####</span>
                             </div>
                             <div class="pago">
                                 <span>Pagos exterior:</span>
-                                <span class="monto">USD ####</span>
+                                <span id="USD" class="monto">USD ####</span>
                             </div>
                         </div>
                     </section>
@@ -127,5 +127,7 @@
             }
         }
     </script>
+
+
 </body>
 </html>

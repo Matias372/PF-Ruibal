@@ -1,0 +1,4 @@
+- AGREGAR BACKEND
+- generar admin.html
+asi el cliente puede agregar o modificar cursos.
+tambien agregar usuario y clave para mas seguridad.

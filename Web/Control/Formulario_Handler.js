@@ -1,3 +1,4 @@
+
 // perronautas.adiestramiento@gmail.com
 (function(){
     emailjs.init("X9KKi_KEI1ovvrocR"); //API key de usuario de EmailJS
@@ -28,7 +29,7 @@ function sendEmail(event) {
     });
 
     // Enviar el correo usando EmailJS
-    emailjs.send('service_de7snee', 'template_cm6tfik', { // Servicio id y plantilla id de correo
+    emailjs.send("service_de7snee", "template_cm6tfik", { // Servicio id y plantilla id de correo
         nombre: nombre,
         apellido: apellido,
         mail: mail,
