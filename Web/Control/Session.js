@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
     function showLoggedInElements() {
-        document.querySelector('.botones').style.display = 'block';
+        document.querySelector('.botones').style.display = 'flex';
         document.querySelector('.contenedor').style.display = 'block';
         document.querySelector('#loginForm').style.display = 'none';
     }

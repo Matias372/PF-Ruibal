@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             formData.set('temario', JSON.stringify(modulos));
 
             enviarFormulario(formData);
+            contenedor.innerHTML = '';
         });
 
         contenedor.appendChild(nuevoCursoForm);
@@ -258,9 +259,82 @@ document.addEventListener('DOMContentLoaded', (event) => {
             );*/
 
             enviarFormularioModificado(formData);
+            contenedor.innerHTML = '';
         });
     }
 
+    function showEliminateForm(){
+        const contenedor = document.querySelector('.contenedor');
+        contenedor.innerHTML = ''; // Limpiar cualquier contenido previo
+        const mensajeDiv = document.querySelector('.mensaje');
+        mensajeDiv.style.display = 'none';
+    
+        // Crear formulario para seleccionar curso a eliminar
+        const selectCursoForm = document.createElement('form');
+        selectCursoForm.id = 'selectCursoForm';
+        selectCursoForm.innerHTML = `
+            <label for="cursoSelect">Seleccione el curso que busca eliminar:</label><br>
+            <select id="cursoSelect" name="cursoSelect" required>
+                <!-- Opciones de cursos se cargarán dinámicamente -->
+            </select>
+            <br><br>
+            <button type="button" id="seleccionarCurso">Seleccionar Curso</button>
+        `;
+    
+        // Manejar el clic en el botón "Seleccionar Curso"
+        selectCursoForm.querySelector('#seleccionarCurso').addEventListener('click', function () {
+            const cursoSeleccionado = selectCursoForm.querySelector('#cursoSelect').value;
+            if (cursoSeleccionado) {
+                // Crear div para confirmación
+                const confirmacionDiv = document.createElement('div');
+                confirmacionDiv.classList.add('confirmacion');
+                confirmacionDiv.innerHTML = `
+                    <p>¿Está seguro que desea eliminar el curso "${cursoSeleccionado}"?</p>
+                    <button id="confirmarEliminar">Sí</button>
+                    <button id="cancelarEliminar">No</button>
+                `;
+                
+                contenedor.appendChild(confirmacionDiv);
+                // lee cuando el boton es presionado y ejecuta la accion correspondiente.
+                const cancelarEliminarBtn = confirmacionDiv.querySelector('#cancelarEliminar');
+                cancelarEliminarBtn.addEventListener('click', function () {
+                    confirmacionDiv.remove();
+                });
+                
+                const confirmarEliminarBtn = confirmacionDiv.querySelector('#confirmarEliminar');
+                confirmarEliminarBtn.addEventListener('click', function () {
+                    comandEliminate(cursoSeleccionado);
+                    contenedor.innerHTML = '';
+                });
+            } else {
+                alert('Seleccione un curso para eliminar.');
+            }
+        });
+    
+        contenedor.appendChild(selectCursoForm);
+    
+        // Cargar opciones de cursos disponibles
+        cargarOpcionesCursos();
+    }
+    
+    // Función para ejecutar la eliminación del curso
+    function comandEliminate(cursoSeleccionado) {
+        console.log('Eliminando curso:', cursoSeleccionado);
+        const formData = new FormData();
+        formData.append('cursoEliminar', cursoSeleccionado);
+    
+        fetch('../../Model/EliminarCurso.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Curso eliminado:', data);
+            mostrarMensaje(`Curso "${cursoSeleccionado}" eliminado correctamente.`);
+        })
+        .catch(error => console.error('Error:', error));
+    }
+    
     // Función para mostrar los módulos cargados del curso
     function mostrarModulos(modulos) {
         const modulosContainer = document.querySelector('#modulosContainer');
@@ -349,15 +423,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
         showModifyCourseForm();
     });
 
+    // Event listener para botón "Modificar Curso"
+    document.querySelector('#Eliminar').addEventListener('click', function () {
+        showEliminateForm();
+    });
+
     // Event listener para botón "Cerrar Sesión"
     document.querySelector('#cerrarSesion').addEventListener('click', function () {
         localStorage.removeItem('isLoggedIn');
-        window.location.href = '../../AdminDog.html'; // Redireccionar a la página de inicio de sesión
+        window.location.href = 'AdminDog.html'; // Redireccionar a la página de inicio de sesión
     });
 
     // Mostrar botones y contenido dependiendo del estado de inicio de sesión
     if (isLoggedIn) {
-        document.querySelector('.botones').style.display = 'block';
+        document.querySelector('.botones').style.display = 'flex';
         document.querySelector('.contenedor').style.display = 'block';
     } else {
         document.querySelector('#loginForm').style.display = 'block';
