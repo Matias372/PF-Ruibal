@@ -1,14 +1,17 @@
 <?php
-$servername = "localhost";  // Nombre del servidor de la base de datos
-$username = "usuario";       // Nombre de usuario de la base de datos
-$password = "contraseña";    // Contraseña del usuario de la base de datos
-$dbname = "nombre_base_de_datos"; // Nombre de la base de datos a la que deseas conectar
+class Conexion {
+    private $host = 'localhost'; // Host del servidor MySQL
+    private $db = 'perronautas'; // Nombre de la base de datos
+    private $user = 'root'; // Usuario de MySQL, por defecto es 'root' en XAMPP
+    private $password = ''; // Contraseña del usuario MySQL, por defecto está vacía en XAMPP
+    public $conn;
 
-// Crear la conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+    public function __construct() {
+        $this->conn = new mysqli($this->host, $this->user, $this->password, $this->db);
 
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+        if ($this->conn->connect_error) {
+            die('Conexión fallida: ' . $this->conn->connect_error);
+        }
+    }
 }
 ?>
