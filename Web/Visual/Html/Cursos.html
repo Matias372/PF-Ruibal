@@ -18,116 +18,13 @@
 
     <main>
         <div class="curso-container">
-            <h2>Cursos</h2>
-            
-            <div class="curso">
-                
-                <div class="curso-header">
-                    <img src="../../Resources/Img/Cursos/Curso-1.png" alt="Imagen del curso" class="curso-imagen">
-                    <div class="nombrecurso-detalles">
-                        <h3>Nombre del curso</h3>
-                        <p>Tenete ergo quod si servitus quae natura liber, et aliena tua tunc impeditur. 
-                            Dolebis, et turbabuntur, et invenietis, cum culpa tam dis hominibusque. 
-                            Quod si tibi tantum sit propria et aliena quale sit.</p>
-                    </div>
-                    <button class="toggle-button" onclick="toggleCourseContent(this)">▼</button>
-                </div>
-
-                <div id="Curso1name" class="nombrecurso-contenido" style="display: none;">
-                    <section>
-                        <div>
-                            <p><strong>Temario:</strong></p>
-                            <ul>
-                                <li>Modulo 1: nombre de modulo</li>
-                                <li>Modulo 2: nombre de modulo</li>
-                                <li>Modulo 3: nombre de modulo</li>
-                                <li>Modulo 4: nombre de modulo</li>
-                                <li>Modulo 5: nombre de modulo</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="medios-pago">
-                            <p><strong>Medios de pago:</strong></p>
-                            <div class="pago">
-                                <span>Transferencia bancaria:</span>
-                                <span id="$" class="monto">$ #####</span> <!--DESPUES CAMBIARLO POR PRECIO-->
-                            </div>
-                            <div class="pago">
-                                <span>Pagos exterior:</span>
-                                <span id="USD" class="monto">USD ####</span> 
-                                <!--mas adelante pasarlo a variables y juntar todas las 
-                                variables de los diferentes cursos en un archivo, asi se
-                                cambia mas rapido-->
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <a class="inscribirse-button" href="Inscribirse.html">Inscribirse</a>
-                </div>
-            </div>
-        
-            <div class="curso">
-                
-                <div class="curso-header">
-                    <img src="../../Resources/Img/Cursos/Curso-2.png" alt="Imagen del curso" class="curso-imagen">
-                    <div class="nombrecurso-detalles">
-                        <h3>Nombre del curso</h3>
-                        <p>Tenete ergo quod si servitus quae natura liber, et aliena tua tunc impeditur. 
-                            Dolebis, et turbabuntur, et invenietis, cum culpa tam dis hominibusque. 
-                            Quod si tibi tantum sit propria et aliena quale sit.</p>
-                    </div>
-                    <button class="toggle-button" onclick="toggleCourseContent(this)">▼</button>
-                </div>
-
-                <div id="Curso2name" class="nombrecurso-contenido" style="display: none;">
-                    <section>
-                        <div>
-                            <p><strong>Temario:</strong></p>
-                            <ul>
-                                <li>Modulo 1: nombre de modulo</li>
-                                <li>Modulo 2: nombre de modulo</li>
-                                <li>Modulo 3: nombre de modulo</li>
-                                <li>Modulo 4: nombre de modulo</li>
-                                <li>Modulo 5: nombre de modulo</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="medios-pago">
-                            <p><strong>Medios de pago:</strong></p>
-                            <div class="pago">
-                                <span>Transferencia bancaria:</span>
-                                <span id="$" class="monto">$ #####</span>
-                            </div>
-                            <div class="pago">
-                                <span>Pagos exterior:</span>
-                                <span id="USD" class="monto">USD ####</span>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <a class="inscribirse-button" href="Inscribirse.html">Inscribirse</a>
-                </div>
-            </div>
-            
+            <!-- Los cursos serán renderizados aquí por el JavaScript -->
         </div>
-
     </main>
+
     <div id="Footer"></div>
 
     <script src="../../Control/HeaFoo_Handler.js"></script>
-    <script>
-        function toggleCourseContent(button) {
-            const cursoContent = button.closest('.curso').querySelector('.nombrecurso-contenido');
-            if (cursoContent.style.display === 'none' || cursoContent.style.display === '') {
-                cursoContent.style.display = 'block';
-                button.textContent = '▲';
-            } else {
-                cursoContent.style.display = 'none';
-                button.textContent = '▼';
-            }
-        }
-    </script>
-
-
+    <script src="../../Control/Cursos_Handler.js"></script>
 </body>
 </html>

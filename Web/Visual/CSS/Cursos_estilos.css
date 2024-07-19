@@ -25,10 +25,13 @@ body {
 
 /* Estilo de cada curso */
 .curso {
+    background-color: #afafaf; /*color de la barra dropdown del curso*/
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     margin-bottom: 20px;
     overflow: hidden;
+    position: relative; 
+    padding-bottom: 50px; 
 }
 
 /* Estilo del encabezado de cada curso */
@@ -45,11 +48,10 @@ body {
     width: 250px;
     height: 200px;
     margin-right: 20px;
-    /*object-fit: cover;*/
-    /*border-radius: 10px;*/
     background-color: #949494;
 }
 
+/* Detalles del curso */
 .nombrecurso-detalles h3 {
     margin: 0;
     margin-bottom: 10px;
@@ -70,9 +72,9 @@ body {
     cursor: pointer;
     color: #333333;
     transition: transform 0.2s ease-in-out;
-    /*lo coloca en la parte inferior*/
-    position: relative;
-    top: 170px;
+    position: absolute; /* Posicionar absolutamente dentro del contenedor .curso */
+    bottom: 10px; /* Espacio desde la parte inferior */
+    right: 10px; /* Espacio desde la parte derecha */
 }
 
 .toggle-button:hover {
@@ -81,6 +83,7 @@ body {
 
 /* Contenido del curso */
 .nombrecurso-contenido {
+    background-color: #ffffff; /*color de la barra dropdown del curso*/
     padding: 20px;
     display: none;
     flex-direction: column;
@@ -91,14 +94,14 @@ body {
     column-count: 2;
 }
 
-.nombrecurso-contenido section div{
+.nombrecurso-contenido section div {
     break-inside: avoid;
     margin-left: 5%;
     margin-right: 5%;
     text-align: justify;
 }
 
-.nombrecurso-contenido section div p{
+.nombrecurso-contenido section div p {
     margin-bottom: 10px;
 }
 
@@ -113,8 +116,7 @@ body {
     color: #333333;
 }
 
-/* medios de pago =============== */
-
+/* Medios de pago */
 .pago {
     display: flex;
     justify-content: space-between;
@@ -156,18 +158,14 @@ body {
 @media (max-width: 768px) {
     .curso-header {
         flex-direction: column;
-        align-items: center;;
+        align-items: center;
+        padding: 20px; /* Ajustar padding para mejorar el espaciado */
     }
     
     .curso-imagen {
         margin-right: 0;
         margin-bottom: 10px;
     }
-    
-    .toggle-button {
-        align-self: flex-end;
-    }
-    
     
     .nombrecurso-contenido section {
         flex-direction: column;
@@ -187,13 +185,8 @@ body {
         margin-right: 0px;
     }
 
-    .toggle-button{
-        position: static;
-    }
-
-    .nombrecurso-contenido section div{
+    .nombrecurso-contenido section div {
         margin-left: 0px;
-        margin-right: 0px
+        margin-right: 0px;
     }
-
 }

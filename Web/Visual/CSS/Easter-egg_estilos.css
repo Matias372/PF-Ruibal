@@ -2,10 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: gray;
+}
+
+body .back-to-home{
+    position: absolute;
 }
 
 .back-to-home img {
-    margin: 10px;
+    margin: 5px;
+    width: 30px;
 }
 
 .game-container {
@@ -13,11 +19,13 @@ body {
     margin: 0 auto;
     text-align: center;
     position: relative;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
+    background-color: #ffffff;
 }
 
 h1 {
+    font-size: 24px;
     padding: 0;
     margin: 0;
 }
@@ -31,6 +39,7 @@ h1 {
 
 .progress-bar label {
     font-weight: bold;
+    font-size: 16px;
 }
 
 .progress-bar {
@@ -41,7 +50,7 @@ h1 {
 
 progress {
     width: 100%;
-    height: 25px; 
+    height: 20px; 
 }
 
 progress::-webkit-progress-bar {
@@ -49,22 +58,41 @@ progress::-webkit-progress-bar {
     border-radius: 10px;
 }
 
+#sucio-container{
+    position: absolute;
+    bottom: 20px;
+}
+
+#accion-container {
+    position: absolute;
+    top: 10px;
+}
 
 .controls {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    background-color: #d1d1d1; /* Color de fondo neutro */
+    border: 1px solid #999999; /* Borde más oscuro */
+    color: #333333; /* Color de texto oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #ddd;
+    background-color: #b3b3b3; /* Color de fondo al pasar el cursor */
+}
+
+button:active {
+    background-color: #004494; /* Fondo azul más oscuro al hacer clic */
+    transform: translateY(0); /* Restablecer elevación al hacer clic */
 }
 
 footer {
@@ -181,7 +209,7 @@ footer .footer-section a:hover {
 }
 
 @media (max-width: 600px) {
-    footer {
+    footer .footer-container {
         flex-direction: column;
         align-items: center;
     }

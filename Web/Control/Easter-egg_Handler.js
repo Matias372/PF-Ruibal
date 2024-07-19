@@ -107,7 +107,10 @@ function restartGame() {
     deathMessage.style.display = 'none';
 
     clearInterval(gameInterval);
-    clearInterval(dirtyInterval);
+    clearInterval(DirtyInterval);
+    clean();
+    gameInterval = setInterval(decreaseStats, 1000);
+    DirtyInterval = setInterval(displaydirt, 30000);
 }
 
 function displaydirt(){
