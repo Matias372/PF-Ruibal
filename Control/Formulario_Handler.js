@@ -1,11 +1,14 @@
+/*== Se implementa EmailJS para enviar formulario como mail al administrador. se comenta codio y se procede a directamente redirigir pagina. */
 
+/*
 // perronautas.adiestramiento@gmail.com
 (function(){
-    emailjs.init("X9KKi_KEI1ovvrocR"); //API key de usuario de EmailJS
+    emailjs.init("xxxxxxxxxx"); //API key de usuario de EmailJS
 })();
-
+*/
 function sendEmail(event) {
-    event.preventDefault(); 
+    
+    /*event.preventDefault(); 
 
     // Obtener los datos del formulario
     var nombre = document.getElementById('nombre').value;
@@ -17,19 +20,8 @@ function sendEmail(event) {
     var fca = document.getElementById('fca').value;
     var comentarios = document.getElementById('comentarios').value;
 
-    console.log("Datos del formulario obtenidos:", {
-        nombre,
-        apellido,
-        mail,
-        telefono,
-        curso,
-        mascota,
-        fca,
-        comentarios
-    });
-
     // Enviar el correo usando EmailJS
-    emailjs.send("service_de7snee", "template_cm6tfik", { // Servicio id y plantilla id de correo
+    emailjs.send("xxxxxxxxxxxx", "xxxxxxxxxxxxxxxxx", { // Servicio id y plantilla id de correo
         nombre: nombre,
         apellido: apellido,
         mail: mail,
@@ -44,5 +36,7 @@ function sendEmail(event) {
         window.location.href = 'Registrado.html';
     }, function(error) {
         console.error('Hubo un error al enviar el correo:', error);
-    });
+    });*/
+
+    window.location.href = 'Registrado.html';
 }

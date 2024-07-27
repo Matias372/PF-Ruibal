@@ -18,7 +18,111 @@
 
     <main>
         <div class="curso-container">
-            <!-- Los cursos serán renderizados aquí por el JavaScript -->
+            <!-- Los cursos serian renderizados aquí por el JavaScript pero se elimino backend en este proyecto -->
+            <div class="curso">
+                <div class="curso-header">
+                    <img src="../${curso.Img}" alt="Imagen del curso" class="curso-imagen">
+                    <div class="nombrecurso-detalles">
+                        <h3>{curso.Nombre}</h3>
+                        <p>{curso.Descripcion}</p>
+                    </div>
+                    <button class="toggle-button" onclick="toggleCourseContent(this)">▼</button>
+                </div>
+                <div id="Curso${index + 1}name" class="nombrecurso-contenido" style="display: none;">
+                    <section>
+                        <div>
+                            <p><strong>Temario:</strong></p>
+                            <ul>
+                                <li>modulo 1</li>
+                                <li>modulo 2</li>
+                                <li>modulo 3</li>
+                            </ul>
+                        </div>
+                        <div class="medios-pago">
+                            <p><strong>Medios de pago:</strong></p>
+                            <div class="pago">
+                                <span>Transferencia bancaria:</span>
+                                <span id="$" class="monto">$ 50000</span>
+                            </div>
+                            <div class="pago">
+                                <span>Pagos exterior:</span>
+                                <span id="USD" class="monto">USD 50</span>
+                            </div>
+                        </div>
+                    </section>
+                    <a class="inscribirse-button" href="Inscribirse.html">Inscribirse</a>
+                </div>
+            </div>
+
+            <div class="curso">
+                <div class="curso-header">
+                    <img src="../${curso.Img}" alt="Imagen del curso" class="curso-imagen">
+                    <div class="nombrecurso-detalles">
+                        <h3>{curso.Nombre}</h3>
+                        <p>{curso.Descripcion}</p>
+                    </div>
+                    <button class="toggle-button" onclick="toggleCourseContent(this)">▼</button>
+                </div>
+                <div id="Curso${index + 1}name" class="nombrecurso-contenido" style="display: none;">
+                    <section>
+                        <div>
+                            <p><strong>Temario:</strong></p>
+                            <ul>
+                                <li>modulo 1</li>
+                                <li>modulo 2</li>
+                                <li>modulo 3</li>
+                            </ul>
+                        </div>
+                        <div class="medios-pago">
+                            <p><strong>Medios de pago:</strong></p>
+                            <div class="pago">
+                                <span>Transferencia bancaria:</span>
+                                <span id="$" class="monto">$ 50000</span>
+                            </div>
+                            <div class="pago">
+                                <span>Pagos exterior:</span>
+                                <span id="USD" class="monto">USD 50</span>
+                            </div>
+                        </div>
+                    </section>
+                    <a class="inscribirse-button" href="Inscribirse.html">Inscribirse</a>
+                </div>
+            </div>
+
+            <div class="curso">
+                <div class="curso-header">
+                    <img src="../${curso.Img}" alt="Imagen del curso" class="curso-imagen">
+                    <div class="nombrecurso-detalles">
+                        <h3>{curso.Nombre}</h3>
+                        <p>{curso.Descripcion}</p>
+                    </div>
+                    <button class="toggle-button" onclick="toggleCourseContent(this)">▼</button>
+                </div>
+                <div id="Curso${index + 1}name" class="nombrecurso-contenido" style="display: none;">
+                    <section>
+                        <div>
+                            <p><strong>Temario:</strong></p>
+                            <ul>
+                                <li>modulo 1</li>
+                                <li>modulo 2</li>
+                                <li>modulo 3</li>
+                            </ul>
+                        </div>
+                        <div class="medios-pago">
+                            <p><strong>Medios de pago:</strong></p>
+                            <div class="pago">
+                                <span>Transferencia bancaria:</span>
+                                <span id="$" class="monto">$ 50000</span>
+                            </div>
+                            <div class="pago">
+                                <span>Pagos exterior:</span>
+                                <span id="USD" class="monto">USD 50</span>
+                            </div>
+                        </div>
+                    </section>
+                    <a class="inscribirse-button" href="Inscribirse.html">Inscribirse</a>
+                </div>
+            </div>
         </div>
     </main>
 
