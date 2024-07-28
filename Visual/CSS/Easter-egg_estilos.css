@@ -22,6 +22,8 @@ body .back-to-home{
     padding: 10px;
     box-sizing: border-box;
     background-color: #ffffff;
+
+    margin-top: 5%;
 }
 
 h1 {
@@ -102,6 +104,9 @@ footer {
     color: white;
     width: 100%;
     box-sizing: border-box;
+
+    position: absolute;
+    bottom: 0px;
 }
 
 footer .footer-container {
@@ -206,40 +211,4 @@ footer .footer-section a:hover {
 
 #death-message button:hover {
     background-color: #f5c6cb;
-}
-
-@media (max-width: 600px) {
-    footer .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .game-container {
-        padding: 10px;
-    }
-
-    #pet-container #pet img {
-        width: 70%;
-    }
-
-    .progress-bars {
-        margin-bottom: 10px;
-    }
-
-    .progress-bar {
-        align-items: center;
-    }
-
-    progress {
-        width: 80%;
-    }
-
-    .controls {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    #death-message {
-        width: 70%;
-    }
 }
