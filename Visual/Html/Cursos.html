@@ -7,120 +7,158 @@
     <meta name="author" content="Matias Ruibal">
     <meta name="github" content="https://github.com/Matias372">
     <meta name="description" content="Perronautas. Adiestramiento.">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Estilos -->
     <link rel="stylesheet" href="../CSS/Header_estilos.css">
     <link rel="stylesheet" href="../CSS/Footer_estilos.css">
     <link rel="stylesheet" href="../CSS/Cursos_estilos.css">
     <!-- Scripts -->
+    
 </head>
 <body>
     <div id="Header"></div>
 
+    <!-- Main Content -->
     <main>
-        <div class="curso-container">
-            <!-- Los cursos serian renderizados aquí por el JavaScript pero se elimino backend en este proyecto -->
-            <div class="curso">
-                <div class="curso-header">
-                    <img src="../../Resources/Img/Cursos/Adiestramiento Nivel 1_IMG.jpg" alt="Imagen del curso" class="curso-imagen">
-                    <div class="nombrecurso-detalles">
-                        <h3>{curso.Nombre}</h3>
-                        <p>{curso.Descripcion}</p>
+        <div class="container mt-4">
+            <div class="row">
+                <!-- Curso 1 -->
+                <div class="col-12 col-md-12 mb-4">
+                    <div class="card position-relative">
+                        <!-- Sección de Imagen y Contenido Principal -->
+                        <section class="card-content align-items-center">
+                            <!-- Imagen del curso -->
+                            <div class="card-img-top">
+                                <img src="../../Resources/Img/Cursos/Adiestramiento Nivel 1_IMG.jpg" class="img-fluid" alt="Imagen del curso" width="250px">
+                            </div>
+                            <!-- Contenido del curso: Nombre, Descripción, y Botón -->
+                            <div class="card-body">
+                                <h5 class="card-title">Adiestramiento Canino Nivel 1</h5>
+                                <p class="card-text">Aprende los fundamentos básicos del adiestramiento canino con nuestro curso de Nivel 1. Ideal para propietarios de perros que buscan establecer una comunicación efectiva y fortalecer el vínculo con sus mascotas. En este curso, cubriremos técnicas esenciales para enseñar comandos básicos y resolver problemas de comportamiento comunes.</p>
+                                <button class="btn btn-primary curso__toggle-button" onclick="toggleCourseContent(this)">▼</button>
+                            </div>
+                        </section>
+                        <!-- Detalles Adicionales -->
+                        <div class="curso__contenido" style="display: none;">
+                            <div class="card-body row  d-flex justify-content-center">
+                                <!-- Temario -->
+                                <div class="curso__temario col-md-6">
+                                    <h6>Temario:</h6>
+                                    <ul>
+                                        <li>Introducción al Adiestramiento Canino</li>
+                                        <li>Comandos Básicos: Sentado, Quieto, Ven aquí</li>
+                                        <li>Uso del Refuerzo Positivo</li>
+                                        <li>Problemas de Comportamiento</li>
+                                    </ul>
+                                </div>
+                                <!-- Medios de Pago -->
+                                <div class="curso__medios-de-pago col-md-6">
+                                    <h6>Medios de pago:</h6>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Transferencia bancaria:</span>
+                                        <span>$ 50000</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Pagos exterior:</span>
+                                        <span>USD 50</span>
+                                    </div>
+                                </div>
+                                <a class="btn btn-success mt-3" href="Inscribirse.html">Inscribirse</a>
+                            </div>
+                        </div>
                     </div>
-                    <button class="toggle-button" onclick="toggleCourseContent(this)">▼</button>
                 </div>
-                <div id="Curso${index + 1}name" class="nombrecurso-contenido" style="display: none;">
-                    <section>
-                        <div>
-                            <p><strong>Temario:</strong></p>
-                            <ul>
-                                <li>modulo 1</li>
-                                <li>modulo 2</li>
-                                <li>modulo 3</li>
-                            </ul>
-                        </div>
-                        <div class="medios-pago">
-                            <p><strong>Medios de pago:</strong></p>
-                            <div class="pago">
-                                <span>Transferencia bancaria:</span>
-                                <span id="$" class="monto">$ 50000</span>
+                <!-- Curso 2 -->
+                <div class="col-12 col-md-12 mb-4">
+                    <div class="card position-relative">
+                        <!-- Sección de Imagen y Contenido Principal -->
+                        <section class="card-content align-items-center">
+                            <!-- Imagen del curso -->
+                            <div class="card-img-top">
+                                <img src="../../Resources/Img/Cursos/Control de Desastres_IMG.jpg" class="img-fluid" alt="Imagen del curso" width="250px">
                             </div>
-                            <div class="pago">
-                                <span>Pagos exterior:</span>
-                                <span id="USD" class="monto">USD 50</span>
+                            <!-- Contenido del curso: Nombre, Descripción, y Botón -->
+                            <div class="card-body">
+                                <h5 class="card-title">Control de Desastres</h5>
+                                <p class="card-text">Este curso está diseñado para ayudarte a manejar y controlar los desastres que pueden causar los cachorros en tu hogar. Desde masticar muebles hasta hacer sus necesidades en lugares inapropiados, aprenderás técnicas eficaces para prevenir y corregir estos comportamientos. Ideal para nuevos propietarios de cachorros y para aquellos que buscan mejorar su manejo de mascotas jóvenes.</p>
+                                <button class="btn btn-primary curso__toggle-button" onclick="toggleCourseContent(this)">▼</button>
+                            </div>
+                        </section>
+                        <!-- Detalles Adicionales -->
+                        <div class="curso__contenido" style="display: none;">
+                            <div class="card-body row  d-flex justify-content-center">
+                                <!-- Temario -->
+                                <div class="curso__temario col-md-6">
+                                    <h6>Temario:</h6>
+                                    <ul>
+                                        <li>Problemas Comunes en Cachorros</li>
+                                        <li>Técnicas para Prevenir el Desorden en Casa</li>
+                                        <li>Cómo Enseñar al Cachorro a No Masticar Objetos No Deseados</li>
+                                        <li>Manejar el Comportamiento Destructivo</li>
+                                    </ul>
+                                </div>
+                                <!-- Medios de Pago -->
+                                <div class="curso__medios-de-pago col-md-6">
+                                    <h6>Medios de pago:</h6>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Transferencia bancaria:</span>
+                                        <span>$ 50000</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Pagos exterior:</span>
+                                        <span>USD 50</span>
+                                    </div>
+                                </div>
+                                <a class="btn btn-success mt-3" href="Inscribirse.html">Inscribirse</a>
                             </div>
                         </div>
-                    </section>
-                    <a class="inscribirse-button" href="Inscribirse.html">Inscribirse</a>
-                </div>
-            </div>
-
-            <div class="curso">
-                <div class="curso-header">
-                    <img src="../../Resources/Img/Cursos/Control de Desastres_IMG.jpg" alt="Imagen del curso" class="curso-imagen">
-                    <div class="nombrecurso-detalles">
-                        <h3>{curso.Nombre}</h3>
-                        <p>{curso.Descripcion}</p>
                     </div>
-                    <button class="toggle-button" onclick="toggleCourseContent(this)">▼</button>
                 </div>
-                <div id="Curso${index + 1}name" class="nombrecurso-contenido" style="display: none;">
-                    <section>
-                        <div>
-                            <p><strong>Temario:</strong></p>
-                            <ul>
-                                <li>modulo 1</li>
-                                <li>modulo 2</li>
-                                <li>modulo 3</li>
-                            </ul>
-                        </div>
-                        <div class="medios-pago">
-                            <p><strong>Medios de pago:</strong></p>
-                            <div class="pago">
-                                <span>Transferencia bancaria:</span>
-                                <span id="$" class="monto">$ 50000</span>
+                <!-- Curso 3 -->
+                <div class="col-12 col-md-12 mb-4">
+                    <div class="card position-relative">
+                        <!-- Sección de Imagen y Contenido Principal -->
+                        <section class="card-content align-items-center">
+                            <!-- Imagen del curso -->
+                            <div class="card-img-top">
+                                <img src="../../Resources/Img/Cursos/Cómo identificar si tu perro es un psicópata_IMG.jpg" class="img-fluid" alt="Imagen del curso" width="250px">
                             </div>
-                            <div class="pago">
-                                <span>Pagos exterior:</span>
-                                <span id="USD" class="monto">USD 50</span>
+                            <!-- Contenido del curso: Nombre, Descripción, y Botón -->
+                            <div class="card-body">
+                                <h5 class="card-title">Identifica si tu Perro es un Psicópata</h5>
+                                <p class="card-text">Este curso te ayudará a identificar comportamientos que podrían indicar problemas de comportamiento graves en tu perro. Aprende a reconocer las señales de alerta de un perro con tendencias psicopáticas y cómo abordarlas de manera efectiva. Este curso está dirigido a propietarios que quieren entender mejor la psicología de sus mascotas y buscar ayuda profesional si es necesario.</p>
+                                <button class="btn btn-primary curso__toggle-button" onclick="toggleCourseContent(this)">▼</button>
+                            </div>
+                        </section>
+                        <!-- Detalles Adicionales -->
+                        <div class="curso__contenido" style="display: none;">
+                            <div class="card-body row d-flex justify-content-center">
+                                <!-- Temario -->
+                                <div class="curso__temario col-md-6">
+                                    <h6>Temario:</h6>
+                                    <ul>
+                                        <li>Comprendiendo la Psicopatía en Perros</li>
+                                        <li>Señales y Síntomas</li>
+                                        <li>Estrategias de Intervención y Manejo</li>
+                                    </ul>
+                                </div>
+                                <!-- Medios de Pago -->
+                                <div class="curso__medios-de-pago col-md-6">
+                                    <h6>Medios de pago:</h6>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Transferencia bancaria:</span>
+                                        <span>$ 50000</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Pagos exterior:</span>
+                                        <span>USD 50</span>
+                                    </div>
+                                </div>
+                                <a class="btn btn-success mt-3" href="Inscribirse.html">Inscribirse</a>
                             </div>
                         </div>
-                    </section>
-                    <a class="inscribirse-button" href="Inscribirse.html">Inscribirse</a>
-                </div>
-            </div>
-
-            <div class="curso">
-                <div class="curso-header">
-                    <img src="../../Resources/Img/Cursos/Cómo identificar si tu perro es un psicópata_IMG.jpg" alt="Imagen del curso" class="curso-imagen">
-                    <div class="nombrecurso-detalles">
-                        <h3>{curso.Nombre}</h3>
-                        <p>{curso.Descripcion}</p>
                     </div>
-                    <button class="toggle-button" onclick="toggleCourseContent(this)">▼</button>
-                </div>
-                <div id="Curso${index + 1}name" class="nombrecurso-contenido" style="display: none;">
-                    <section>
-                        <div>
-                            <p><strong>Temario:</strong></p>
-                            <ul>
-                                <li>modulo 1</li>
-                                <li>modulo 2</li>
-                                <li>modulo 3</li>
-                            </ul>
-                        </div>
-                        <div class="medios-pago">
-                            <p><strong>Medios de pago:</strong></p>
-                            <div class="pago">
-                                <span>Transferencia bancaria:</span>
-                                <span id="$" class="monto">$ 50000</span>
-                            </div>
-                            <div class="pago">
-                                <span>Pagos exterior:</span>
-                                <span id="USD" class="monto">USD 50</span>
-                            </div>
-                        </div>
-                    </section>
-                    <a class="inscribirse-button" href="Inscribirse.html">Inscribirse</a>
                 </div>
             </div>
         </div>
@@ -128,6 +166,11 @@
 
     <div id="Footer"></div>
 
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Scripts personalizados -->
     <script src="../../Control/HeaFoo_Handler.js"></script>
     <script src="../../Control/Cursos_Handler.js"></script>
 </body>

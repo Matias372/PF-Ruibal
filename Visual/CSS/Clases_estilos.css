@@ -4,18 +4,14 @@ body {
     padding: 0;
 }
 
-main {
+.main {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
 
-main h3, main h4, main h5{
-    font-size: 18px;
-}
-
-#tipo-presensial, #tipo-remoto {
+.class-type {
     display: inline-block;
     width: 48%;
     height: 450px;
@@ -26,57 +22,39 @@ main h3, main h4, main h5{
     margin-bottom: 20px;
 }
 
-#tipo-presensial {
+.class-type--presensial {
     margin-right: 2%;
 }
 
-#tipo-presensial h2, #tipo-remoto h2 {
+.class-type__title {
     margin-bottom: 15px;
 }
 
-#tipo-presensial h3, #tipo-remoto h3 {
+.class-type__subtitle {
     text-align: justify;
-    margin-bottom: 10px;
-    margin-left: 5%;
 }
 
-#tipo-presensial ul, #tipo-remoto ul {
+.class-type__list {
     text-align: justify;
     list-style-type: disc;
     margin-left: 20px;
-    margin-bottom: 25px;
     padding-left: 5%;
 }
 
-#tipo-presensial ul li, #tipo-remoto ul li {
+.class-type__item {
     margin-bottom: 5px;
 }
 
-#tipo-presensial ul{
+.class-type--presensial .class-type__list {
     column-count: 2;
     margin-left: 5%;
 }
 
-#tipo-remoto p{
-    font-weight: normal !important;
+.class-type__topics-title {
+    margin-top: 10px;
 }
 
-#tipo-remoto #zona-horaria {
-    font-weight: bold;
-    display: inline;
-}
-
-#tipo-remoto h4{
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
-
-#tipo-presensial h4{
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
-
-#section-consideracion {
+.considerations {
     background-color: #f9f9f9;
     padding: 20px;
     box-sizing: border-box;
@@ -86,16 +64,16 @@ main h3, main h4, main h5{
     align-items: center;
 }
 
-#section-consideracion h2{
+.considerations__title {
     margin-bottom: 25px;
 }
 
-#Btn-Contactanos {
+.contact {
     text-align: center;
     margin-bottom: 20px;
 }
 
-#Btn-Contactanos a {
+.contact__link {
     width: 225px;
     height: 66px;
     display: inline-flex;
@@ -110,19 +88,25 @@ main h3, main h4, main h5{
     align-items: center;
 }
 
-#Btn-Contactanos a:hover {
+.contact__link:hover {
     background: #ceffe2;
+    border-color: #20c361;
+    color: #000000;
 }
 
-#Btn-Contactanos a img {
-    margin-right: 10px;
+.class-type__topic {
+    margin-bottom: 0px !important;
 }
 
-
-@media screen and (max-width: 768px) {
-    #tipo-presensial, #tipo-remoto, #section-consideracion {
-        display: block;
+@media (max-width: 768px) {
+    .considerations{
         width: 100%;
-        margin-right: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .Clases-container{
+        display: flex;
+        flex-wrap: nowrap;
     }
 }

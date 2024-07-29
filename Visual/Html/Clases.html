@@ -8,72 +8,74 @@
     <meta name="github" content="https://github.com/Matias372">
     <meta name="description" content="Perronautas. Adiestramiento.">
     <!-- Estilos -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../CSS/Header_estilos.css">
     <link rel="stylesheet" href="../CSS/Footer_estilos.css">
     <link rel="stylesheet" href="../CSS/Clases_estilos.css">
 </head>
 <body>
-    
     <div id="Header"></div>
 
-    <main>
-        <div id="tipo-presensial">
-            <h2>Presensial</h2>
-            <h3>Zona de cobertura:</h3>
-            <div>
-                <ul>
-                    <li>Ramos Mejia</li>
-                    <li>Villa Luzuriaga</li>
-                    <li>San Justo</li>
-                    <li>Castelar</li>
-                    <li>El Palomar</li>
-                    <li>Haedo</li>
-                    <li>Moron</li>
-                    <li>Villa Sarmiento</li>
-                    <li>Caseros</li>
-                    <li>Ciudadela</li>
+    <main class="main container">
+        <div class="Clases-container row  justify-content-center">
+            <section class="class-type class-type--presensial col-12 col-md-6">
+                <h2 class="class-type__title">Presencial</h2>
+                <h3 class="class-type__subtitle">Zona de cobertura:</h3>
+                <div class="class-type__coverage">
+                    <ul class="class-type__list">
+                        <li class="class-type__item">Ramos Mejia</li>
+                        <li class="class-type__item">Villa Luzuriaga</li>
+                        <li class="class-type__item">San Justo</li>
+                        <li class="class-type__item">Castelar</li>
+                        <li class="class-type__item">El Palomar</li>
+                        <li class="class-type__item">Haedo</li>
+                        <li class="class-type__item">Moron</li>
+                        <li class="class-type__item">Villa Sarmiento</li>
+                        <li class="class-type__item">Caseros</li>
+                        <li class="class-type__item">Ciudadela</li>
+                    </ul>
+                </div>
+                <h4 class="class-type__topics-title">Temas</h4>
+                <p class="class-type__topic">Entrenamiento respetuoso.</p>
+                <p class="class-type__topic">Educación y obediencia.</p>
+                <p class="class-type__topic">Modificación de conducta.</p>
+            </section>
+            
+            <section class="class-type class-type--remote col-12 col-md-6">
+                <h2 class="class-type__title">Remoto</h2>
+                <h3 class="class-type__subtitle">Zona de cobertura:</h3>
+                <ul class="class-type__list">
+                    <li class="class-type__item">LATAM</li>
+                    <li class="class-type__item">España</li>
+                    <li class="class-type__item">Estados Unidos (Spanish)</li>
                 </ul>
-            </div>
-            <h4>Temas</h4>
-            <p>Entrenamiento respetuoso.</p>
-            <p>Educación y obediencia.</p>
-            <p>Modificación de conducta.</p>
-        </div>
-        
-        <div id="tipo-remoto">
-            <h2>Remoto</h2>
-            <h3>Zona de cobertura:</h3>
-            <ul>
-                <li>LATAM</li>
-                <li>España</li>
-                <li>Estados Unidos spanish</li>
-            </ul>
-            <h5 id="zona-horaria">Zona horarias:</h5>
-            <p id="zona-horaria">UTC o GMT-3</p>
-            <h4>Temas</h4>
-            <p>Clases de adiestramiento.</p>
-            <p>Modificación de conducta.</p>
-            <p>Asesoramiento y seguimiento.</p>
-            <p>Acompañamiento post traslado.</p>
+                <h5 class="class-type__timezone-title">Zona horarias:</h5>
+                <p class="class-type__timezone">UTC o GMT-3</p>
+                <h4 class="class-type__topics-title">Temas</h4>
+                <p class="class-type__topic">Clases de adiestramiento.</p>
+                <p class="class-type__topic">Modificación de conducta.</p>
+                <p class="class-type__topic">Asesoramiento y seguimiento.</p>
+                <p class="class-type__topic">Acompañamiento post traslado.</p>
+            </section>
         </div>
 
-        <div id="section-consideracion">
+        <section class="considerations">
+            <h2 class="considerations__title">Consideraciones</h2>
+            <p class="considerations__text">Tenete ergo quod si servitus quae natura liber, et aliena tua tunc impeditur. Dolebis, et turbabuntur, et invenietis, cum culpa tam dis hominibusque. Quod si tibi tantum sit propria et aliena quale sit.</p>
+        </section>
 
-            <h2>Consideraciones</h2>
-            <p>Tenete ergo quod si servitus quae natura liber, et aliena tua tunc impeditur. Dolebis, et turbabuntur, et invenietis, cum culpa tam dis hominibusque. Quod si tibi tantum sit propria et aliena quale sit.</p>
-
-        </div>
-
-        <div id="Btn-Contactanos">
-            <a id="whatsapp"  target="_blank" >
+        <div class="contact">
+            <a id="whatsapp" class="contact__link btn btn-primary" target="_blank">
                 <img src="../../Resources/Img/Icons/Whatsapp-icon.svg" alt="whatsapp" width="32">Contactanos
             </a>
         </div>
-
     </main>
 
     <div id="Footer"></div>
 
     <script src="../../Control/HeaFoo_Handler.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
