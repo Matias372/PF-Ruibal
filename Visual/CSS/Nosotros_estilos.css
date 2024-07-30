@@ -1,5 +1,6 @@
 body{
     font-family: Arial, sans-serif;
+    background-image: url("../../Resources/Template/Fondo_star_light_white.png");
 }
 
 main {
@@ -78,7 +79,7 @@ main {
     align-items: center;
     background-color: #e1e1e1;
     border-radius: 8px;
-    padding: 20px;
+    padding: 5px;
     max-width: 300px;
 }
 

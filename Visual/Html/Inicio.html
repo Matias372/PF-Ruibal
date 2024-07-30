@@ -8,36 +8,37 @@
     <meta name="github" content="https://github.com/Matias372">
     <meta name="description" content="Perronautas. Adiestramiento.">
     <!-- Estilos -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/Header_estilos.css">
     <link rel="stylesheet" href="../CSS/Footer_estilos.css">
     <link rel="stylesheet" href="../CSS/Inicio_estilos.css">
+    
 </head>
 <body>
-    
     <div id="Header"></div>
     
-    <main>
-        <div id="slider">
-            <img id="sliderImage" src="" alt="Slider Image">
+    <main class="main text-center">
+        <div id="slider" class="slider">
+            <img id="sliderImage" class="slider__image" src="" alt="Slider Image">
         </div>
 
-        <section id="Servicios">
-            <div id="Clases">
-                <h2>Clases</h2>
-                <p>En nuestras <strong>Clases</strong>, te ofrecemos una experiencia personalizada en adiestramiento canino. Puedes elegir entre clases presenciales o sesiones en vivo por Zoom, donde nuestro experto te guiará paso a paso. Estas clases están diseñadas para resolver problemas específicos de comportamiento de tu perro, enseñar nuevas habilidades o simplemente mejorar su obediencia general. Trabajaremos juntos para asegurar que tanto tú como tu perro obtengan los mejores resultados en un entorno interactivo y de apoyo.</p>
-                <a href="Clases.html">Ver</a>
+        <section id="Servicios" class="services row justify-content-around">
+            <div id="Clases" class="services__item services__item--classes col-md-5 p-3">
+                <h2 class="services__title">Clases</h2>
+                <p class="services__description">En nuestras <strong>Clases</strong>, te ofrecemos una experiencia personalizada en adiestramiento canino. Puedes elegir entre clases presenciales o sesiones en vivo por Zoom, donde nuestro experto te guiará paso a paso. Estas clases están diseñadas para resolver problemas específicos de comportamiento de tu perro, enseñar nuevas habilidades o simplemente mejorar su obediencia general. Trabajaremos juntos para asegurar que tanto tú como tu perro obtengan los mejores resultados en un entorno interactivo y de apoyo.</p>
+                <a href="Clases.html" class="services__link btn btn-primary">Ver</a>
             </div>
     
-            <div id="Cursos">
-                <h2>Cursos</h2>
-                <p>Nuestros <strong>Cursos</strong> están diseñados para aquellos que buscan una formación más completa y estructurada en adiestramiento canino. Ofrecemos cursos pregrabados que puedes seguir a tu propio ritmo, así como sesiones en vivo por Zoom donde puedes interactuar con el instructor y otros participantes. Cada curso sigue un programa detallado que cubre una amplia gama de temas, desde habilidades básicas hasta técnicas avanzadas de adiestramiento. Ideal para grupos de personas interesadas en mejorar sus conocimientos y habilidades en el adiestramiento canino.</p>
-                <a href="Cursos.html">Ver</a>
+            <div id="Cursos" class="services__item services__item--courses col-md-5 p-3">
+                <h2 class="services__title">Cursos</h2>
+                <p class="services__description">Nuestros <strong>Cursos</strong> están diseñados para aquellos que buscan una formación más completa y estructurada en adiestramiento canino. Ofrecemos cursos pregrabados que puedes seguir a tu propio ritmo, así como sesiones en vivo por Zoom donde puedes interactuar con el instructor y otros participantes. Cada curso sigue un programa detallado que cubre una amplia gama de temas, desde habilidades básicas hasta técnicas avanzadas de adiestramiento. Ideal para grupos de personas interesadas en mejorar sus conocimientos y habilidades en el adiestramiento canino.</p>
+                <a href="Cursos.html" class="services__link btn btn-primary">Ver</a>
             </div>
         </section>
 
-        <div id="Btn-Contactanos">
-            <a id="whatsapp"  target="_blank" >
-                <img src="../../Resources/Img/Icons/Whatsapp-icon.svg" alt="whatsapp" width="32">Contactanos
+        <div id="Btn-Contactanos" class="contact-button">
+            <a id="whatsapp" class="contact-button__link" href="https://web.whatsapp.com" target="_blank">
+                <img src="../../Resources/Img/Icons/Whatsapp-icon.svg" alt="whatsapp" width="32" class="contact-button__icon">Contactanos
             </a>
         </div>
     </main>
@@ -46,5 +47,7 @@
 
     <script src="../../Control/HeaFoo_Handler.js"></script>
     <script src="../../Control/Slider.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

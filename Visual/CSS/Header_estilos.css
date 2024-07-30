@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
 }
 
 header {
@@ -11,6 +13,7 @@ header {
     padding: 10px 20px;
     background-color: #f4f4f4;
     border-bottom: 1px solid #ddd;
+    background-color: #3ECAD3;
 }
 
 header img {
@@ -39,14 +42,14 @@ nav#botones ul li a {
     color: #333;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #0C1B54;
     color: #fff;
     border-radius: 5px;
     display: inline-block;
 }
 
 nav#botones ul li a:hover {
-    background-color: #0056b3;
+    background-color: #18296a;
 }
 
 /* Estilos para móvil */

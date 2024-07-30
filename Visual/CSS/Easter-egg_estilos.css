@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: gray;
+    min-height: 100vh;
 }
 
 body .back-to-home{
@@ -23,7 +24,8 @@ body .back-to-home{
     box-sizing: border-box;
     background-color: #ffffff;
 
-    margin-top: 5%;
+    min-height: 80vh;
+    align-content: center;
 }
 
 h1 {
@@ -105,8 +107,7 @@ footer {
     width: 100%;
     box-sizing: border-box;
 
-    position: absolute;
-    bottom: 0px;
+    min-height: 20vh;
 }
 
 footer .footer-container {
@@ -211,4 +212,10 @@ footer .footer-section a:hover {
 
 #death-message button:hover {
     background-color: #f5c6cb;
+}
+
+@media (max-width: 768px) {
+    footer .footer-container {
+        flex-direction: column;
+    }
 }

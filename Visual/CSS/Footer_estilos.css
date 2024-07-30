@@ -4,6 +4,9 @@ footer {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #0C1B54;
+    color: white;
 }
 
 footer div {
@@ -18,7 +21,7 @@ footer div a {
     display: block;
     margin-bottom: 10px;
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     transition: color 0.3s;
 }
 

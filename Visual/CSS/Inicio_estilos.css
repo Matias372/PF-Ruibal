@@ -1,72 +1,83 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-image: url("../../Resources/Template/Fondo_star_light_white.png");
 }
 
-/* Slider ===============*/
-#slider {
-    /*height: 600px;*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Slider */
+.slider {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    width: 80%;
 }
 
-#slider img {
+.slider__image {
     max-width: 100%;
     max-height: 100%;
     display: block;
+    
 }
 
-/* Servicios =============*/
-#Servicios{
+/* Servicios */
+.services {
     margin-left: 20px;
     margin-right: 20px;
 }
 
-main section {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
+.services .services__item{
+    border-radius: 2vh;
 }
 
-section div {
-    width: 45%;
-    padding: 20px;
+.services__item {
     background: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-bottom: 20px;
+    background-color: #72CDAE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-section div h2 {
+.services__title {
     margin-bottom: 10px;
     text-align: center;
 }
 
-section div p {
+.services__description {
     margin-bottom: 20px;
 }
 
-section div a {
+.services__link {
     display: inline-block;
     padding: 10px 20px;
-    background: #007BFF;
+    background: #0C1B54;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
 }
 
-section div a:hover {
-    background: #0056b3;
+.services__link:hover {
+    background: #18296a;
 }
 
-#Btn-Contactanos {
+/* Botón de Contacto */
+.contact-button {
     text-align: center;
     margin-bottom: 20px;
 }
 
-#Btn-Contactanos a {
+.contact-button__link {
     width: 225px;
     height: 66px;
     display: inline-flex;
@@ -81,21 +92,34 @@ section div a:hover {
     align-items: center;
 }
 
-#Btn-Contactanos a:hover {
+.contact-button__link:hover {
     background: #ceffe2;
+    text-decoration: none;
 }
 
-#Btn-Contactanos a img {
+.contact-button__icon {
     margin-right: 10px;
 }
+
+.btn-primary{
+    border-color: #0C1B54;
+}
+
+.services__description{
+    text-align: start;
+}
+
 /* Estilos para móvil */
 @media (max-width: 768px) {
-    section {
+    .services {
         flex-direction: column;
     }
 
-    section div {
+    .services__item {
         width: 100%;
-        margin-bottom: 20px;
+    }
+
+    .slider{
+        width: 100%;
     }
 }
