@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    function loadHTML(file, elementId) {
+    // Carga Header y Footer en html.
+    function loadHTML(file, elementId) { 
         var xhr = new XMLHttpRequest();
         xhr.open('GET', file, true);
         xhr.onreadystatechange = function() {
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     loadHTML('../../Visual/Html/Footer.html', 'Footer');
 });
 
+// Función para mostrar y ocultar el menu
 function toggleMenu() {
     var navBotones = document.getElementById('botones');
     navBotones.classList.toggle('active');

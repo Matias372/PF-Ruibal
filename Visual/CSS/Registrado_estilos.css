@@ -1,7 +1,8 @@
 body, html {
-    height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url("../../Resources/Template/Fondo_star_light_white.png");
 }
 
 body {
@@ -50,11 +51,6 @@ main a:hover {
     background-color: #0056b3;
 }
 
-#Footer {
-    background: #f1f1f1;
-    text-align: center;
-    padding: 10px;
-}
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {

@@ -1,10 +1,11 @@
 body{
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url("../../Resources/Template/Fondo_star_light_white.png");
 }
 
 main {
     padding: 20px;
-    background-color: #f9f9f9;
     max-width: 800px;
     margin: 0 auto;
     margin-top: 5%;
@@ -12,7 +13,7 @@ main {
 }
 
 #Inscribirse {
-    background-color: #ffffff;
+    background-image: url("../../Resources/Template/Fondo_simple_light_orange.png");
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

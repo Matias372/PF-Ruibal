@@ -49,7 +49,7 @@ nav#botones ul li a {
 }
 
 nav#botones ul li a:hover {
-    background-color: #18296a;
+    background-color: #1d307e;
 }
 
 /* Estilos para móvil */
@@ -116,8 +116,13 @@ nav#botones ul li a:hover {
         width: 100%;
         text-align: center;
         border-radius: 0%;
-        background-color: darkgray;
-        border: 2px solid black;
+        color: white;
+        background-color: #0C1B54;
+        border: 2px solid #18296a;
+    }
+
+    nav#botones ul li a:hover {
+        background-color: #1d307e;
     }
 
 }
