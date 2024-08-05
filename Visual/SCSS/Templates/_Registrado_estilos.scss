@@ -1,0 +1,70 @@
+#Template-Registrado {
+    // Reseteo de márgenes y configuración general
+    body, html {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; // Asegura que el body ocupe al menos toda la altura de la ventana
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        margin-top: 10px;
+        flex: 1; // Permite que main ocupe el espacio disponible
+    }
+
+    main img {
+        width: 400px;
+        margin-bottom: 20px;
+        background-color: #597766;
+    }
+
+    main h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    main p {
+        font-size: 1.2em;
+        max-width: 600px;
+        margin-bottom: 20px;
+    }
+
+    main a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    main a:hover {
+        background-color: #0056b3;
+    }
+
+    /* Ajustes para pantallas pequeñas */
+    @media (max-width: 768px) {
+        main h1 {
+            font-size: 1.9em;
+        }
+
+        main img {
+            width: 100%;
+        }
+    }
+}

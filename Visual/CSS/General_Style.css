@@ -1,0 +1,903 @@
+@charset "UTF-8";
+#Template-Inicio {
+  /*Inicio==================*/
+  /*body*/
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+}
+#Template-Inicio main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Template-Inicio .slider {
+  /* Slider */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 80%;
+}
+#Template-Inicio .slider__image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+#Template-Inicio .services {
+  /* Servicios */
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#Template-Inicio .services .services__item {
+  border-radius: 2vh;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #72CDAE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#Template-Inicio .services__title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+#Template-Inicio .services__description {
+  margin-bottom: 20px;
+  text-align: start;
+}
+#Template-Inicio .services__link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0C1B54;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+#Template-Inicio .services__link:hover {
+  background: #18296a;
+}
+#Template-Inicio .contact-button {
+  /* Botón de Contacto */
+  text-align: center;
+  margin-bottom: 20px;
+}
+#Template-Inicio .contact-button__link {
+  width: 225px;
+  height: 66px;
+  display: inline-flex;
+  padding: 10px 20px;
+  background: #ffffff;
+  border: 4px solid #20c361;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background 0.3s;
+  font-size: 24px;
+  align-items: center;
+}
+#Template-Inicio .contact-button__link:hover {
+  background: #ceffe2;
+  text-decoration: none;
+}
+#Template-Inicio .contact-button__icon {
+  margin-right: 10px;
+}
+#Template-Inicio .btn-primary {
+  border-color: #0C1B54;
+}
+@media (max-width: 768px) {
+  #Template-Inicio {
+    /* Estilos para móvil */
+  }
+  #Template-Inicio .services {
+    flex-direction: column;
+  }
+  #Template-Inicio .services__item {
+    width: 100%;
+  }
+  #Template-Inicio .slider {
+    width: 100%;
+  }
+}
+
+#Template-Clases {
+  /*CLASES=========================*/
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+  /* Estilos para móvil */
+  /* Estilos para pantallas grandes */
+}
+#Template-Clases .main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+#Template-Clases .Clases-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#Template-Clases .Clases-container .class-type {
+  display: inline-block;
+  width: 48%;
+  height: 450px;
+  vertical-align: top;
+  background-color: #FEC985;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border-radius: 2vh;
+  text-align: center;
+}
+#Template-Clases .Clases-container .class-type--presensial {
+  margin-right: 2%;
+}
+#Template-Clases .Clases-container .class-type--presensial__list {
+  column-count: 2;
+  margin-left: 5%;
+}
+#Template-Clases .Clases-container .class-type__title {
+  margin-bottom: 15px;
+}
+#Template-Clases .Clases-container .class-type__subtitle {
+  text-align: justify;
+}
+#Template-Clases .Clases-container .class-type__list {
+  text-align: justify;
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 5%;
+}
+#Template-Clases .Clases-container .class-type__item {
+  margin-bottom: 5px;
+}
+#Template-Clases .Clases-container .class-type__topics-title {
+  margin-top: 10px;
+}
+#Template-Clases .Clases-container .class-type__topic {
+  margin-bottom: 0px !important;
+}
+#Template-Clases .Clases-container .considerations {
+  background-color: #72CDAE;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+}
+#Template-Clases .Clases-container .considerations__title {
+  margin-bottom: 25px;
+}
+#Template-Clases .Clases-container .contact {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#Template-Clases .Clases-container .contact__link {
+  width: 225px;
+  height: 66px;
+  display: inline-flex;
+  padding: 10px 20px;
+  background: #ffffff;
+  border: 4px solid #20c361;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background 0.3s;
+  font-size: 24px;
+  align-items: center;
+}
+#Template-Clases .Clases-container .contact__link:hover {
+  background: #ceffe2;
+  border-color: #20c361;
+  color: #000000;
+}
+@media (max-width: 768px) {
+  #Template-Clases .considerations {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) {
+  #Template-Clases .Clases-container {
+    flex-wrap: nowrap;
+  }
+}
+
+#Template-Cursos body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+}
+#Template-Cursos h5, #Template-Cursos h6 {
+  font-weight: bold;
+}
+#Template-Cursos .container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+#Template-Cursos .container h2 {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 20px;
+}
+#Template-Cursos .card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+#Template-Cursos .card .card-content {
+  background-image: url("../../Resources/Template/Fondo_simple_light_green.png");
+  border: 3px solid #2b8f67;
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+}
+#Template-Cursos .card .card-content .card-img-top {
+  width: 250px;
+  height: 200px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Template-Cursos .card .card-content .card-body {
+  flex: 1;
+  padding: 0 !important;
+}
+#Template-Cursos .card .card-content .card-body .card-title {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #000000;
+}
+#Template-Cursos .card .card-content .card-body .card-text {
+  margin: 0;
+  color: #000000;
+}
+#Template-Cursos .card .card-content .card-body .curso__toggle-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000000;
+  transition: color 0.2s ease-in-out;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#Template-Cursos .card .card-content .card-body .curso__toggle-button:hover {
+  color: #3b3b3b;
+}
+#Template-Cursos .card .curso__contenido {
+  background-image: url("../../Resources/Template/Fondo_simple_light_orange.png");
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+}
+#Template-Cursos .card .curso__contenido .curso__temario {
+  margin-bottom: 20px;
+}
+#Template-Cursos .card .curso__contenido .curso__temario h6 {
+  margin-bottom: 10px;
+}
+#Template-Cursos .card .curso__contenido .curso__temario ul {
+  padding: 0;
+  margin-left: 3vh !important;
+  margin: 0;
+  text-align: left;
+}
+#Template-Cursos .card .curso__contenido .curso__temario ul li {
+  margin-bottom: 10px;
+  color: #333333;
+}
+#Template-Cursos .card .curso__contenido .curso__medios-de-pago {
+  margin-bottom: 20px;
+}
+#Template-Cursos .card .curso__contenido .curso__medios-de-pago h6 {
+  margin-bottom: 10px;
+}
+#Template-Cursos .card .curso__contenido .curso__medios-de-pago .d-flex {
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+#Template-Cursos .card .curso__contenido .btn-success {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+#Template-Cursos .card .curso__contenido .btn-success:hover {
+  background-color: #45a049;
+}
+@media (max-width: 768px) {
+  #Template-Cursos .card-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  #Template-Cursos .card-img-top {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  #Template-Cursos .curso__contenido {
+    text-align: left;
+  }
+}
+
+#Template-Easter-egg body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+  min-height: 100vh;
+}
+#Template-Easter-egg .back-to-home {
+  position: absolute;
+}
+#Template-Easter-egg .back-to-home img {
+  margin: 5px;
+  width: 30px;
+}
+#Template-Easter-egg .game-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  min-height: 80vh;
+  align-content: center;
+}
+#Template-Easter-egg .game-container h1 {
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+}
+#Template-Easter-egg .game-container .progress-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#Template-Easter-egg .game-container .progress-bars .progress-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#Template-Easter-egg .game-container .progress-bars .progress-bar label {
+  font-weight: bold;
+  font-size: 16px;
+}
+#Template-Easter-egg .game-container .progress-bars .progress-bar progress {
+  width: 100%;
+  height: 20px;
+}
+#Template-Easter-egg .game-container .progress-bars .progress-bar progress::-webkit-progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+#Template-Easter-egg .game-container #pet-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#Template-Easter-egg .game-container #sucio-container {
+  position: absolute;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  align-self: flex-start;
+  order: 1;
+}
+#Template-Easter-egg .game-container #sucio-container img {
+  width: 100%;
+  height: auto;
+}
+#Template-Easter-egg .game-container #accion-container {
+  position: absolute;
+  top: 10px;
+  width: 50px;
+  height: 50px;
+  align-self: flex-end;
+  order: -1;
+  margin-left: 5%;
+}
+#Template-Easter-egg .game-container #accion-container .extra-gif {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+#Template-Easter-egg .game-container .controls {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 10px;
+}
+#Template-Easter-egg .game-container .controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #d1d1d1;
+  border: 1px solid #999999;
+  color: #333333;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+#Template-Easter-egg .game-container .controls button:hover {
+  background-color: #b3b3b3;
+}
+#Template-Easter-egg .game-container .controls button:active {
+  background-color: #004494;
+  transform: translateY(0);
+}
+#Template-Easter-egg .game-container #death-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 1000;
+  max-width: 80%;
+}
+#Template-Easter-egg .game-container #death-message p {
+  margin: 0 0 10px;
+}
+#Template-Easter-egg .game-container #death-message button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#Template-Easter-egg .game-container #death-message button:hover {
+  background-color: #f5c6cb;
+}
+#Template-Easter-egg footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 20vh;
+}
+#Template-Easter-egg footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#Template-Easter-egg footer .footer-container .footer-section {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+#Template-Easter-egg footer .footer-container .footer-section h3,
+#Template-Easter-egg footer .footer-container .footer-section p,
+#Template-Easter-egg footer .footer-container .footer-section a {
+  color: white;
+}
+#Template-Easter-egg footer .footer-container .footer-section a:hover {
+  text-decoration: underline;
+}
+#Template-Easter-egg footer .footer-container .footer-section #donations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Template-Easter-egg footer .footer-container .footer-section #donations div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#Template-Easter-egg footer .footer-container .footer-section #donations div img {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(68, 142, 211);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+}
+@media (max-width: 768px) {
+  #Template-Easter-egg footer .footer-container {
+    flex-direction: column;
+  }
+}
+
+#Footer {
+  background-color: #0C1B54;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+#Footer div {
+  flex: 1;
+}
+#Footer div h3 {
+  margin-bottom: 10px;
+}
+#Footer div a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+#Footer div a:hover {
+  color: #007BFF;
+}
+#Footer div#Redes-sociales a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Footer div#Redes-sociales a img {
+  margin-right: 5px;
+  transition: filter 0.3s;
+}
+#Footer div#Redes-sociales a img:hover {
+  filter: brightness(1.2);
+}
+
+@media (max-width: 768px) {
+  #Footer {
+    flex-direction: column;
+  }
+}
+#Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  background-color: #3ECAD3;
+}
+#Header * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+#Header .header__logo {
+  max-width: 100px;
+  height: auto;
+}
+#Header .header__toggle-menu-btn {
+  display: none;
+}
+#Header .header__nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#Header .header__nav li {
+  margin: 0 15px;
+}
+#Header .header__nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #0C1B54;
+  color: #fff;
+  border-radius: 5px;
+  display: inline-block;
+}
+#Header .header__nav a:hover {
+  background-color: #1d307e;
+}
+@media (max-width: 768px) {
+  #Header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px;
+    padding: 0px;
+  }
+  #Header .header__logo-toggle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0px !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #Header .header__menu {
+    width: 100%;
+    margin-bottom: 0 !important;
+  }
+  #Header .header__toggle-menu-btn {
+    display: block;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: fit-content;
+  }
+  #Header .header__nav {
+    display: none;
+    width: 100%;
+  }
+  #Header .header__nav.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+  }
+  #Header .header__nav.active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  #Header .header__nav.active ul li {
+    width: 100%;
+  }
+  #Header .header__nav.active ul a {
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+    border: 2px solid #18296a;
+  }
+  #Header .header__nav.active ul a:hover {
+    background-color: #1d307e;
+  }
+}
+
+#Template-Inscribirse {
+  background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+#Template-Inscribirse main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 5% auto;
+}
+#Template-Inscribirse .formulario {
+  background-image: url("../../Resources/Template/Fondo_simple_light_orange.png");
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#Template-Inscribirse .formulario__title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+#Template-Inscribirse .formulario__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+#Template-Inscribirse .formulario__field {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-bottom: 20px;
+}
+#Template-Inscribirse .formulario__field label {
+  font-size: 1em;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: bold;
+}
+#Template-Inscribirse .formulario__field input,
+#Template-Inscribirse .formulario__field select,
+#Template-Inscribirse .formulario__field textarea {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+#Template-Inscribirse .formulario__field input:focus,
+#Template-Inscribirse .formulario__field select:focus,
+#Template-Inscribirse .formulario__field textarea:focus {
+  border-color: #0056b3;
+}
+#Template-Inscribirse .formulario__field textarea {
+  resize: none;
+  height: 200px;
+}
+#Template-Inscribirse .formulario__button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#Template-Inscribirse .formulario__button:hover {
+  background-color: #004494;
+}
+@media (max-width: 768px) {
+  #Template-Inscribirse .formulario__field {
+    width: 90%;
+  }
+}
+
+#Template-Nosotros {
+  font-family: Arial, sans-serif;
+  background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+}
+#Template-Nosotros main {
+  padding: 20px;
+  font-family: inherit;
+}
+#Template-Nosotros .perfil-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+#Template-Nosotros .perfil {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+#Template-Nosotros .perfil-detalles {
+  flex: 2;
+  padding-right: 20px;
+}
+#Template-Nosotros .perfil-detalles h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+#Template-Nosotros .perfil-detalles p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+#Template-Nosotros .perfil-detalles h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#Template-Nosotros .perfil-detalles ul {
+  list-style: none;
+  padding-left: 0;
+}
+#Template-Nosotros .perfil-detalles ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+#Template-Nosotros .perfil-detalles .linkedin-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0073b1;
+  font-size: 16px;
+  margin-top: 25px;
+}
+#Template-Nosotros .perfil-detalles .linkedin-link img {
+  margin-right: 5px;
+}
+#Template-Nosotros .perfil-imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e1e1e1;
+  border-radius: 8px;
+  padding: 5px;
+  max-width: 300px;
+}
+#Template-Nosotros .perfil-imagen img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  #Template-Nosotros .perfil {
+    flex-direction: column;
+  }
+  #Template-Nosotros .perfil-detalles {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  #Template-Nosotros .perfil-imagen {
+    width: 100%;
+    order: -1;
+    margin-bottom: 20px;
+  }
+}
+
+#Template-Registrado {
+  /* Ajustes para pantallas pequeñas */
+}
+#Template-Registrado body, #Template-Registrado html {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+  background-size: cover;
+  background-position: center;
+}
+#Template-Registrado body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#Template-Registrado main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+  flex: 1;
+}
+#Template-Registrado main img {
+  width: 400px;
+  margin-bottom: 20px;
+  background-color: #597766;
+}
+#Template-Registrado main h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+#Template-Registrado main p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+#Template-Registrado main a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+#Template-Registrado main a:hover {
+  background-color: #0056b3;
+}
+@media (max-width: 768px) {
+  #Template-Registrado main h1 {
+    font-size: 1.9em;
+  }
+  #Template-Registrado main img {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=General_Style.css.map */
