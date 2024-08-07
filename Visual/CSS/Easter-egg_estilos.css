@@ -8,6 +8,7 @@ body {
 
 body .back-to-home{
     position: absolute;
+    z-index: 1;
 }
 
 .back-to-home img {
