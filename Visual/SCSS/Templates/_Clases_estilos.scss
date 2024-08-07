@@ -3,7 +3,7 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+    background-image: $template-WhiteStar;
     
 
     .main {
@@ -23,7 +23,7 @@
             width: 48%;
             height: 450px;
             vertical-align: top;
-            background-color: #FEC985;
+            background-color: $light-orange;
             padding: 20px;
             box-sizing: border-box;
             margin-bottom: 20px;
@@ -68,7 +68,7 @@
         }
 
         .considerations {
-            background-color: #72CDAE;
+            background-color: $green;
             padding: 20px;
             box-sizing: border-box;
             margin-bottom: 20px;
@@ -78,10 +78,6 @@
 
             &__title {
                 margin-bottom: 25px;
-            }
-
-            &__text {
-                // Añadir estilos adicionales si es necesario
             }
         }
 

@@ -1,5 +1,5 @@
 #Template-Inscribirse {
-    background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+    background-image: $template-WhiteStar;
     font-family: Arial, sans-serif;
     line-height: 1.6;
 
@@ -10,7 +10,7 @@
     }
 
     .formulario {
-        background-image: url("../../Resources/Template/Fondo_simple_light_orange.png");
+        background-image: $template-SimpleOrange;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

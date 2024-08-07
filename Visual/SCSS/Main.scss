@@ -1,3 +1,14 @@
+//Palettes
+$light-blue: #3ECAD3;
+$dark-blue: #0C1B54;
+$green: #72CDAE;
+$light-orange:#FEC985;
+$rose: #F18DC1;
+$template-WhiteStar: url(../../Resources/Template/Fondo_star_light_white.png);
+$template-SimpleGreen: url(../../Resources/Template/Fondo_simple_light_green.png);
+$template-SimpleOrange: url(../../Resources/Template/Fondo_simple_light_orange.png);
+$template-SimpleLBlue: url(../../Resources/Template/Fondo_simple_light_blue.png);
+
 //Imports
 @import "Templates/_Inicio_estilos.scss";
 @import "Templates/_Clases_estilos.scss";

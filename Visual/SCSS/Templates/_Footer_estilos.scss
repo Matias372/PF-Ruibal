@@ -1,9 +1,9 @@
-#Footer {
+#Footer-container {
     // Contenedor principal del footer
-    background-color: #0C1B54;
+    background-color: $dark-blue;
     color: white;
     padding: 20px;
-    display: flex;
+    display: contents !important;
     justify-content: space-around;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -24,7 +24,7 @@
             transition: color 0.3s;
 
             &:hover {
-                color: #007BFF;
+                color: $light-blue;
             }
         }
     }

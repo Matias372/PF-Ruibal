@@ -3,10 +3,9 @@
 #Template-Cursos {
     body {
         font-family: Arial, sans-serif;
-        background-color: #f8f9fa; // Color de fondo ligeramente grisáceo
         margin: 0;
         padding: 0;
-        background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+        background-image: $template-WhiteStar;
     }
 
     h5, h6 {
@@ -37,7 +36,7 @@
         position: relative;
 
         .card-content {
-            background-image: url("../../Resources/Template/Fondo_simple_light_green.png");
+            background-image: $template-SimpleGreen;
             border: 3px solid #2b8f67;
             display: flex;
             align-items: flex-start;
@@ -86,7 +85,7 @@
         }
 
         .curso__contenido {
-            background-image: url("../../Resources/Template/Fondo_simple_light_orange.png");
+            background-image: $template-SimpleOrange;
             padding: 20px;
             display: none;
             flex-direction: column;
