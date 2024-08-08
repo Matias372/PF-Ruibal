@@ -1,10 +1,151 @@
 @charset "UTF-8";
+#Footer footer#F-container {
+  background-color: #0C1B54;
+  color: white;
+  padding: 20px;
+  display: flex !important;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+#Footer footer#F-container div {
+  flex: 1;
+}
+#Footer footer#F-container div h3 {
+  margin-bottom: 10px;
+}
+#Footer footer#F-container div a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+#Footer footer#F-container div a:hover {
+  color: #3ECAD3;
+}
+#Footer footer#F-container div#Redes-sociales a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Footer footer#F-container div#Redes-sociales a img {
+  margin-right: 5px;
+  transition: filter 0.3s;
+}
+#Footer footer#F-container div#Redes-sociales a img:hover {
+  filter: brightness(1.2);
+}
+@media (max-width: 768px) {
+  #Footer footer#F-container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+#Header header#H-container {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #3ECAD3;
+}
+#Header header#H-container .header__logo {
+  max-width: 100px;
+  height: auto;
+}
+#Header header#H-container .header__toggle-menu-btn {
+  display: none;
+}
+#Header header#H-container .header__nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#Header header#H-container .header__nav li {
+  margin: 0 15px;
+}
+#Header header#H-container .header__nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #0C1B54;
+  color: #fff;
+  border-radius: 5px;
+  display: inline-block;
+}
+#Header header#H-container .header__nav a:hover {
+  background-color: #1d307e;
+}
+@media (max-width: 768px) {
+  #Header header#H-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px;
+    padding: 0px;
+  }
+  #Header header#H-container .header__logo-toggle {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0px !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #Header header#H-container .header__menu {
+    width: 100%;
+    margin-bottom: 0 !important;
+  }
+  #Header header#H-container .header__toggle-menu-btn {
+    display: block;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: fit-content;
+  }
+  #Header header#H-container .header__nav {
+    display: none;
+    width: 100%;
+  }
+  #Header header#H-container .header__nav.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+  }
+  #Header header#H-container .header__nav.active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  #Header header#H-container .header__nav.active ul li {
+    width: 100%;
+  }
+  #Header header#H-container .header__nav.active ul a {
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+    border: 2px solid #0C1B54;
+  }
+  #Header header#H-container .header__nav.active ul a:hover {
+    background-color: #1d307e;
+  }
+}
+
 #Template-Inicio {
   /*Inicio==================*/
   /*body*/
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
 }
 #Template-Inicio main {
   display: flex;
@@ -110,7 +251,7 @@
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
   /* Estilos para móvil */
   /* Estilos para pantallas grandes */
 }
@@ -213,10 +354,9 @@
 
 #Template-Cursos body {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
   margin: 0;
   padding: 0;
-  background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
 }
 #Template-Cursos h5, #Template-Cursos h6 {
   font-weight: bold;
@@ -240,7 +380,7 @@
   position: relative;
 }
 #Template-Cursos .card .card-content {
-  background-image: url("../../Resources/Template/Fondo_simple_light_green.png");
+  background-image: url(../../Resources/Template/Fondo_simple_light_green.png);
   border: 3px solid #2b8f67;
   display: flex;
   align-items: flex-start;
@@ -282,7 +422,7 @@
   color: #3b3b3b;
 }
 #Template-Cursos .card .curso__contenido {
-  background-image: url("../../Resources/Template/Fondo_simple_light_orange.png");
+  background-image: url(../../Resources/Template/Fondo_simple_light_orange.png);
   padding: 20px;
   display: none;
   flex-direction: column;
@@ -341,7 +481,7 @@
   }
 }
 
-#Template-Easter-egg body {
+#Template-Easter-egg {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -527,151 +667,8 @@
   }
 }
 
-#Footer {
-  background-color: #0C1B54;
-  color: white;
-  padding: 20px;
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-#Footer div {
-  flex: 1;
-}
-#Footer div h3 {
-  margin-bottom: 10px;
-}
-#Footer div a {
-  display: block;
-  margin-bottom: 10px;
-  text-decoration: none;
-  color: #ffffff;
-  transition: color 0.3s;
-}
-#Footer div a:hover {
-  color: #007BFF;
-}
-#Footer div#Redes-sociales a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#Footer div#Redes-sociales a img {
-  margin-right: 5px;
-  transition: filter 0.3s;
-}
-#Footer div#Redes-sociales a img:hover {
-  filter: brightness(1.2);
-}
-
-@media (max-width: 768px) {
-  #Footer {
-    flex-direction: column;
-  }
-}
-#Header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
-  background-color: #3ECAD3;
-}
-#Header * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-#Header .header__logo {
-  max-width: 100px;
-  height: auto;
-}
-#Header .header__toggle-menu-btn {
-  display: none;
-}
-#Header .header__nav ul {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-#Header .header__nav li {
-  margin: 0 15px;
-}
-#Header .header__nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  padding: 10px 20px;
-  background-color: #0C1B54;
-  color: #fff;
-  border-radius: 5px;
-  display: inline-block;
-}
-#Header .header__nav a:hover {
-  background-color: #1d307e;
-}
-@media (max-width: 768px) {
-  #Header {
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0px;
-    padding: 0px;
-  }
-  #Header .header__logo-toggle {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin: 0px !important;
-    align-items: center;
-    justify-content: space-between;
-  }
-  #Header .header__menu {
-    width: 100%;
-    margin-bottom: 0 !important;
-  }
-  #Header .header__toggle-menu-btn {
-    display: block;
-    font-size: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    height: fit-content;
-  }
-  #Header .header__nav {
-    display: none;
-    width: 100%;
-  }
-  #Header .header__nav.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5px;
-  }
-  #Header .header__nav.active ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  #Header .header__nav.active ul li {
-    width: 100%;
-  }
-  #Header .header__nav.active ul a {
-    width: 100%;
-    text-align: center;
-    border-radius: 0;
-    border: 2px solid #18296a;
-  }
-  #Header .header__nav.active ul a:hover {
-    background-color: #1d307e;
-  }
-}
-
 #Template-Inscribirse {
-  background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
@@ -681,7 +678,7 @@
   margin: 5% auto;
 }
 #Template-Inscribirse .formulario {
-  background-image: url("../../Resources/Template/Fondo_simple_light_orange.png");
+  background-image: url(../../Resources/Template/Fondo_simple_light_orange.png);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -750,7 +747,7 @@
 
 #Template-Nosotros {
   font-family: Arial, sans-serif;
-  background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
 }
 #Template-Nosotros main {
   padding: 20px;
@@ -846,7 +843,7 @@
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-image: url("../../Resources/Template/Fondo_star_light_white.png");
+  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
   background-size: cover;
   background-position: center;
 }
