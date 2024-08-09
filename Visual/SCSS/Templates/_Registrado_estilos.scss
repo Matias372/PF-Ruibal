@@ -1,19 +1,16 @@
 #Template-Registrado {
-    // Reseteo de márgenes y configuración general
-    body, html {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-image: $template-WhiteStar;
-        background-size: cover;
-        background-position: center;
-    }
-
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; // Asegura que el body ocupe al menos toda la altura de la ventana
-    }
+    
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: $template-WhiteStar;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; // Asegura que el body ocupe al menos toda la altura de la ventana
+    
 
     main {
         display: flex;

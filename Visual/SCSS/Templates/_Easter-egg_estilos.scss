@@ -1,24 +1,19 @@
-// _easter-egg.scss
-
-#Template-Easter-egg {
-    
+#Template-Easter-egg{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: gray;
     min-height: 100vh;
-    
-
-    .back-to-home {
+    .back-to-home{
         position: absolute;
-
-        img {
+        z-index: 1;
+        img{
             margin: 5px;
             width: 30px;
         }
     }
 
-    .game-container {
+    .game-container{
         max-width: 600px;
         margin: 0 auto;
         text-align: center;
@@ -26,109 +21,105 @@
         padding: 10px;
         box-sizing: border-box;
         background-color: #ffffff;
+
         min-height: 80vh;
         align-content: center;
-
-        h1 {
+        h1{
             font-size: 24px;
             padding: 0;
             margin: 0;
         }
-
-        .progress-bars {
+        .progress-bars{
             display: flex;
             flex-direction: column;
             gap: 10px;
             margin-bottom: 20px;
-
-            .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            background-color: white;
+            .progress-bar{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-
-                label {
+                label{
                     font-weight: bold;
                     font-size: 16px;
                 }
-
-                progress {
+                progress{
                     width: 100%;
                     height: 20px;
-
-                    &::-webkit-progress-bar {
-                        background-color: #e0e0e0;
-                        border-radius: 10px;
-                    }
                 }
+                
             }
+            
         }
-
-        #pet-container {
+        #pet-container{
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-        }
-
-        #sucio-container {
-            position: absolute;
-            bottom: 20px;
-            width: 50px;
-            height: 50px;
-            align-self: flex-start;
-            order: 1;
-
-            img {
-                width: 100%;
-                height: auto;
+            #sucio-container{
+                position: absolute;
+                bottom: 20px;
+                align-self: flex-start;
+                order: 1;
+                width: 50px;
+                height: 50px;
+                
             }
-        }
 
-        #accion-container {
-            position: absolute;
-            top: 10px;
-            width: 50px;
-            height: 50px;
-            align-self: flex-end;
-            order: -1;
-            margin-left: 5%;
-
-            .extra-gif {
-                width: 100%;
-                height: auto;
+            #pet{
+                padding-top: 20px;
+                width: 300px;
+                height: 330px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 80%;
+                }
+            }
+            #accion-container{
+                position: absolute;
+                top: 10px;
+                align-self: flex-end;
+                order: -1;
+                margin-left: 5%;
+                width: 50px;
+                height: 50px;
+                
+            }
+            #gif-sucio, #gif-Alimentar, #gif-Jugar{
+                width: 50px;
+                height: 50px;
                 display: none;
             }
         }
-
-        .controls {
+        .controls{
             display: flex;
             justify-content: space-around;
             gap: 10px;
             margin-top: 10px;
-
-            button {
+            button{
                 padding: 10px 20px;
                 font-size: 16px;
                 cursor: pointer;
-                background-color: #d1d1d1; // Color de fondo neutro
-                border: 1px solid #999999; // Borde más oscuro
-                color: #333333; // Color de texto oscuro
-                border-radius: 5px; // Bordes redondeados
+                background-color: #d1d1d1; /* Color de fondo neutro */
+                border: 1px solid #999999; /* Borde más oscuro */
+                color: #333333; /* Color de texto oscuro */
+                border-radius: 5px; /* Bordes redondeados */
                 transition: background-color 0.3s ease;
-
-                &:hover {
-                    background-color: #b3b3b3; // Color de fondo al pasar el cursor
-                }
-
-                &:active {
-                    background-color: #004494; // Fondo azul más oscuro al hacer clic
-                    transform: translateY(0); // Restablecer elevación al hacer clic
-                }
+            }
+            button:hover{
+                background-color: #b3b3b3;
+            }
+            button:active{
+                background-color: #004494;
+                transform: translateY(0);
             }
         }
-
-        #death-message {
+        #death-message{
             display: none;
             position: fixed;
             top: 50%;
@@ -142,24 +133,20 @@
             text-align: center;
             z-index: 1000;
             max-width: 80%;
-
-            p {
+            p{
                 margin: 0 0 10px;
             }
-
-            button {
+            button{
                 padding: 10px 20px;
                 font-size: 16px;
                 cursor: pointer;
-
-                &:hover {
-                    background-color: #f5c6cb;
-                }
+            } 
+            button:hover{
+                background-color: #f5c6cb;
             }
         }
     }
-
-    footer {
+    footer{
         display: flex;
         justify-content: space-around;
         background-color: black;
@@ -167,54 +154,48 @@
         width: 100%;
         box-sizing: border-box;
         min-height: 20vh;
-
-        .footer-container {
+        .footer-container{
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            .footer-section {
+            .footer-section h3, .footer-section p, .footer-section a{
+                color: white;
+            }
+            .footer-section a:hover{
+                text-decoration: underline;
+            }
+            .footer-section{
                 flex: 1;
                 padding: 10px;
                 text-align: center;
-
-                h3,
-                p,
-                a {
-                    color: white;
-                }
-
-                a:hover {
-                    text-decoration: underline;
-                }
-
-                #donations {
+                
+            }
+            
+            .footer-section#donations{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                div{
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     align-items: center;
-
-                    div {
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-
-                        img {
-                            width: 50px;
-                            height: 50px;
-                            background-color: rgb(68, 142, 211);
-                            border-radius: 5px;
-                            padding: 5px;
-                            margin: 10px;
-                        }
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        background-color: rgb(68, 142, 211);
+                        border-radius: 5px;
+                        padding: 5px;
+                        margin: 10px;
                     }
                 }
-            }
+            }            
         }
     }
+}
 
-    @media (max-width: 768px) {
-        footer .footer-container {
-            flex-direction: column;
-        }
+@media (max-width: 768px) {
+
+    #Template-Easter-egg footer .footer-container{
+        flex-direction: column;
     }
 }
