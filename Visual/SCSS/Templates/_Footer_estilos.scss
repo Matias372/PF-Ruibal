@@ -1,56 +1,65 @@
-#Footer {
-    // Contenedor principal del footer
-    background-color: #0C1B54;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    font-family: Arial, sans-serif;
+#Footer{
+    margin: 0;
+    padding: 0;
+    footer#F-container {
+        // Contenedor principal del footer
+        background-color: $dark-blue;
+        color: white;
+        display: flex !important;
+        justify-content: space-around;
+        width: 100%;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        
+        // Elementos dentro del footer
+        div {
+            flex: 1;
+            margin-top: 10px;
     
-    // Elementos dentro del footer
-    div {
-        flex: 1;
-
-        h3 {
-            margin-bottom: 10px;
-        }
-
-        a {
-            display: block;
-            margin-bottom: 10px;
-            text-decoration: none;
-            color: #ffffff;
-            transition: color 0.3s;
-
-            &:hover {
-                color: #007BFF;
+            h3 {
+                margin-bottom: 10px;
+            }
+    
+            a {
+                display: block;
+                margin-bottom: 10px;
+                text-decoration: none;
+                color: #ffffff;
+                transition: color 0.3s;
+    
+                &:hover {
+                    color: $light-blue;
+                }
             }
         }
-    }
-
-    // Estilos específicos para la sección de redes sociales
-    div#Redes-sociales {
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            img {
-                margin-right: 5px;
-                transition: filter 0.3s;
-
-                &:hover {
-                    filter: brightness(1.2);
+    
+        // Estilos específicos para la sección de redes sociales
+        div#Redes-sociales {
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                img {
+                    margin-right: 5px;
+                    transition: filter 0.3s;
+    
+                    &:hover {
+                        filter: brightness(1.2);
+                    }
                 }
             }
         }
     }
-}
-
-// Estilos responsivos
-@media (max-width: 768px) {
-    #Footer {
-        flex-direction: column;
+    
+    // Estilos responsivos
+    @media (max-width: 768px) {
+        
+        footer#F-container {
+            display: flex !important;
+            flex-direction: column !important;
+        }
+        
     }
+    
 }

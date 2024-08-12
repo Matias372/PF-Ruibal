@@ -1,160 +1,138 @@
 // _cursos.scss
 
 #Template-Cursos {
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f9fa; // Color de fondo ligeramente grisáceo
-        margin: 0;
-        padding: 0;
-        background-image: url("../../Resources/Template/Fondo_star_light_white.png");
-    }
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: $template-WhiteStar;
 
-    h5, h6 {
-        font-weight: bold;
-    }
+    main{
+        h5, h6 {
+            font-weight: bold;
+        }
+        .container{
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            .container-lista{
+                .container-lista-curso{
+                    .card{
+                        background-color: #ffffff; /* Fondo blanco para las tarjetas */
+                        border: 1px solid #e0e0e0;
+                        border-radius: 10px;
+                        margin-bottom: 20px;
+                        overflow: hidden;
+                        position: relative;
+                        .card-content{
+                            background-image: $template-SimpleGreen;
+                            border: 3px solid #2b8f67;
+                            display: flex;
+                            align-items: flex-start;
+                            padding: 10px;
+                            .card-img-top{
+                                width: 250px;
+                                height: 200px;
+                                margin-right: 20px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                img{
+                                    width: 250px;
+                                    height: 200px;
+                                }
+                            }
+                            .card-body{
+                                flex: 1;
+                                padding: 0 !important;
+                                .card-title{
+                                    margin: 0;
+                                    margin-bottom: 10px;
+                                    color: #000000;
+                                }
+                                .card-text{
+                                    margin: 0;
+                                    color: #000000;
+                                }
+                                .curso__toggle-button{
+                                    background: none;
+                                    border: none;
+                                    font-size: 24px;
+                                    cursor: pointer;
+                                    color: #000000;
+                                    transition: color 0.2s ease-in-out;
+                                    position: absolute;
+                                    right: 0;
+                                    bottom: 0;
+                                }
+                                .curso__toggle-button:hover {
+                                    color: #3b3b3b;
+                                }
+                            }
+                        }
+                        .curso__contenido{
+                            background-image: $template-SimpleOrange;
+                            padding: 20px;
+                            display: none;
+                            flex-direction: column;
+                            text-align: center;
+                            .card-body{
+                                .curso__temario{
+                                    margin-bottom: 20px;
+                                    h6{
+                                        margin-bottom: 10px;
+                                    }
+                                    ul{
+                                        padding: 0;
+                                        margin-left: 3vh !important;
+                                        margin: 0;
+                                        text-align: left;
+                                        li{
+                                            margin-bottom: 10px;
+                                            color: #333333;
+                                        }
+                                    }
+                                }
+                                .curso__medios-de-pago{
+                                    margin-bottom: 20px;
+                                    h6{
+                                        margin-bottom: 10px;
+                                    }
+                                    div{
+                                        justify-content: space-between;
+                                        margin-bottom: 10px;
+                                        span{
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                                .btn-success{
+                                    @include button-style(#4CAF50, #ffffff);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-    .container {
-        max-width: 1200px;
-        margin: 20px auto;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .card-content {
+        flex-direction: column;
+        align-items: center;
         padding: 20px;
-        // background-color: #ffffff;
-        // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        // border-radius: 10px;
-        
-        h2 {
-            text-align: center;
-            color: #000000;
-            margin-bottom: 20px;
-        }
     }
 
-    .card {
-        background-color: #ffffff; // Fondo blanco para las tarjetas
-        border: 1px solid #e0e0e0;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        overflow: hidden;
-        position: relative;
-
-        .card-content {
-            background-image: url("../../Resources/Template/Fondo_simple_light_green.png");
-            border: 3px solid #2b8f67;
-            display: flex;
-            align-items: flex-start;
-            padding: 10px;
-
-            .card-img-top {
-                width: 250px;
-                height: 200px;
-                margin-right: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .card-body {
-                flex: 1;
-                padding: 0 !important; // Evita el padding adicional
-
-                .card-title {
-                    margin: 0;
-                    margin-bottom: 10px;
-                    color: #000000;
-                }
-
-                .card-text {
-                    margin: 0;
-                    color: #000000;
-                }
-
-                .curso__toggle-button {
-                    background: none;
-                    border: none;
-                    font-size: 24px;
-                    cursor: pointer;
-                    color: #000000;
-                    transition: color 0.2s ease-in-out;
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-
-                    &:hover {
-                        color: #3b3b3b;
-                    }
-                }
-            }
-        }
-
-        .curso__contenido {
-            background-image: url("../../Resources/Template/Fondo_simple_light_orange.png");
-            padding: 20px;
-            display: none;
-            flex-direction: column;
-            text-align: center;
-
-            .curso__temario {
-                margin-bottom: 20px;
-
-                h6 {
-                    margin-bottom: 10px;
-                }
-
-                ul {
-                    padding: 0;
-                    margin-left: 3vh !important;
-                    margin: 0;
-                    text-align: left;
-
-                    li {
-                        margin-bottom: 10px;
-                        color: #333333;
-                    }
-                }
-            }
-
-            .curso__medios-de-pago {
-                margin-bottom: 20px;
-
-                h6 {
-                    margin-bottom: 10px;
-                }
-
-                .d-flex {
-                    justify-content: space-between;
-                    margin-bottom: 10px;
-                }
-            }
-
-            .btn-success {
-                background-color: #4CAF50;
-                color: #ffffff;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-                text-decoration: none;
-
-                &:hover {
-                    background-color: #45a049;
-                }
-            }
-        }
+    .card-img-top {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
-    @media (max-width: 768px) {
-        .card-content {
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .card-img-top {
-            margin-right: 0;
-            margin-bottom: 10px;
-        }
-
-        .curso__contenido {
-            text-align: left;
-        }
+    .curso__contenido {
+        text-align: left;
     }
 }

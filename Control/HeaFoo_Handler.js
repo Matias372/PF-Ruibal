@@ -23,8 +23,14 @@ document.addEventListener("DOMContentLoaded", function() {
     loadHTML('../../Visual/Html/Footer.html', 'Footer');
 });
 
-// Función para mostrar y ocultar el menu
+// Función para mostrar y ocultar el menú
 function toggleMenu() {
-    var navBotones = document.getElementById('botones');
-    navBotones.classList.toggle('active');
+    var menu = document.getElementById('menu');
+    menu.classList.toggle('active');
 }
+
+// Añadir evento click al botón de menú
+document.addEventListener("DOMContentLoaded", function() {
+    var menuButton = document.getElementById('menuButton');
+    menuButton.addEventListener('click', toggleMenu);
+});

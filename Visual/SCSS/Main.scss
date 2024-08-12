@@ -1,10 +1,38 @@
+//Palettes
+$light-blue: #3ECAD3;
+$dark-blue: #0C1B54;
+$green: #72CDAE;
+$light-orange:#FEC985;
+$rose: #F18DC1;
+$template-WhiteStar: url(../../Resources/Template/Fondo_star_light_white.png);
+$template-SimpleGreen: url(../../Resources/Template/Fondo_simple_light_green.png);
+$template-SimpleOrange: url(../../Resources/Template/Fondo_simple_light_orange.png);
+$template-SimpleLBlue: url(../../Resources/Template/Fondo_simple_light_blue.png);
+
+//MIXINS================================================
+@mixin button-style($bg-color, $text-color) {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: $bg-color;
+    color: $text-color;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+}
+
+
 //Imports
+@import "Templates/_Footer_estilos.scss";
+@import "Templates/_Header_estilos.scss";
 @import "Templates/_Inicio_estilos.scss";
 @import "Templates/_Clases_estilos.scss";
 @import "Templates/_Cursos_estilos.scss";
 @import "Templates/_Easter-egg_estilos.scss";
-@import "Templates/_Footer_estilos.scss";
-@import "Templates/_Header_estilos.scss";
 @import "Templates/_Inscribirse_estilos.scss";
 @import "Templates/_Nosotros_estilos.scss";
-@import "Templates/_Registrado_estilos.scss";
+@import "Templates/_Registrado_estilos.scss"; 

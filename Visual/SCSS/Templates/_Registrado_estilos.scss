@@ -1,19 +1,16 @@
 #Template-Registrado {
-    // Reseteo de márgenes y configuración general
-    body, html {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-image: url("../../Resources/Template/Fondo_star_light_white.png");
-        background-size: cover;
-        background-position: center;
-    }
-
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; // Asegura que el body ocupe al menos toda la altura de la ventana
-    }
+    
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: $template-WhiteStar;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; // Asegura que el body ocupe al menos toda la altura de la ventana
+    
 
     main {
         display: flex;
@@ -44,17 +41,7 @@
     }
 
     main a {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #007BFF;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-    }
-
-    main a:hover {
-        background-color: #0056b3;
+        @include button-style(#007BFF, #fff);
     }
 
     /* Ajustes para pantallas pequeñas */
