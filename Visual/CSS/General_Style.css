@@ -48,11 +48,11 @@
   }
 }
 
-#Header {
+body #Header {
   margin: 0;
   padding: 0;
 }
-#Header header#H-container {
+body #Header header#H-container {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
   display: flex !important;
@@ -62,45 +62,47 @@
   padding: 10px 20px;
   background-color: #3ECAD3;
 }
-#Header header#H-container .header__logo {
+body #Header header#H-container .header__logo {
   max-width: 100px;
   height: auto;
 }
-#Header header#H-container .header__toggle-menu-btn {
+body #Header header#H-container .header__toggle-menu-btn {
   display: none;
 }
-#Header header#H-container .header__nav ul {
+body #Header header#H-container .header__nav ul {
   display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-#Header header#H-container .header__nav li {
+body #Header header#H-container .header__nav li {
   margin: 0 15px;
 }
-#Header header#H-container .header__nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  padding: 10px 20px;
-  background-color: #0C1B54;
-  color: #fff;
-  border-radius: 5px;
+body #Header header#H-container .header__nav a {
   display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #0C1B54;
+  color: #ffffff;
+  transition: background-color 0.3s;
 }
-#Header header#H-container .header__nav a:hover {
-  background-color: #1d307e;
+body #Header header#H-container .header__nav a:hover {
+  background-color: #060d27;
+}
+body #Header header#H-container .header__nav a {
+  font-weight: bold;
 }
 @media (max-width: 768px) {
-  #Header header#H-container {
+  body #Header header#H-container {
     flex-direction: column;
     align-items: flex-start;
     margin: 0px;
     padding: 0px;
     padding-top: 2px;
-    padding-bottom: 2px;
   }
-  #Header header#H-container .header__logo-toggle {
+  body #Header header#H-container .header__logo-toggle {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -109,16 +111,16 @@
     justify-content: space-between;
     padding-top: 2px;
     padding-bottom: 3px;
-    padding-left: 4px;
   }
-  #Header header#H-container .header__logo-toggle .header__logo {
+  body #Header header#H-container .header__logo-toggle .header__logo {
     width: 80px;
+    margin-left: 4px;
   }
-  #Header header#H-container .header__menu {
+  body #Header header#H-container .header__menu {
     width: 100%;
     margin-bottom: 0 !important;
   }
-  #Header header#H-container .header__toggle-menu-btn {
+  body #Header header#H-container .header__toggle-menu-btn {
     display: block;
     font-size: 30px;
     background: none;
@@ -126,33 +128,33 @@
     cursor: pointer;
     height: fit-content;
   }
-  #Header header#H-container .header__nav {
+  body #Header header#H-container .header__nav {
     display: none;
     width: 100%;
   }
-  #Header header#H-container .header__nav.active {
+  body #Header header#H-container .header__nav.active {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5px;
   }
-  #Header header#H-container .header__nav.active ul {
+  body #Header header#H-container .header__nav.active ul {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  #Header header#H-container .header__nav.active ul li {
+  body #Header header#H-container .header__nav.active ul li {
     width: 100%;
   }
-  #Header header#H-container .header__nav.active ul a {
+  body #Header header#H-container .header__nav.active ul a {
+    padding: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
     width: 100%;
     text-align: center;
     border-radius: 0;
-    border: 2px solid #0C1B54;
-  }
-  #Header header#H-container .header__nav.active ul a:hover {
-    background-color: #1d307e;
+    border: 1px solid #1d307e;
   }
 }
 
@@ -209,14 +211,15 @@
 #Template-Inicio .services__link {
   display: inline-block;
   padding: 10px 20px;
-  background: #0C1B54;
-  color: #fff;
-  text-decoration: none;
   border-radius: 5px;
-  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #0C1B54;
+  color: #fff;
+  transition: background-color 0.3s;
 }
 #Template-Inicio .services__link:hover {
-  background: #18296a;
+  background-color: #060d27;
 }
 #Template-Inicio .contact-button {
   /* Botón de Contacto */
@@ -485,16 +488,17 @@
   font-size: 16px;
 }
 #Template-Cursos main .container .container-lista .container-lista-curso .card .curso__contenido .card-body .btn-success {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
   background-color: #4CAF50;
   color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
+  transition: background-color 0.3s;
 }
 #Template-Cursos main .container .container-lista .container-lista-curso .card .curso__contenido .card-body .btn-success:hover {
-  background-color: #45a049;
+  background-color: #3d8b40;
 }
 
 @media (max-width: 768px) {
@@ -629,7 +633,7 @@
 }
 #Template-Easter-egg .game-container #death-message {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -706,45 +710,50 @@
   background-image: url(../../Resources/Template/Fondo_star_light_white.png);
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 #Template-Inscribirse main {
   padding: 20px;
   max-width: 800px;
-  margin: 5% auto;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
-#Template-Inscribirse .formulario {
-  background-image: url(../../Resources/Template/Fondo_simple_light_orange.png);
+#Template-Inscribirse main section#Inscribirse {
+  background-image: url("../../Resources/Template/Fondo_simple_light_orange.png");
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-#Template-Inscribirse .formulario__title {
+#Template-Inscribirse main section#Inscribirse h1 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #333;
+  color: #000000;
   text-align: center;
 }
-#Template-Inscribirse .formulario__form {
+#Template-Inscribirse main section#Inscribirse form {
   display: flex;
   flex-direction: column;
   gap: 15px;
   align-items: center;
 }
-#Template-Inscribirse .formulario__field {
+#Template-Inscribirse main section#Inscribirse form div {
   display: flex;
   flex-direction: column;
   width: 60%;
   margin-bottom: 20px;
 }
-#Template-Inscribirse .formulario__field label {
+#Template-Inscribirse main section#Inscribirse form div label {
   font-size: 1em;
   margin-bottom: 5px;
-  color: #555;
+  color: #000000;
   font-weight: bold;
 }
-#Template-Inscribirse .formulario__field input,
-#Template-Inscribirse .formulario__field select,
-#Template-Inscribirse .formulario__field textarea {
+#Template-Inscribirse main section#Inscribirse form div input,
+#Template-Inscribirse main section#Inscribirse form div select,
+#Template-Inscribirse main section#Inscribirse form div textarea {
   padding: 10px;
   font-size: 1em;
   border: 1px solid #ddd;
@@ -752,34 +761,37 @@
   outline: none;
   transition: border-color 0.3s;
 }
-#Template-Inscribirse .formulario__field input:focus,
-#Template-Inscribirse .formulario__field select:focus,
-#Template-Inscribirse .formulario__field textarea:focus {
-  border-color: #0056b3;
+#Template-Inscribirse main section#Inscribirse form div input:focus,
+#Template-Inscribirse main section#Inscribirse form div select:focus,
+#Template-Inscribirse main section#Inscribirse form div textarea:focus {
+  border-color: #0C1B54;
 }
-#Template-Inscribirse .formulario__field textarea {
+#Template-Inscribirse main section#Inscribirse form div textarea {
   resize: none;
   height: 200px;
 }
-#Template-Inscribirse .formulario__button {
+#Template-Inscribirse main section#Inscribirse form button {
   padding: 10px 20px;
   font-size: 1.2em;
-  background-color: #0056b3;
+  background-color: #0C1B54;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
-#Template-Inscribirse .formulario__button:hover {
-  background-color: #004494;
-}
-@media (max-width: 768px) {
-  #Template-Inscribirse .formulario__field {
-    width: 90%;
-  }
+#Template-Inscribirse main section#Inscribirse form button:hover {
+  background-color: #3ECAD3;
 }
 
+@media (max-width: 768px) {
+  #Template-Inscribirse main section#Inscribirse {
+    width: 90%;
+  }
+  #Template-Inscribirse main section#Inscribirse form div {
+    width: 100%;
+  }
+}
 #Template-Nosotros {
   margin: 0;
   padding: 0;
@@ -913,14 +925,15 @@
 #Template-Registrado main a {
   display: inline-block;
   padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
   background-color: #007BFF;
   color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
   transition: background-color 0.3s;
 }
 #Template-Registrado main a:hover {
-  background-color: #0056b3;
+  background-color: #0062cc;
 }
 @media (max-width: 768px) {
   #Template-Registrado main h1 {

@@ -107,16 +107,7 @@
                                     }
                                 }
                                 .btn-success{
-                                    background-color: #4CAF50;
-                                    color: #ffffff;
-                                    border: none;
-                                    border-radius: 5px;
-                                    cursor: pointer;
-                                    transition: background-color 0.3s ease;
-                                    text-decoration: none;
-                                }
-                                .btn-success:hover {
-                                    background-color: #45a049;
+                                    @include button-style(#4CAF50, #ffffff);
                                 }
                             }
                         }
