@@ -14,6 +14,8 @@ body #loading-screen {
 }
 body #loading-screen img {
   margin: 0 10px;
+  width: 150px;
+  height: 75px;
 }
 
 #Footer {
