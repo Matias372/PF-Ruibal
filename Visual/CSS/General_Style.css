@@ -159,8 +159,7 @@ body #Header header#H-container .header__nav a {
 }
 
 #Template-Inicio {
-  /*Inicio==================*/
-  /*body*/
+  /* Estilos base para móviles (Mobile First) */
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-image: url(../../Resources/Template/Fondo_star_light_white.png);
@@ -171,12 +170,11 @@ body #Header header#H-container .header__nav a {
   align-items: center;
 }
 #Template-Inicio .slider {
-  /* Slider */
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  width: 80%;
+  width: 100%;
 }
 #Template-Inicio .slider__image {
   max-width: 100%;
@@ -184,9 +182,9 @@ body #Header header#H-container .header__nav a {
   display: block;
 }
 #Template-Inicio .services {
-  /* Servicios */
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  flex-direction: column;
 }
 #Template-Inicio .services .services__item {
   border-radius: 2vh;
@@ -199,6 +197,7 @@ body #Header header#H-container .header__nav a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 #Template-Inicio .services__title {
   margin-bottom: 10px;
@@ -222,13 +221,12 @@ body #Header header#H-container .header__nav a {
   background-color: #060d27;
 }
 #Template-Inicio .contact-button {
-  /* Botón de Contacto */
   text-align: center;
   margin-bottom: 20px;
 }
 #Template-Inicio .contact-button__link {
-  width: 225px;
-  height: 66px;
+  width: 100%;
+  height: auto;
   display: inline-flex;
   padding: 10px 20px;
   background: #ffffff;
@@ -237,7 +235,7 @@ body #Header header#H-container .header__nav a {
   text-decoration: none;
   border-radius: 20px;
   transition: background 0.3s;
-  font-size: 24px;
+  font-size: 20px;
   align-items: center;
 }
 #Template-Inicio .contact-button__link:hover {
@@ -250,28 +248,51 @@ body #Header header#H-container .header__nav a {
 #Template-Inicio .btn-primary {
   border-color: #0C1B54;
 }
-@media (max-width: 768px) {
-  #Template-Inicio {
-    /* Estilos para móvil */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #Template-Inicio .slider {
+    width: 90%;
   }
   #Template-Inicio .services {
-    flex-direction: column;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-right: 15px;
   }
-  #Template-Inicio .services__item {
-    width: 100%;
+  #Template-Inicio .services .services__item {
+    width: 48%;
   }
+  #Template-Inicio .contact-button__link {
+    width: 225px;
+    font-size: 22px;
+  }
+}
+@media (min-width: 1024px) {
   #Template-Inicio .slider {
-    width: 100%;
+    width: 80%;
+  }
+  #Template-Inicio .services {
+    flex-direction: row;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #Template-Inicio .services .services__item {
+    width: 45%;
+  }
+  #Template-Inicio .contact-button__link {
+    width: 225px;
+    font-size: 24px;
   }
 }
 
 #Template-Clases {
+  /* Estilos base para móviles (Mobile First) */
   font-family: Arial, sans-serif;
+  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
   margin: 0;
   padding: 0;
-  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
+  min-height: 100vh;
 }
 #Template-Clases main.main {
+  min-height: 72vh;
   padding: 20px;
   max-width: 100%;
   margin: 0 auto;
@@ -279,23 +300,21 @@ body #Header header#H-container .header__nav a {
 }
 #Template-Clases main.main .Clases-container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around !important;
-  margin-left: 0px;
-  margin-right: 0px;
+  justify-content: center;
+  margin: 0;
   width: 100%;
 }
 #Template-Clases main.main .Clases-container .class-type {
-  display: inline-block;
+  width: 100%;
   max-width: 550px;
-  height: 450px;
-  vertical-align: top;
+  height: auto;
   background-color: #FEC985;
   padding: 20px;
-  box-sizing: border-box;
   margin-bottom: 20px;
   border-radius: 2vh;
+  box-sizing: border-box;
 }
 #Template-Clases main.main .Clases-container .class-type h2.class-type__title {
   margin-bottom: 15px;
@@ -307,41 +326,25 @@ body #Header header#H-container .header__nav a {
   margin-top: 10px;
 }
 #Template-Clases main.main .Clases-container .class-type p.class-type__topic {
-  margin-bottom: 0px !important;
+  margin-bottom: 0 !important;
 }
-#Template-Clases main.main .Clases-container .class-type--presensial {
-  margin-right: 2%;
-}
-#Template-Clases main.main .Clases-container .class-type--presensial .class-type__coverage .class-type__list {
+#Template-Clases main.main .Clases-container .class-type .class-type__list {
   text-align: justify;
   list-style-type: disc;
   padding-left: 5%;
   column-count: 2;
   margin-left: 5%;
 }
-#Template-Clases main.main .Clases-container .class-type--presensial .class-type__coverage .class-type__list .class-type__item {
-  margin-bottom: 5px;
-}
-#Template-Clases main.main .Clases-container .class-type--remote {
-  margin-right: 2%;
-}
-#Template-Clases main.main .Clases-container .class-type--remote .class-type__list {
-  text-align: justify;
-  list-style-type: disc;
-  padding-left: 5%;
-  column-count: 2;
-  margin-left: 5%;
-}
-#Template-Clases main.main .Clases-container .class-type--remote .class-type__list .class-type__item {
+#Template-Clases main.main .Clases-container .class-type .class-type__list .class-type__item {
   margin-bottom: 5px;
 }
 #Template-Clases main.main .considerations {
   background-color: #72CDAE;
   padding: 20px;
-  box-sizing: border-box;
   margin-bottom: 20px;
-  width: 50%;
-  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
   align-items: center;
 }
 #Template-Clases main.main .considerations .considerations__title {
@@ -352,8 +355,7 @@ body #Header header#H-container .header__nav a {
   margin-bottom: 20px;
 }
 #Template-Clases main.main .contact .contact__link {
-  width: 225px;
-  height: 66px;
+  height: auto;
   display: inline-flex;
   padding: 10px 20px;
   background: #ffffff;
@@ -362,7 +364,7 @@ body #Header header#H-container .header__nav a {
   text-decoration: none;
   border-radius: 20px;
   transition: background 0.3s;
-  font-size: 24px;
+  font-size: 20px;
   align-items: center;
 }
 #Template-Clases main.main .contact .contact__link:hover {
@@ -370,19 +372,49 @@ body #Header header#H-container .header__nav a {
   border-color: #20c361;
   color: #000000;
 }
-
-@media (max-width: 768px) {
-  #Template-Clases .Clases-container {
+@media (min-width: 768px) and (max-width: 1024px) {
+  #Template-Clases main.main {
+    display: flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
   }
-  #Template-Clases .Clases-container .class-type {
-    width: 100%;
+  #Template-Clases main.main .Clases-container {
+    flex-direction: row;
+    justify-content: space-around !important;
   }
-  #Template-Clases .considerations {
-    width: 100% !important;
+  #Template-Clases main.main .Clases-container .class-type {
+    width: 48%;
+  }
+  #Template-Clases main.main .considerations {
+    width: 75%;
+  }
+  #Template-Clases main.main .contact__link {
+    width: 225px;
+    font-size: 22px;
   }
 }
+@media (min-width: 1024px) {
+  #Template-Clases main.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #Template-Clases main.main .Clases-container {
+    flex-direction: row;
+    justify-content: space-around !important;
+  }
+  #Template-Clases main.main .Clases-container .class-type {
+    width: 45%;
+  }
+  #Template-Clases main.main .considerations {
+    width: 50%;
+  }
+  #Template-Clases main.main .contact__link {
+    width: 225px;
+    font-size: 24px;
+  }
+}
+
 #Template-Cursos {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -454,9 +486,10 @@ body #Header header#H-container .header__nav a {
 #Template-Cursos main .container .container-lista .container-lista-curso .card .curso__contenido {
   background-image: url(../../Resources/Template/Fondo_simple_light_orange.png);
   padding: 20px;
-  display: none;
-  flex-direction: column;
-  text-align: center;
+  max-height: 0;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 1s ease;
 }
 #Template-Cursos main .container .container-lista .container-lista-curso .card .curso__contenido .card-body .curso__temario {
   margin-bottom: 20px;
@@ -500,6 +533,9 @@ body #Header header#H-container .header__nav a {
 #Template-Cursos main .container .container-lista .container-lista-curso .card .curso__contenido .card-body .btn-success:hover {
   background-color: #3d8b40;
 }
+#Template-Cursos main .container .container-lista .container-lista-curso .card .curso__contenido.visible {
+  max-height: 700px;
+}
 
 @media (max-width: 768px) {
   .card-content {
@@ -513,6 +549,40 @@ body #Header header#H-container .header__nav a {
   }
   .curso__contenido {
     text-align: left;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-lista-curso .card-content {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .container-lista-curso .card-img-top {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+  .container-lista-curso .curso__contenido {
+    padding: 20px 30px;
+  }
+  .container-lista-curso .curso__contenido .card-body .curso__temario, .container-lista-curso .curso__contenido .card-body .curso__medios-de-pago {
+    margin-bottom: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .container-lista-curso .card-content {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 30px;
+  }
+  .container-lista-curso .card-img-top {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .container-lista-curso .curso__contenido {
+    padding: 30px 40px;
+  }
+  .container-lista-curso .curso__contenido .card-body .curso__temario, .container-lista-curso .curso__contenido .card-body .curso__medios-de-pago {
+    margin-bottom: 30px;
   }
 }
 #Template-Easter-egg {
@@ -722,13 +792,13 @@ body #Header header#H-container .header__nav a {
   margin-bottom: 5%;
 }
 #Template-Inscribirse main section#Inscribirse {
-  background-image: url("../../Resources/Template/Fondo_simple_light_orange.png");
+  background-image: url(../../Resources/Template/Fondo_simple_light_orange.png);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 #Template-Inscribirse main section#Inscribirse h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   margin-bottom: 20px;
   color: #000000;
   text-align: center;
@@ -742,11 +812,11 @@ body #Header header#H-container .header__nav a {
 #Template-Inscribirse main section#Inscribirse form div {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 100%;
   margin-bottom: 20px;
 }
 #Template-Inscribirse main section#Inscribirse form div label {
-  font-size: 1em;
+  font-size: 0.9em;
   margin-bottom: 5px;
   color: #000000;
   font-weight: bold;
@@ -755,24 +825,31 @@ body #Header header#H-container .header__nav a {
 #Template-Inscribirse main section#Inscribirse form div select,
 #Template-Inscribirse main section#Inscribirse form div textarea {
   padding: 10px;
-  font-size: 1em;
+  font-size: 0.9em;
   border: 1px solid #ddd;
   border-radius: 4px;
   outline: none;
   transition: border-color 0.3s;
+  opacity: 0.8;
+}
+#Template-Inscribirse main section#Inscribirse form div select {
+  width: 100%;
+}
+#Template-Inscribirse main section#Inscribirse form div option {
+  opacity: 0.8;
 }
 #Template-Inscribirse main section#Inscribirse form div input:focus,
 #Template-Inscribirse main section#Inscribirse form div select:focus,
 #Template-Inscribirse main section#Inscribirse form div textarea:focus {
-  border-color: #0C1B54;
+  border-color: #3ECAD3;
 }
 #Template-Inscribirse main section#Inscribirse form div textarea {
   resize: none;
-  height: 200px;
+  height: 150px;
 }
 #Template-Inscribirse main section#Inscribirse form button {
   padding: 10px 20px;
-  font-size: 1.2em;
+  font-size: 1em;
   background-color: #0C1B54;
   color: #fff;
   border: none;
@@ -792,97 +869,176 @@ body #Header header#H-container .header__nav a {
     width: 100%;
   }
 }
+@media (min-width: 768px) {
+  main {
+    padding: 30px;
+  }
+  section#Inscribirse {
+    padding: 30px;
+    border-radius: 10px;
+  }
+  section#Inscribirse h1 {
+    font-size: 2em;
+  }
+  section#Inscribirse form div {
+    width: 80%;
+  }
+  section#Inscribirse form div label {
+    font-size: 1em;
+  }
+  section#Inscribirse form div input,
+  section#Inscribirse form div select,
+  section#Inscribirse form div textarea {
+    font-size: 1em;
+  }
+  section#Inscribirse form div textarea {
+    height: 200px;
+  }
+  section#Inscribirse form button {
+    font-size: 1.1em;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    padding: 40px;
+  }
+  section#Inscribirse {
+    padding: 40px;
+    border-radius: 12px;
+  }
+  section#Inscribirse h1 {
+    font-size: 2.5em;
+  }
+  section#Inscribirse form div {
+    width: 60%;
+  }
+  section#Inscribirse form div label {
+    font-size: 1.1em;
+  }
+  section#Inscribirse form div input,
+  section#Inscribirse form div select,
+  section#Inscribirse form div textarea {
+    font-size: 1.1em;
+  }
+  section#Inscribirse form div textarea {
+    height: 250px;
+  }
+  section#Inscribirse form button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+  }
+}
 #Template-Nosotros {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
   background-image: url(../../Resources/Template/Fondo_star_light_white.png);
 }
-#Template-Nosotros main {
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
 #Template-Nosotros main .perfil-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 20px 0;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
 }
 #Template-Nosotros main .perfil-container .perfil {
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #ffffff;
   padding: 20px;
+  position: relative;
+  overflow: hidden;
 }
 #Template-Nosotros main .perfil-container .perfil .perfil-detalles {
-  flex: 2;
+  flex: 1;
   padding-right: 20px;
 }
-#Template-Nosotros main .perfil-container .perfil .perfil-detalles h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+#Template-Nosotros main .perfil-container .perfil .perfil-detalles h2, #Template-Nosotros main .perfil-container .perfil .perfil-detalles h3 {
+  color: #2b8f67;
 }
-#Template-Nosotros main .perfil-container .perfil .perfil-detalles h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-#Template-Nosotros main .perfil-container .perfil .perfil-detalles p {
-  font-size: 16px;
-  margin-bottom: 20px;
+#Template-Nosotros main .perfil-container .perfil .perfil-detalles p, #Template-Nosotros main .perfil-container .perfil .perfil-detalles ul {
+  color: #333333;
 }
 #Template-Nosotros main .perfil-container .perfil .perfil-detalles ul {
-  list-style: none;
-  padding-left: 0;
+  padding-left: 20px;
 }
 #Template-Nosotros main .perfil-container .perfil .perfil-detalles ul li {
-  font-size: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 #Template-Nosotros main .perfil-container .perfil .perfil-detalles .linkedin-link {
   display: flex;
   align-items: center;
-  text-decoration: none;
-  color: #0073b1;
-  font-size: 16px;
-  margin-top: 25px;
+  margin-top: 20px;
+  color: #0077b5;
 }
 #Template-Nosotros main .perfil-container .perfil .perfil-detalles .linkedin-link img {
   margin-right: 5px;
 }
+#Template-Nosotros main .perfil-container .perfil .perfil-detalles .linkedin-link:hover {
+  text-decoration: underline;
+}
 #Template-Nosotros main .perfil-container .perfil .perfil-imagen {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #e1e1e1;
-  border-radius: 8px;
-  padding: 5px;
-  max-width: 300px;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-right: 20px;
 }
 #Template-Nosotros main .perfil-container .perfil .perfil-imagen img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#Template-Nosotros main .perfil-container .perfil #PawIcon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+#Template-Nosotros main .perfil-container .perfil #PawIcon img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
-  #Template-Nosotros main .perfil-container .perfil {
+  .perfil {
     flex-direction: column;
+    align-items: center !important;
+    text-align: center;
   }
-  #Template-Nosotros main .perfil-container .perfil .perfil-detalles {
-    padding-right: 0;
-    margin-bottom: 20px;
-  }
-  #Template-Nosotros main .perfil-container .perfil .perfil-imagen {
-    width: 100%;
+  .perfil .perfil-imagen {
     order: -1;
     margin-bottom: 20px;
+    margin-right: 0;
+    width: 200px;
+  }
+  .perfil .perfil-detalles {
+    padding-right: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .perfil {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .perfil .perfil-imagen {
+    width: 220px;
+    margin-right: 20px;
+  }
+  .perfil .perfil-detalles {
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .perfil {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .perfil .perfil-imagen {
+    width: 250px;
+    margin-right: 30px;
+  }
+  .perfil .perfil-detalles {
+    padding-right: 30px;
   }
 }
 #Template-Registrado {
