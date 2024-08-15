@@ -5,19 +5,45 @@ body #loading-screen {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ececec; /* Color gris */
+  background-color: #3ECAD3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Asegúrate de que esté por encima de todo */
+  overflow: hidden;
+  z-index: 9999;
 }
-body #loading-screen img {
-  margin: 0 10px;
+body #loading-screen #loading-dog {
+  position: absolute;
+  bottom: 142px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 150px;
   height: 75px;
+  background-image: url("../../Resources/Gif/Web/DogRunningv2.gif");
+  background-size: cover;
+  z-index: 2;
+}
+body #loading-screen #loading-floor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 152px;
+  background-image: url("../../Resources/Gif/Web/LoadingScreen_Floor.png");
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  animation: move-floor 10s linear infinite;
 }
 
+@keyframes move-floor {
+  0% {
+    background-position: 0 bottom;
+  }
+  100% {
+    background-position: -3000px bottom;
+  }
+}
 #Footer {
   margin: 0;
   padding: 0;
@@ -473,9 +499,10 @@ body #Header header#H-container .header__nav a {
 #Template-Cursos main .container .container-lista .container-lista-curso .card .curso__contenido {
   background-image: url(../../Resources/Template/Fondo_simple_light_orange.png);
   padding: 20px;
-  display: none;
-  flex-direction: column;
-  text-align: center;
+  max-height: 0;
+  opacity: 1;
+  overflow: hidden;
+  transition: max-height 1s ease;
 }
 #Template-Cursos main .container .container-lista .container-lista-curso .card .curso__contenido .card-body .curso__temario {
   margin-bottom: 20px;
@@ -518,6 +545,9 @@ body #Header header#H-container .header__nav a {
 }
 #Template-Cursos main .container .container-lista .container-lista-curso .card .curso__contenido .card-body .btn-success:hover {
   background-color: #3d8b40;
+}
+#Template-Cursos main .container .container-lista .container-lista-curso .card .curso__contenido.visible {
+  max-height: 700px;
 }
 
 @media (max-width: 768px) {
@@ -888,6 +918,23 @@ body #Header header#H-container .header__nav a {
 #Template-Nosotros main .perfil-container .perfil .perfil-imagen img {
   max-width: 100%;
   height: auto;
+}
+#Template-Nosotros main .perfil-container .perfil #PawIcon {
+  position: fixed;
+  bottom: 2vh;
+  right: 2vh;
+  background-color: white;
+  width: 30px;
+  text-align: center;
+  height: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+#Template-Nosotros main .perfil-container .perfil #PawIcon img {
+  width: 20px;
 }
 
 @media (max-width: 768px) {

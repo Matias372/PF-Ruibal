@@ -73,6 +73,23 @@
                         height: auto;
                     }
                 }
+                #PawIcon{
+                    position: fixed;
+                    bottom: 2vh;
+                    right: 2vh;
+                    background-color: white;
+                    width: 30px;
+                    text-align: center;
+                    height: 30px;
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    img{
+                        width: 20px;
+                    }
+                }
             }
         }
     }

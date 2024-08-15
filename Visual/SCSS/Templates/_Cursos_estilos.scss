@@ -70,54 +70,56 @@
                                 }
                             }
                         }
-                        .curso__contenido{
+                        .curso__contenido {
                             background-image: $template-SimpleOrange;
                             padding: 20px;
-                            display: none;
-                            flex-direction: column;
-                            text-align: center;
-                            .card-body{
-                                .curso__temario{
+                            max-height: 0;
+                            opacity: 1;
+                            overflow: hidden;
+                            transition: max-height 1s ease;
+                            .card-body {
+                                .curso__temario {
                                     margin-bottom: 20px;
-                                    h6{
+                                    h6 {
                                         margin-bottom: 10px;
                                     }
-                                    ul{
+                                    ul {
                                         padding: 0;
                                         margin-left: 3vh !important;
                                         margin: 0;
                                         text-align: left;
-                                        li{
+                                        li {
                                             margin-bottom: 10px;
                                             color: #333333;
                                         }
                                     }
                                 }
-                                .curso__medios-de-pago{
+                                .curso__medios-de-pago {
                                     margin-bottom: 20px;
-                                    h6{
+                                    h6 {
                                         margin-bottom: 10px;
                                     }
-                                    div{
+                                    div {
                                         justify-content: space-between;
                                         margin-bottom: 10px;
-                                        span{
+                                        span {
                                             font-size: 16px;
                                         }
                                     }
                                 }
-                                .btn-success{
+                                .btn-success {
                                     @include button-style(#4CAF50, #ffffff);
                                 }
                             }
+                        }
+                        .curso__contenido.visible {
+                            max-height: 700px; // Ajusta según el contenido
                         }
                     }
                 }
             }
         }
-
     }
-    
 }
 
 @media (max-width: 768px) {
@@ -135,4 +137,5 @@
     .curso__contenido {
         text-align: left;
     }
+    
 }

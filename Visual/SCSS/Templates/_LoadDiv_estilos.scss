@@ -1,21 +1,49 @@
-body{
+body {
     #loading-screen {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #ececec; /* Color gris */
+        background-color: $light-blue;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        z-index: 9999; /* Asegúrate de que esté por encima de todo */
+        overflow: hidden;
+        z-index: 9999;
+
+        #loading-dog {
+            position: absolute;
+            bottom: 142px; // Distancia desde la parte inferior
+            left: 50%; // Centra horizontalmente
+            transform: translateX(-50%); // Ajusta el centro de la imagen horizontalmente
+            width: 150px;
+            height: 75px;
+            background-image: url('../../Resources/Gif/Web/DogRunningv2.gif');
+            background-size: cover; // Ajusta la imagen al tamaño del div
+            z-index: 2; // Asegúrate de que el perro esté por encima del piso
+        }
+
+        #loading-floor {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%; // Mantiene el ancho en 100%
+            height: 152px; // Mantén la altura que ya definiste
+            background-image: url('../../Resources/Gif/Web/LoadingScreen_Floor.png');
+            background-repeat: repeat-x; // Repite la imagen horizontalmente
+            background-position: 0 bottom; // Asegura que la imagen esté pegada al fondo
+            animation: move-floor 10s linear infinite; // Añade animación para mover el piso
+        }
     }
-    
-    #loading-screen img {
-        margin: 0 10px;
-        width: 150px;
-        height: 75px;
+}
+
+@keyframes move-floor {
+    0% {
+        background-position: 0 bottom;
+    }
+    100% {
+        background-position: -3000px bottom; // Mueve la imagen del background hacia la izquierda
     }
 }
