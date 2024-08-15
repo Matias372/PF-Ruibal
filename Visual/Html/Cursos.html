@@ -13,13 +13,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Estilos -->
     <link rel="stylesheet" href="../CSS/General_Style.css">
-    <!-- Scripts -->
+    
     
 </head>
 <body id="Template-Cursos">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div id="loading-dog"></div>
+        <div id="loading-floor"></div>
+    </div>
+
     <div id="Header"></div>
 
-    <!-- Main Content -->
+    
     <main>
         <div class="container mt-4">
             <div class="container-lista row"> <!--originalmente se toma elementos de base de datos por JS y se rellenan-->
@@ -29,7 +35,7 @@
                         <section class="card-content align-items-center">
                             <!-- Imagen del curso -->
                             <div class="card-img-top">
-                                <img src="../../Resources/Img/Cursos/Adiestramiento Nivel 1_IMG.jpg" class="img-fluid" alt="Imagen del curso" width="250px">
+                                <img src="../../Resources/Img/Cursos/Adiestramiento Nivel 1_IMG.jpg" class="img-fluid" alt="Imagen del curso" width="250px" loading="lazy">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Adiestramiento Canino Nivel 1</h5>
@@ -72,7 +78,7 @@
                         <section class="card-content align-items-center">
                             <!-- Imagen del curso -->
                             <div class="card-img-top">
-                                <img src="../../Resources/Img/Cursos/Control de Desastres_IMG.jpg" class="img-fluid" alt="Imagen del curso" width="250px">
+                                <img src="../../Resources/Img/Cursos/Control de Desastres_IMG.jpg" class="img-fluid" alt="Imagen del curso" width="250px" loading="lazy">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Control de Desastres</h5>
@@ -115,7 +121,7 @@
                         <section class="card-content align-items-center">
                             <!-- Imagen del curso -->
                             <div class="card-img-top">
-                                <img src="../../Resources/Img/Cursos/Cómo identificar si tu perro es un psicópata_IMG.jpg" class="img-fluid" alt="Imagen del curso" width="250px">
+                                <img src="../../Resources/Img/Cursos/Cómo identificar si tu perro es un psicópata_IMG.jpg" class="img-fluid" alt="Imagen del curso" width="250px" loading="lazy">
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Identifica si tu Perro es un Psicópata</h5>
@@ -164,5 +170,6 @@
     <!-- Scripts personalizados -->
     <script src="../../Control/HeaFoo_Handler.js"></script>
     <script src="../../Control/Cursos_Handler.js"></script>
+    <script src="../../Control/LoadingScreen_Handler.js"></script>
 </body>
 </html>

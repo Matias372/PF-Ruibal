@@ -13,11 +13,19 @@
     <link rel="stylesheet" href="../CSS/General_Style.css">
 </head>
 <body id="Template-Clases">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div id="loading-dog"></div>
+        <div id="loading-floor"></div>
+    </div>
+
     <div id="Header"></div>
 
     <main class="main container">
+        <!-- Clases -->
         <div class="Clases-container row  justify-content-center"> <!-- contiene los 2 tipos de clases -->
-            <section class="class-type class-type--presensial col-12 col-md-6"> <!-- clase presencial: col-12: columna completa / col-md-6: 2 columnas a partir de pantallas medias -->
+            <!-- Clase Presencial -->
+            <section class="class-type class-type--presensial col-12 col-md-5 col-lg-6"> <!-- clase presencial: col-12: columna completa / col-md-6: 2 columnas a partir de pantallas medias -->
                 <h2 class="class-type__title">Presencial</h2>
                 <h3 class="class-type__subtitle">Zona de cobertura:</h3>
                 <div class="class-type__coverage">
@@ -39,8 +47,8 @@
                 <p class="class-type__topic">Educación y obediencia.</p>
                 <p class="class-type__topic">Modificación de conducta.</p>
             </section>
-            
-            <section class="class-type class-type--remote col-12 col-md-6">
+            <!-- Clase Remota -->
+            <section class="class-type class-type--remote col-12 col-md-5 col-lg-6">
                 <h2 class="class-type__title">Remoto</h2>
                 <h3 class="class-type__subtitle">Zona de cobertura:</h3>
                 <ul class="class-type__list">
@@ -57,12 +65,12 @@
                 <p class="class-type__topic">Acompañamiento post traslado.</p>
             </section>
         </div>
-
+        <!-- detalles -->
         <section class="considerations">
             <h2 class="considerations__title">Consideraciones</h2>
             <p class="considerations__text">Tenete ergo quod si servitus quae natura liber, et aliena tua tunc impeditur. Dolebis, et turbabuntur, et invenietis, cum culpa tam dis hominibusque. Quod si tibi tantum sit propria et aliena quale sit.</p>
         </section>
-
+        <!-- Contactar por whatsapp -->
         <div class="contact">
             <a id="whatsapp" class="contact__link btn btn-primary" href="https://web.whatsapp.com" target="_blank">
                 <img src="../../Resources/Img/Icons/Whatsapp-icon.svg" alt="whatsapp" width="32">Contactanos
@@ -72,9 +80,11 @@
 
     <div id="Footer"></div>
 
+    <!-- scripts -->
     <script src="../../Control/HeaFoo_Handler.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../../Control/LoadingScreen_Handler.js"></script>
 </body>
 </html>

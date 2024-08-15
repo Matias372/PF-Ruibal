@@ -1,7 +1,6 @@
 //Inicio==================
 #Template-Inicio {
-    /*Inicio==================*/
-    /*body*/
+    /* Estilos base para móviles (Mobile First) */
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-image: $template-WhiteStar;
@@ -12,14 +11,12 @@
         align-items: center;
     }
 
-    
     .slider {
-        /* Slider */
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
-        width: 80%;
+        width: 100%; // Ajuste para móvil
 
         &__image {
             max-width: 100%;
@@ -28,11 +25,10 @@
         }
     }
 
-    
     .services {
-        /* Servicios */
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        flex-direction: column; // Estilos base para móvil
 
         .services__item {
             border-radius: 2vh;
@@ -45,6 +41,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+            width: 100%; // Ajuste para móvil
         }
 
         &__title {
@@ -62,15 +59,13 @@
         }
     }
 
-    
     .contact-button {
-        /* Botón de Contacto */
         text-align: center;
         margin-bottom: 20px;
 
         &__link {
-            width: 225px;
-            height: 66px;
+            width: 100%; // Ajuste para móvil
+            height: auto; // Ajuste para móvil
             display: inline-flex;
             padding: 10px 20px;
             background: #ffffff;
@@ -79,7 +74,7 @@
             text-decoration: none;
             border-radius: 20px;
             transition: background 0.3s;
-            font-size: 24px;
+            font-size: 20px; // Ajuste para móvil
             align-items: center;
 
             &:hover {
@@ -97,19 +92,47 @@
         border-color: $dark-blue;
     }
 
-    
-    @media (max-width: 768px) {
-        /* Estilos para móvil */
-        .services {
-            flex-direction: column;
-        }
-
-        .services__item {
-            width: 100%;
-        }
-
+    // Tablet==================
+    @media (min-width: 768px) and (max-width: 1024px) {
         .slider {
-            width: 100%;
+            width: 90%; // Ajuste para tablet
+        }
+
+        .services {
+            flex-direction: row; // Distribuye en filas para tablet
+            margin-left: 15px;
+            margin-right: 15px;
+
+            .services__item {
+                width: 48%; // Ajuste para tablet
+            }
+        }
+
+        .contact-button__link {
+            width: 225px;
+            font-size: 22px; // Ajuste para tablet
+        }
+    }
+
+    // PC==================
+    @media (min-width: 1024px) {
+        .slider {
+            width: 80%; // Ajuste para PC
+        }
+
+        .services {
+            flex-direction: row;
+            margin-left: 20px;
+            margin-right: 20px;
+
+            .services__item {
+                width: 45%; // Ajuste para PC
+            }
+        }
+
+        .contact-button__link {
+            width: 225px;
+            font-size: 24px; // Ajuste para PC
         }
     }
 }

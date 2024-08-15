@@ -14,10 +14,16 @@
     <script src="../../Control/Img_Click_Handler.js"></script>
 </head>
 <body id="Template-Nosotros">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div id="loading-dog"></div>
+        <div id="loading-floor"></div>
+    </div>
     
     <div id="Header"></div>
 
     <main>
+        <!-- Perfil -->
         <div class="perfil-container">
             <div class="perfil">
                 <div class="perfil-detalles"> <!-- texto de muestra-->
@@ -50,16 +56,20 @@
                         <img src="../../Resources/Img/Icons/Linkedin-logo.svg" alt="LinkedIn" style="width:20px; height:20px;"> Link de LinkedIn
                     </a>
                 </div>
-                
+                <!-- Imagen de perfil -->
                 <div class="perfil-imagen">
                     <img src="../../Resources/Img/Perfil-img.png" alt="Imagen de perfil">
                 </div>
+                <div id="PawIcon">
+                    <img src="../../Resources/Img/Icons/PawEG.svg" alt="icono patita perro" onclick="handleLogoClick()">
+                </div>
             </div>
-        </div>    
+        </div>
     </main>
     
     <div id="Footer"></div>
-
+    <!-- Scripts -->
     <script src="../../Control/HeaFoo_Handler.js"></script>
+    <script src="../../Control/LoadingScreen_Handler.js"></script>
 </body>
 </html>
