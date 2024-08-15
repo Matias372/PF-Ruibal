@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="../CSS/General_Style.css">
 </head>
 <body id="Template-Inscribirse">
+    <!-- Loading Screen -->
     <div id="loading-screen">
-        <img src="../../Resources/Gif/Web/Running dog.gif" alt="Loading DogRun">
-        <img src="../../Resources/Gif/Web/Fading lines.gif" alt="Loading WaveLine">
+        <div id="loading-dog"></div>
+        <div id="loading-floor"></div>
     </div>
     
     <div id="Header"></div>
@@ -24,7 +25,7 @@
         <section id="Inscribirse"> <!--actualmente redirige directo a Registrado.html, no guarda datos.-->
 
             <h1>Formulario</h1>
-
+            <!-- Formulario de inscripción -->
             <form method="post" id="inscripcion-form" onsubmit="sendEmail(event)">
 
                 <div>
@@ -43,6 +44,7 @@
                     <label for="telefono">Teléfono *</label>
                     <input type="tel" id="telefono" name="telefono" required>    
                 </div>
+                <!-- Select de cursos, implementar DB -->
                 <div>
                     <label for="curso">Curso *</label>
                     <select name="curso" id="cursoname" required>
@@ -70,7 +72,7 @@
     </main>
     
     <div id="Footer"></div>
-
+    <!--scripts-->
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="../../Control/HeaFoo_Handler.js"></script>
     <script src="../../Control/Formulario_Handler.js"></script>

@@ -15,18 +15,22 @@
     
 </head>
 <body id="Template-Inicio">
+    <!-- Loading Screen -->
     <div id="loading-screen">
-        <img src="../../Resources/Gif/Web/Running dog.gif" alt="Loading DogRun">
-        <img src="../../Resources/Gif/Web/Fading lines.gif" alt="Loading WaveLine">
+        <div id="loading-dog"></div>
+        <div id="loading-floor"></div>
     </div>
-
+    <!-- contenedor donde se carga el header-->
     <div id="Header"></div>
     
+
     <main class="main text-center">
+        <!-- Slider -->
         <div id="slider" class="slider">
-            <img id="sliderImage" class="slider__image" src="" alt="Slider Image"> <!--slider, cambia imagen con JS-->
+            <img id="sliderImage" class="slider__image" src="" alt="Slider Image" loading="lazy"> <!--slider, cambia imagen con JS-->
         </div>
 
+        <!-- contenedor de Servicios -->
         <section id="Servicios" class="services row justify-content-around">
             <div id="Clases" class="services__item services__item--classes col-md-5 p-3"> <!-- cold-md-5: para que separe en 2 columnas cuando es pantalla mediana o mayor, p-3: padding -->
                 <h2 class="services__title">Clases</h2>
@@ -41,19 +45,20 @@
             </div>
         </section>
 
+        <!-- Contactar por whatsapp -->
         <div id="Btn-Contactanos" class="contact-button">
             <a id="whatsapp" class="contact-button__link" href="https://web.whatsapp.com" target="_blank">
                 <img src="../../Resources/Img/Icons/Whatsapp-icon.svg" alt="whatsapp" width="32" class="contact-button__icon">Contactanos
             </a>
         </div>
     </main>
-
+    <!-- contenedor donde se carga Footer -->
     <div id="Footer"></div>
-
-    <script src="../../Control/HeaFoo_Handler.js"></script> <!--agrega header y footer-->
-    <script src="../../Control/Slider.js"></script>
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../../Control/LoadingScreen_Handler.js"></script>
+    <script src="../../Control/HeaFoo_Handler.js" defer></script> <!--agrega header y footer-->
+    <script src="../../Control/Slider.js" defer></script>
+    <script src="../../Control/LoadingScreen_Handler.js" defer></script>
 </body>
 </html>

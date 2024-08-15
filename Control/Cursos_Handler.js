@@ -1,16 +1,19 @@
-/* aca se agrega las funciones para mostrar detalles del curso de la base de datos */
 function toggleCourseContent(button) {
-    // Encuentra el contenedor
     const card = button.closest('.card');
-    // Busca el contenido
     const cursoContent = card.querySelector('.curso__contenido');
-    if (cursoContent.style.display === 'none' || cursoContent.style.display === '') {
-        cursoContent.style.display = 'block'; // Muestra el contenido
-        button.textContent = '▲'; // Cambia el texto del botón a ▲ para indicar que el contenido está visible
+    const isVisible = cursoContent.classList.contains('visible');
+
+    if (isVisible) {
+        cursoContent.classList.remove('visible');
+        setTimeout(() => {
+            cursoContent.style.display = 'none';
+        }, 1000); // El tiempo debe coincidir con la duración de la transición
+        button.textContent = '▼';
     } else {
-        cursoContent.style.display = 'none'; // Oculta el contenido
-        button.textContent = '▼'; // Cambia el texto del botón a ▼ para indicar que el contenido está oculto
+        cursoContent.style.display = 'block';
+        setTimeout(() => {
+            cursoContent.classList.add('visible');
+        }, 1); // Un pequeño retraso para permitir que el cambio de display sea procesado
+        button.textContent = '▲';
     }
 }
-
-
