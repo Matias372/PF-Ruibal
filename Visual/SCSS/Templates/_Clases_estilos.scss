@@ -1,101 +1,80 @@
-#Template-Clases{
+#Template-Clases {
+    /* Estilos base para móviles (Mobile First) */
     font-family: Arial, sans-serif;
+    background-image: $template-WhiteStar;
     margin: 0;
     padding: 0;
-    background-image: $template-WhiteStar;
-    main.main{
+    min-height: 100vh;
+
+    main.main {
+        min-height: 72vh;
         padding: 20px;
         max-width: 100%;
         margin: 0 auto;
         text-align: center;
-        
-        .Clases-container{
+
+        .Clases-container {
             display: flex;
-            flex-wrap: nowrap;
+            flex-direction: column; // Móvil: columnas en vez de filas
             align-items: center;
-            justify-content: space-around !important;
-            margin-left: 0px;
-            margin-right: 0px;
+            justify-content: center;
+            margin: 0;
             width: 100%;
-            .class-type{
-                display: inline-block;
+
+            .class-type {
+                width: 100%; // Móvil: 100% ancho
                 max-width: 550px;
-                height: 450px;
-                vertical-align: top;
+                height: auto;
                 background-color: $light-orange;
                 padding: 20px;
-                box-sizing: border-box;
                 margin-bottom: 20px;
                 border-radius: 2vh;
-                h2.class-type__title{
+                box-sizing: border-box;
+                h2.class-type__title {
                     margin-bottom: 15px;
                 }
-                h3.class-type__subtitle{
+                h3.class-type__subtitle {
                     text-align: justify;
                 }
-                h4.class-type__topics-title{
+                h4.class-type__topics-title {
                     margin-top: 10px;
                 }
-                p.class-type__topic{
-                    margin-bottom: 0px !important;
+                p.class-type__topic {
+                    margin-bottom: 0 !important;
                 }
-            }
-            .class-type--presensial{
-                margin-right: 2%;
-                
-                .class-type__coverage{
-                    .class-type__list{
-                        text-align: justify;
-                        list-style-type: disc;
-                        padding-left: 5%;
-                        column-count: 2;
-                        margin-left: 5%;
-                        .class-type__item{
-                            margin-bottom: 5px;
-                        }
-                    } 
-                }
-                
-            }
-            .class-type--remote{
-                margin-right: 2%;
-                .class-type__list{
+
+                .class-type__list {
                     text-align: justify;
                     list-style-type: disc;
                     padding-left: 5%;
                     column-count: 2;
                     margin-left: 5%;
-                    .class-type__item{
+                    .class-type__item {
                         margin-bottom: 5px;
                     }
                 }
-                h5.class-type__timezone-title{
-
-                }
-                p.class-type__timezone{
-                }
-            }        
+            }
         }
 
-        .considerations{
+        .considerations {
             background-color: $green;
             padding: 20px;
-            box-sizing: border-box;
             margin-bottom: 20px;
-            width: 50%;
-            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
             align-items: center;
-            .considerations__title{
+
+            .considerations__title {
                 margin-bottom: 25px;
             }
         }
 
-        .contact{
+        .contact {
             text-align: center;
             margin-bottom: 20px;
-            .contact__link{
-                width: 225px;
-                height: 66px;
+            .contact__link {
+                height: auto; // Móvil: ajuste automático
                 display: inline-flex;
                 padding: 10px 20px;
                 background: #ffffff;
@@ -104,29 +83,64 @@
                 text-decoration: none;
                 border-radius: 20px;
                 transition: background 0.3s;
-                font-size: 24px;
+                font-size: 20px; // Móvil: tamaño de fuente más pequeño
                 align-items: center;
             }
-            .contact__link:hover{
+            .contact__link:hover {
                 background: #ceffe2;
                 border-color: #20c361;
                 color: #000000;
             }
         }
     }
-}
 
-@media (max-width: 768px) {
-    #Template-Clases{
-        .Clases-container{
+    // Tablet==================
+    @media (min-width: 768px) and (max-width: 1024px) {
+        main.main {
+            display: flex;
             flex-direction: column;
-            width: 100%;
-            .class-type{
-                width: 100%;
+            align-items: center;
+            .Clases-container {
+                flex-direction: row;
+                justify-content: space-around !important; // Tablet: filas
+                .class-type {
+                    width: 48%; // Tablet: casi la mitad del ancho
+                }
+            }
+
+            .considerations {
+                width: 75%; // Tablet: 75% ancho
+            }
+
+            .contact__link {
+                width: 225px;
+                font-size: 22px; // Tablet: tamaño de fuente más grande
             }
         }
-        .considerations{
-            width: 100% !important;
+    }
+
+    // PC==================
+    @media (min-width: 1024px) {
+        main.main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .Clases-container {
+                flex-direction: row;
+                justify-content: space-around !important;
+                .class-type {
+                    width: 45%; // PC: menos de la mitad del ancho
+                }
+            }
+
+            .considerations {
+                width: 50%; // PC: 50% ancho
+            }
+
+            .contact__link {
+                width: 225px;
+                font-size: 24px; // PC: tamaño de fuente más grande
+            }
         }
     }
 }

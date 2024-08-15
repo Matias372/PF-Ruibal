@@ -1,70 +1,85 @@
-#Template-Inscribirse{
+#Template-Inscribirse {
     background-image: $template-WhiteStar;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     width: 100%;
+
     main {
         padding: 20px;
         max-width: 800px;
         margin: 0 auto;
         margin-top: 5%;
         margin-bottom: 5%;
-        section#Inscribirse{
-            background-image: url("../../Resources/Template/Fondo_simple_light_orange.png");
+
+        section#Inscribirse {
+            background-image: $template-SimpleOrange;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            h1{
-                font-size: 2em;
+
+            h1 {
+                font-size: 1.5em;
                 margin-bottom: 20px;
                 color: #000000;
                 text-align: center;
             }
-            form{
+
+            form {
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
                 align-items: center;
-                div{
+
+                div {
                     display: flex;
                     flex-direction: column;
-                    width: 60%;
+                    width: 100%;
                     margin-bottom: 20px;
-                    label{
-                        font-size: 1em;
+
+                    label {
+                        font-size: 0.9em;
                         margin-bottom: 5px;
                         color: #000000;
                         font-weight: bold;
                     }
+
                     input,
                     select,
-                    textarea{
+                    textarea {
                         padding: 10px;
-                        font-size: 1em;
+                        font-size: 0.9em;
                         border: 1px solid #ddd;
                         border-radius: 4px;
                         outline: none;
                         transition: border-color 0.3s;
-
+                        opacity: 0.8; // Opacidad del 80%
                     }
+
+                    select {
+                        width: 100%; // Asegura que el select ocupe el ancho completo de su contenedor
+                    }
+
+                    option {
+                        opacity: 0.8; // Opacidad del 80%
+                    }
+
                     input:focus,
                     select:focus,
-                    textarea:focus{
-                        border-color: $dark-blue;
+                    textarea:focus {
+                        border-color: $light-blue; // Color de la paleta para foco
                     }
-                    
-                    textarea{
-                        resize: none;
-                        height: 200px;
-                    }
-                    
 
+                    textarea {
+                        resize: none;
+                        height: 150px;
+                    }
                 }
-                button{
+
+                button {
                     padding: 10px 20px;
-                    font-size: 1.2em;
+                    font-size: 1em;
                     background-color: $dark-blue;
                     color: #fff;
                     border: none;
@@ -72,20 +87,97 @@
                     cursor: pointer;
                     transition: background-color 0.3s;
                 }
-                button:hover{
-                    background-color: $light-blue;
+
+                button:hover {
+                    background-color: $light-blue; // Color más claro para el hover
                 }
             }
         }
     }
 }
 
+// Mobile First (Base styles for mobile)
 @media (max-width: 768px) {
-    #Template-Inscribirse main section#Inscribirse{
+    #Template-Inscribirse main section#Inscribirse {
         width: 90%;
-        form div{
+
+        form div {
             width: 100%;
         }
     }
-    
+}
+
+// Tablet (min-width: 768px)
+@media (min-width: 768px) {
+    main {
+        padding: 30px;
+    }
+
+    section#Inscribirse {
+        padding: 30px;
+        border-radius: 10px;
+
+        h1 {
+            font-size: 2em;
+        }
+
+        form {
+            div {
+                width: 80%;
+                label {
+                    font-size: 1em;
+                }
+                input,
+                select,
+                textarea {
+                    font-size: 1em;
+                }
+                textarea {
+                    height: 200px;
+                }
+            }
+
+            button {
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
+// PC (min-width: 1024px)
+@media (min-width: 1024px) {
+    main {
+        padding: 40px;
+    }
+
+    section#Inscribirse {
+        padding: 40px;
+        border-radius: 12px;
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        form {
+            div {
+                width: 60%;
+                label {
+                    font-size: 1.1em;
+                }
+                input,
+                select,
+                textarea {
+                    font-size: 1.1em;
+                }
+                textarea {
+                    height: 250px;
+                }
+            }
+
+            button {
+                font-size: 1.2em;
+                padding: 15px 30px;
+            }
+        }
+    }
 }
