@@ -1,10 +1,7 @@
 // _cursos.scss
 
 #Template-Cursos {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: $template-WhiteStar;
+    @include body-set();
 
     main {
         h5, h6 {

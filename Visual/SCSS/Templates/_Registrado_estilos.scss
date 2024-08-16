@@ -1,10 +1,6 @@
 #Template-Registrado {
-    
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+    @include body-set();
     line-height: 1.6;
-    background-image: $template-WhiteStar;
     background-size: cover;
     background-position: center;
     display: flex;

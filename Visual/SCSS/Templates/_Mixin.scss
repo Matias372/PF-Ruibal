@@ -1,0 +1,29 @@
+//MIXINS================================================
+@mixin button-style($bg-color, $text-color) {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: $bg-color;
+    color: $text-color;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+}
+
+@mixin body-set(){
+    font-family: Arial, sans-serif;
+    background-image: $template-WhiteStar;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+@mixin flex-col-center(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

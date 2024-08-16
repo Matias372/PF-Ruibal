@@ -206,8 +206,10 @@ body #Header header#H-container .header__nav a {
 #Template-Inicio {
   /* Estilos base para móviles (Mobile First) */
   font-family: Arial, sans-serif;
-  line-height: 1.6;
   background-image: url(../../Resources/Template/Fondo_star_light_white.png);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 #Template-Inicio main {
   display: flex;
@@ -462,9 +464,10 @@ body #Header header#H-container .header__nav a {
 
 #Template-Cursos {
   font-family: Arial, sans-serif;
+  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
   margin: 0;
   padding: 0;
-  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
+  min-height: 100vh;
 }
 #Template-Cursos main h5, #Template-Cursos main h6 {
   font-weight: bold;
@@ -822,11 +825,12 @@ body #Header header#H-container .header__nav a {
   }
 }
 #Template-Inscribirse {
-  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  line-height: 1.6;
   width: 100%;
 }
 #Template-Inscribirse main {
@@ -851,8 +855,8 @@ body #Header header#H-container .header__nav a {
 #Template-Inscribirse main section#Inscribirse form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
   align-items: center;
+  gap: 15px;
 }
 #Template-Inscribirse main section#Inscribirse form div {
   display: flex;
@@ -975,9 +979,10 @@ body #Header header#H-container .header__nav a {
 }
 #Template-Nosotros {
   font-family: Arial, sans-serif;
+  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
   margin: 0;
   padding: 0;
-  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
+  min-height: 100vh;
 }
 #Template-Nosotros main .perfil-container {
   max-width: 1200px;
@@ -1041,7 +1046,6 @@ body #Header header#H-container .header__nav a {
 #Template-Nosotros main .perfil-container .perfil #PawIcon img {
   width: 40px;
   height: 40px;
-  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -1087,11 +1091,12 @@ body #Header header#H-container .header__nav a {
   }
 }
 #Template-Registrado {
+  font-family: Arial, sans-serif;
+  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  min-height: 100vh;
   line-height: 1.6;
-  background-image: url(../../Resources/Template/Fondo_star_light_white.png);
   background-size: cover;
   background-position: center;
   display: flex;
