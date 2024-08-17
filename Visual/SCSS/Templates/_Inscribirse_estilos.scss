@@ -1,9 +1,6 @@
 #Template-Inscribirse {
-    background-image: $template-WhiteStar;
-    font-family: Arial, sans-serif;
+    @include body-set();
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     width: 100%;
 
     main {
@@ -27,10 +24,8 @@
             }
 
             form {
-                display: flex;
-                flex-direction: column;
+                @include flex-col-center();
                 gap: 15px;
-                align-items: center;
 
                 div {
                     display: flex;

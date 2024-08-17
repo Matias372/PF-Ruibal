@@ -1,14 +1,10 @@
 //Inicio==================
 #Template-Inicio {
     /* Estilos base para móviles (Mobile First) */
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-image: $template-WhiteStar;
+    @include body-set();
 
     main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex-col-center();
     }
 
     .slider {
@@ -37,9 +33,7 @@
             text-align: center;
             margin-bottom: 20px;
             background-color: $green;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flex-col-center();
             justify-content: space-between;
             width: 100%; // Ajuste para móvil
         }
