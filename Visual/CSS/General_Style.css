@@ -532,7 +532,7 @@ body #Header header#H-container .header__nav a {
   color: #3b3b3b;
 }
 #Template-Cursos main .container .container-lista .container-lista-curso .card .curso__contenido {
-  background-image: url(../../Resources/Template/Fondo_simple_light_orange.webps);
+  background-image: url(../../Resources/Template/Fondo_simple_light_orange.webp);
   padding: 20px;
   max-height: 0;
   opacity: 1;
@@ -841,7 +841,7 @@ body #Header header#H-container .header__nav a {
   margin-bottom: 5%;
 }
 #Template-Inscribirse main section#Inscribirse {
-  background-image: url(../../Resources/Template/Fondo_simple_light_orange.webps);
+  background-image: url(../../Resources/Template/Fondo_simple_light_orange.webp);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
