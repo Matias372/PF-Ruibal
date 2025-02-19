@@ -15,11 +15,7 @@
     
 </head>
 <body id="Template-Inicio">
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div id="loading-dog"></div>
-        <div id="loading-floor"></div>
-    </div>
+    
     <!-- contenedor donde se carga el header-->
     <div id="Header"></div>
     
@@ -45,10 +41,41 @@
             </div>
         </section>
 
+        <section id="testimonios" class="testimonials">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-slider">
+                <button class="slider-btn left" onclick="prevTestimonial()">&#10094;</button>
+                <div class="testimonials-container">
+                    <div class="testimonial">
+                        <p>"Gracias a Perronautas, mi perro ahora se porta increíble. ¡Muy recomendado!"</p>
+                        <span>- Juan Pérez y Max 🐶</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Los cursos fueron fáciles de seguir y muy efectivos. ¡Excelentes instructores!"</p>
+                        <span>- Ana Gómez</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"El cambio en mi perro fue increíble después de tomar las clases. ¡Gracias Perronautas!"</p>
+                        <span>- Carlos López y Rocky 🐾</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"La atención personalizada hizo toda la diferencia. ¡Muy profesionales!"</p>
+                        <span>- María Fernández</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Recomiendo Perronautas a todos los dueños de perros. ¡Los resultados son sorprendentes!"</p>
+                        <span>- Luis Torres y Luna 🌟</span>
+                    </div>
+                </div>
+                <button class="slider-btn right" onclick="nextTestimonial()">&#10095;</button>
+            </div>
+        </section>
+        
+        
         <!-- Contactar por whatsapp -->
         <div id="Btn-Contactanos" class="contact-button">
             <a id="whatsapp" class="contact-button__link" href="https://web.whatsapp.com" target="_blank">
-                <img src="../../Resources/Img/Icons/Whatsapp-icon.svg" alt="whatsapp" width="32" class="contact-button__icon">Contactanos
+                <img src="../../Resources/Img/Icons/Whatsapp-icon.svg" alt="whatsapp" width="32" class="contact-button__icon">
             </a>
         </div>
     </main>
@@ -59,6 +86,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../../Control/HeaFoo_Handler.js" defer></script> <!--agrega header y footer-->
     <script src="../../Control/Slider.js" defer></script>
-    <script src="../../Control/LoadingScreen_Handler.js" defer></script>
+    <script src="../../Control/TestimonialsSlider.js" defer></script>
+
 </body>
 </html>

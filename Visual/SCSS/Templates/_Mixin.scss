@@ -16,7 +16,7 @@
 
 @mixin body-set(){
     font-family: Arial, sans-serif;
-    background-image: $template-WhiteStar;
+    background-color: $blue-dark; 
     margin: 0;
     padding: 0;
     min-height: 100vh;

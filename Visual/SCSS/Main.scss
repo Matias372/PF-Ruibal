@@ -1,16 +1,18 @@
 //Palettes
-$light-blue: #3ECAD3;
-$dark-blue: #0C1B54;
-$green: #72CDAE;
-$light-orange:#FEC985;
-$rose: #F18DC1;
+$light-blue: #43C8DA;
+$dark-blue: #071A52;
+$blue-dark: #030A1F;
+$green: #72D0B6;
+$light-orange:#FCCD88;
+$rose: #E491B5;
+$violet: #6D3EB0;
+
 $template-WhiteStar: url(../../Resources/Template/Fondo_star_light_white.webp);
 $template-SimpleGreen: url(../../Resources/Template/Fondo_simple_light_green.webp);
 $template-SimpleOrange: url(../../Resources/Template/Fondo_simple_light_orange.webp);
 $template-SimpleLBlue: url(../../Resources/Template/Fondo_simple_light_blue.png);
 
 //Imports
-@import "Templates/_LoadDiv_estilos.scss";
 @import "Templates/_Mixin.scss";
 @import "Templates/_Footer_estilos.scss";
 @import "Templates/_Header_estilos.scss";

@@ -1,55 +1,10 @@
 @charset "UTF-8";
-body #loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #3ECAD3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  z-index: 9999;
-}
-body #loading-screen #loading-dog {
-  position: absolute;
-  bottom: 142px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 150px;
-  height: 75px;
-  background-image: url("../../Resources/Gif/Web/DogRunningv2.gif");
-  background-size: cover;
-  z-index: 2;
-}
-body #loading-screen #loading-floor {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 152px;
-  background-image: url("../../Resources/Gif/Web/LoadingScreen_Floor.png");
-  background-repeat: repeat-x;
-  background-position: 0 bottom;
-  animation: move-floor 10s linear infinite;
-}
-
-@keyframes move-floor {
-  0% {
-    background-position: 0 bottom;
-  }
-  100% {
-    background-position: -3000px bottom;
-  }
-}
 #Footer {
   margin: 0;
   padding: 0;
 }
 #Footer footer#F-container {
-  background-color: #0C1B54;
+  background-color: #071A52;
   color: white;
   display: flex !important;
   justify-content: space-around;
@@ -72,7 +27,7 @@ body #loading-screen #loading-floor {
   transition: color 0.3s;
 }
 #Footer footer#F-container div a:hover {
-  color: #3ECAD3;
+  color: #43C8DA;
 }
 #Footer footer#F-container div#Redes-sociales a {
   display: flex;
@@ -105,116 +60,116 @@ body #Header header#H-container {
   justify-content: space-between;
   width: 100%;
   padding: 10px 20px;
-  background-color: #3ECAD3;
+  background-color: #ffffff;
+  position: relative;
 }
-body #Header header#H-container .header__logo {
+body #Header .header__menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+body #Header .header__logo {
   max-width: 100px;
   height: auto;
 }
-body #Header header#H-container .header__toggle-menu-btn {
+body #Header .header__toggle-menu-btn {
   display: none;
 }
-body #Header header#H-container .header__nav ul {
+body #Header .header__nav ul {
   display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  align-items: center;
 }
-body #Header header#H-container .header__nav li {
+body #Header .header__nav li {
   margin: 0 15px;
 }
-body #Header header#H-container .header__nav a {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  text-decoration: none;
-  background-color: #0C1B54;
-  color: #ffffff;
-  transition: background-color 0.3s;
-}
-body #Header header#H-container .header__nav a:hover {
-  background-color: #060d27;
-}
-body #Header header#H-container .header__nav a {
+body #Header .header__nav a {
+  color: #071A52;
   font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: color 0.3s;
+  background: none;
+  border: none;
+}
+body #Header .header__nav a:hover {
+  color: #0d3098;
 }
 @media (max-width: 768px) {
   body #Header header#H-container {
     flex-direction: column;
     align-items: flex-start;
-    margin: 0px;
-    padding: 0px;
-    padding-top: 2px;
+    padding: 10px;
   }
-  body #Header header#H-container .header__logo-toggle {
+  body #Header .header__logo-toggle {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    margin: 0px !important;
-    align-items: center;
     justify-content: space-between;
-    padding-top: 2px;
-    padding-bottom: 3px;
+    align-items: center;
   }
-  body #Header header#H-container .header__logo-toggle .header__logo {
+  body #Header .header__logo-toggle .header__logo {
     width: 80px;
-    margin-left: 4px;
   }
-  body #Header header#H-container .header__menu {
-    width: 100%;
-    margin-bottom: 0 !important;
-  }
-  body #Header header#H-container .header__toggle-menu-btn {
+  body #Header .header__toggle-menu-btn {
     display: block;
     font-size: 30px;
     background: none;
     border: none;
     cursor: pointer;
-    height: fit-content;
   }
-  body #Header header#H-container .header__nav {
+  body #Header .header__nav {
     display: none;
     width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 0;
   }
-  body #Header header#H-container .header__nav.active {
+  body #Header .header__nav.active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5px;
+    justify-content: center;
+    width: 100%;
   }
-  body #Header header#H-container .header__nav.active ul {
-    display: flex;
+  body #Header .header__nav ul {
     flex-direction: column;
-    align-items: center;
     width: 100%;
-  }
-  body #Header header#H-container .header__nav.active ul li {
-    width: 100%;
-  }
-  body #Header header#H-container .header__nav.active ul a {
     padding: 0;
-    padding-top: 8px;
-    padding-bottom: 8px;
+  }
+  body #Header .header__nav li {
     width: 100%;
     text-align: center;
-    border-radius: 0;
-    border: 1px solid #1d307e;
+    padding: 10px 0;
+  }
+  body #Header .header__nav a {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    color: #071A52;
   }
 }
 
 #Template-Inicio {
   /* Estilos base para móviles (Mobile First) */
   font-family: Arial, sans-serif;
-  background-image: url(../../Resources/Template/Fondo_star_light_white.webp);
+  background-color: #030A1F;
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  background-color: #030A1F;
+  color: #ffffff;
 }
 #Template-Inicio main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0px;
 }
 #Template-Inicio .slider {
   display: flex;
@@ -223,117 +178,120 @@ body #Header header#H-container .header__nav a {
   margin-bottom: 20px;
   width: 100%;
 }
-#Template-Inicio .slider__image {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-}
-#Template-Inicio .services {
-  margin-left: 10px;
-  margin-right: 10px;
-  flex-direction: column;
-}
-#Template-Inicio .services .services__item {
-  border-radius: 2vh;
-  background: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  margin-bottom: 20px;
-  background-color: #72CDAE;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+#Template-Inicio .slider img {
   width: 100%;
 }
-#Template-Inicio .services__title {
-  margin-bottom: 10px;
+#Template-Inicio .services {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  align-items: stretch;
+}
+#Template-Inicio .services .services__item {
+  border-radius: 10px;
+  background: #6D3EB0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
+  padding: 25px;
+  width: 100%;
+  max-width: 530px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-#Template-Inicio .services__description {
+#Template-Inicio .testimonials {
+  margin: 50px auto;
+  text-align: center;
+  background-color: #FCCD88;
+  padding: 20px;
+  width: 80%;
+  position: relative;
+}
+#Template-Inicio .testimonials h2 {
+  font-size: 2em;
   margin-bottom: 20px;
-  text-align: start;
+  color: #000;
 }
-#Template-Inicio .services__link {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  text-decoration: none;
-  background-color: #0C1B54;
-  color: #fff;
-  transition: background-color 0.3s;
+#Template-Inicio .testimonials .testimonials-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
 }
-#Template-Inicio .services__link:hover {
-  background-color: #060d27;
+#Template-Inicio .testimonials .testimonials-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  gap: 20px;
+}
+#Template-Inicio .testimonials .testimonial {
+  flex: 0 0 80%;
+  background: white;
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#Template-Inicio .testimonials .slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
+#Template-Inicio .testimonials .slider-btn.left {
+  left: 10px;
+}
+#Template-Inicio .testimonials .slider-btn.right {
+  right: 10px;
 }
 #Template-Inicio .contact-button {
   text-align: center;
-  margin-bottom: 20px;
 }
 #Template-Inicio .contact-button__link {
-  width: 100%;
-  height: auto;
-  display: inline-flex;
-  padding: 10px 20px;
-  background: #ffffff;
-  border: 4px solid #20c361;
-  color: #000000;
-  text-decoration: none;
-  border-radius: 20px;
-  transition: background 0.3s;
-  font-size: 20px;
-  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin: 0;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: white;
 }
-#Template-Inicio .contact-button__link:hover {
-  background: #ceffe2;
-  text-decoration: none;
-}
-#Template-Inicio .contact-button__icon {
-  margin-right: 10px;
-}
-#Template-Inicio .btn-primary {
-  border-color: #0C1B54;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  #Template-Inicio .slider {
-    width: 90%;
-  }
-  #Template-Inicio .services {
+
+@media (min-width: 768px) {
+  .services {
     flex-direction: row;
-    margin-left: 15px;
-    margin-right: 15px;
   }
-  #Template-Inicio .services .services__item {
+  .services__item {
     width: 48%;
-  }
-  #Template-Inicio .contact-button__link {
-    width: 225px;
-    font-size: 22px;
+    min-height: 380px;
   }
 }
 @media (min-width: 1024px) {
-  #Template-Inicio .slider {
-    width: 80%;
-  }
-  #Template-Inicio .services {
-    flex-direction: row;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  #Template-Inicio .services .services__item {
+  .services__item {
     width: 45%;
-  }
-  #Template-Inicio .contact-button__link {
-    width: 225px;
-    font-size: 24px;
+    min-height: 400px;
   }
 }
-
 #Template-Clases {
   /* Estilos base para móviles (Mobile First) */
   font-family: Arial, sans-serif;
-  background-image: url(../../Resources/Template/Fondo_star_light_white.webp);
+  background-color: #030A1F;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -357,7 +315,7 @@ body #Header header#H-container .header__nav a {
   width: 100%;
   max-width: 550px;
   height: auto;
-  background-color: #FEC985;
+  background-color: #FCCD88;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 2vh;
@@ -386,7 +344,7 @@ body #Header header#H-container .header__nav a {
   margin-bottom: 5px;
 }
 #Template-Clases main.main .considerations {
-  background-color: #72CDAE;
+  background-color: #72D0B6;
   padding: 20px;
   margin-bottom: 20px;
   width: 100%;
@@ -464,7 +422,7 @@ body #Header header#H-container .header__nav a {
 
 #Template-Cursos {
   font-family: Arial, sans-serif;
-  background-image: url(../../Resources/Template/Fondo_star_light_white.webp);
+  background-color: #030A1F;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -826,7 +784,7 @@ body #Header header#H-container .header__nav a {
 }
 #Template-Inscribirse {
   font-family: Arial, sans-serif;
-  background-image: url(../../Resources/Template/Fondo_star_light_white.webp);
+  background-color: #030A1F;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -890,7 +848,7 @@ body #Header header#H-container .header__nav a {
 #Template-Inscribirse main section#Inscribirse form div input:focus,
 #Template-Inscribirse main section#Inscribirse form div select:focus,
 #Template-Inscribirse main section#Inscribirse form div textarea:focus {
-  border-color: #3ECAD3;
+  border-color: #43C8DA;
 }
 #Template-Inscribirse main section#Inscribirse form div textarea {
   resize: none;
@@ -899,7 +857,7 @@ body #Header header#H-container .header__nav a {
 #Template-Inscribirse main section#Inscribirse form button {
   padding: 10px 20px;
   font-size: 1em;
-  background-color: #0C1B54;
+  background-color: #071A52;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -907,7 +865,7 @@ body #Header header#H-container .header__nav a {
   transition: background-color 0.3s;
 }
 #Template-Inscribirse main section#Inscribirse form button:hover {
-  background-color: #3ECAD3;
+  background-color: #43C8DA;
 }
 
 @media (max-width: 768px) {
@@ -979,7 +937,7 @@ body #Header header#H-container .header__nav a {
 }
 #Template-Nosotros {
   font-family: Arial, sans-serif;
-  background-image: url(../../Resources/Template/Fondo_star_light_white.webp);
+  background-color: #030A1F;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -1092,7 +1050,7 @@ body #Header header#H-container .header__nav a {
 }
 #Template-Registrado {
   font-family: Arial, sans-serif;
-  background-image: url(../../Resources/Template/Fondo_star_light_white.webp);
+  background-color: #030A1F;
   margin: 0;
   padding: 0;
   min-height: 100vh;
